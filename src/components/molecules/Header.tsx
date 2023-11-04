@@ -15,7 +15,9 @@ export default function Header() {
 
         <Link href="/about" className="p-3 bg-gray-900 rounded-lg">
           About
-        </Link>
+              </Link>
+              
+
       </div>
     </div>
   );

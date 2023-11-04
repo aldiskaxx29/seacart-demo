@@ -1,4 +1,8 @@
+import Footers from "@/components/molecules/Footers";
 import Header from "@/components/molecules/Header";
+import PeopleBehind from "@/components/sections/PeopleBehind";
+import VisiMisi from "@/components/sections/VisiMisi";
+import WhoAreWe from "@/components/sections/WhoAreWe";
 import React from "react";
 
 export default function About() {
@@ -8,7 +12,11 @@ export default function About() {
 
       <Header />
 
-      <h1 className="p-20 text-9xl">Ini halaman About</h1>
+      <WhoAreWe />
+      <VisiMisi />
+      <PeopleBehind />
+
+      <Footers />
     </main>
   );
 }
