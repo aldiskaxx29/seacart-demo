@@ -17,6 +17,10 @@ export default function Header() {
           Contact
         </Link>
 
+        <Link href="/article" className="p-3 bg-gray-900 rounded-lg">
+          Article
+        </Link>
+
         <Link href="/about" className="p-3 bg-gray-900 rounded-lg">
           About
         </Link>
