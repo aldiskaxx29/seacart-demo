@@ -1,30 +1,67 @@
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import Button from "../atomic/Button";
 
-export default function Header() {
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div>
-      <div className="flex gap-2">
-        <Link href="/" className="p-3 bg-gray-900 rounded-lg">
-          Home
-        </Link>
+    <header className=" py-4 flex items-center justify-between px-6 w-full header-comp fixed">
+      <div className="flex items-center">
+      <Image src="/logo.png" alt="Logo" className="h-8 mr-4" width={10} height={10} />
+      
+      <nav className="hidden lg:flex space-x-4">
+          <Link href="/" className="hover:text-gray-300 ">
+            Home
+          </ Link>
+          <Link href="/product" className="hover:text-gray-300">
+            Product
+          </ Link>
+          <Link href="/contactus" className="hover:text-gray-300">
+            Contact Us
+          </ Link>
+          <Link href="/aboutus" className="hover:text-gray-300">
+            About Us
+          </ Link>
+          <Link href="/article" className="hover:text-gray-300">
+            Article
+          </ Link>
+      </nav>
 
-        <Link href="/product" className="p-3 bg-gray-900 rounded-lg">
-          Produk
-        </Link>
-
-        <Link href="/contact" className="p-3 bg-gray-900 rounded-lg">
-          Contact
-        </Link>
-
-        <Link href="/article" className="p-3 bg-gray-900 rounded-lg">
-          Article
-        </Link>
-
-        <Link href="/about" className="p-3 bg-gray-900 rounded-lg">
-          About
-        </Link>
       </div>
-    </div>
+      
+      <div className="lg:hidden flex items-center">
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-white focus:outline-none">
+          ☰
+        </button>
+      </div>
+      {isMenuOpen && (
+        <div className="lg:hidden absolute top-16  bg-gray-800 p-4 rounded shadow-lg w-full">
+          <Link href="/" className="block text-white py-2 hover:text-gray-300 ">
+            Home
+          </ Link>
+          <Link href="#" className="block text-white py-2 hover:text-gray-300">
+            Product
+          </ Link>
+          <Link href="#" className="block text-white py-2 hover:text-gray-300">
+            Contact Us
+          </ Link>
+          <Link href="#" className="block text-white py-2 hover:text-gray-300">
+            About Us
+          </ Link>
+          <Link href="#" className="block text-white py-2 hover:text-gray-300">
+            Article
+          </ Link>
+        </div>
+      )}
+      <div className="hidden lg:flex">
+        <Button link={"/"} text={"Contact Us"} variant="Primary"/>
+      </div>
+    </header>
   );
-}
+};
+
+export default Header;

@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --accent-primary: #2F306A;
+  --accent-secondary: #3BC1CB;
+  --accent-tertiary: #8C52FF;
+  --text-black: #212121;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -24,4 +29,50 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+/* styles/fonts.css */
+
+/* styles/fonts.css */
+
+@font-face {
+  font-family: 'Sen';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/sen-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sen';
+  font-weight: 500;
+  font-style: normal;
+  src: url('/fonts/sen-medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sen';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/fonts/sen-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sen';
+  font-weight: 800;
+  font-style: normal;
+  src: url('/fonts/sen-extraBold.ttf') format('truetype');
+}
+
+
+
+
+*{
+  font-family: 'Sen', sans-serif;
+}
+
+.header-comp{
+  background-color: rgba(248, 249, 252, 0.70);
+
+/* Background blur/md */
+backdrop-filter: blur(8px);
 }

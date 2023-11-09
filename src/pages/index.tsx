@@ -11,10 +11,10 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col items-center p-24`}>
-      <h1 className="p-20 text-3xl">Home</h1>
+    <div className={`  items-center p-0`}>
 
       <Header />
+
 
       <HeroBanner />
       <VideoPlaceholder />
@@ -25,6 +25,6 @@ export default function Home() {
       <Contact />
 
       <Footers />
-    </main>
+    </div>
   );
 }
