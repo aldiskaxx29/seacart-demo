@@ -11,20 +11,18 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={`  items-center p-0`}>
+    <>
 
       <Header />
 
 
       <HeroBanner />
-      <VideoPlaceholder />
-      <PartnerList />
       <WhatWeServe />
       <ShowCaseProduct />
       <DocumentasiKegiatan />
       <Contact />
 
       <Footers />
-    </div>
+    </>
   );
 }
