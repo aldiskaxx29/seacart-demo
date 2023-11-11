@@ -9,7 +9,7 @@ export default function HeroBanner() {
       className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4`}>
       <div className="text-center mb-10 space-y-4 pt-[120px]">
         <span>Seafood Supplier</span>
-        <h1 className="text-6xl lg:text-8xl font-bold text-center bg-accent-secondary text-primary  lg:w-[800px] md:w-full">
+        <h1 className="text-6xl lg:text-8xl font-bold text-center bg-accent-secondary text-primary  font-['Sen'] lg:w-[800px] md:w-full">
           Bring The Sea to Your Kitchen!
         </h1>
         <span>Downstreaming Commodity Through Technology</span>
