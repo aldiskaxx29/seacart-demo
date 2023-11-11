@@ -3,7 +3,7 @@ import React from "react";
 
 export default function WhatWeServe() {
   return (
-    <div className="lg:flex bg-gray-100 lg:px-20 py-32 lg:gap-24 gap:12 px-4 space-y-12 lg:space-y-0">
+    <div className="lg:flex bg-gray-100 lg:px-20 pt-32 pb-[256px] lg:gap-24 gap:12 px-4 space-y-12 lg:space-y-0">
       {/* First Column */}
       <div className="flex-col flex gap-5">
         <span className="text-teal-400 text-base font-extrabold  leading-normal">
