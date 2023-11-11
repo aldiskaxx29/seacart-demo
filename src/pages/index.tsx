@@ -14,7 +14,6 @@ export default function Home() {
     <>
       <Header />
       <HeroBanner />
-      <NewComp />
       <WhatWeServe />
       <VideoPlaceholder />
       <ShowCaseProduct />

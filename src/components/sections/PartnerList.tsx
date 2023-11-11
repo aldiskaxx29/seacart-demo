@@ -36,6 +36,11 @@ export default function PartnerList() {
     autoplaySpeed: 2000,
   };
 
+    const mobileSettings = {
+      ...settings,
+      slidesToShow: 2, // Adjust the number of slides for mobile view
+    };
+
   return (
     <div className="py-32 flex-col justify-center items-center gap-16">
       <div className="flex-col justify-start items-center gap-5 inline-flex lg:px-[200px] px-4 w-full">
@@ -45,7 +50,7 @@ export default function PartnerList() {
         <span className="text-center text-indigo-900 text-4xl font-extrabold">
           Trust and Transparency
         </span>
-        <span className=" text-center text-neutral-800 text-xl font-normal w-[500px]">
+        <span className=" text-center text-neutral-800 text-xl font-normal lg:w-[500px]">
           We&rsquo;re proud to showcase our performance data and the growing
           list of companies who have chosen to partner with us.
         </span>
@@ -80,11 +85,13 @@ export default function PartnerList() {
 
       <div className="flex-col mt-20 w-full items-center justify-center">
         <div className="mb-5 flex items-center justify-center">
-          <span className="text-indigo-900 text-lg font-extrabold">Trusted</span>
+          <span className="text-indigo-900 text-lg font-extrabold">
+            Trusted
+          </span>
         </div>
 
         <div>
-          <Slider {...settings}>
+          <Slider {...(window.innerWidth < 768 ? mobileSettings : settings)}>
             {data.map((item, index) => (
               <div key={index} className="flex justify-center items-center">
                 <Image

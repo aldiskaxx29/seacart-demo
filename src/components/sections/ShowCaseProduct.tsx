@@ -62,7 +62,7 @@ export default function ShowCaseProduct() {
         {data.map((item, index) => (
           <div key={index} className="">
             <div className="lg:flex flex-wrap-reverse">
-              <div className="flex-1 lg:hidden h-[300px] items-center justify-center overflow-hidden flex px-32 ">
+              <div className="flex-1 lg:hidden h-[300px] items-center justify-center overflow-hidden flex  ">
                 <Image
                   src={`/assets/product-feature/${item.featuredImageURL}`}
                   alt={""}
@@ -72,7 +72,7 @@ export default function ShowCaseProduct() {
                 />
               </div>
 
-              <div className="flex-1  px-[100px] py-[64px] grid gap-4">
+              <div className="flex-1 px-4 lg:px-[100px] py-[64px] grid gap-4">
                 <Image
                   src={"/assets/product-icons/box.svg"}
                   alt={"icon"}
@@ -85,7 +85,7 @@ export default function ShowCaseProduct() {
                   {item.productName}
                 </h3>
 
-                <span className=" text-slate-300 text-lg font-normal  w-[400px] ">
+                <span className=" text-slate-300 text-lg font-normal  lg:w-[400px] ">
                   {item.description}
                 </span>
 
@@ -99,7 +99,7 @@ export default function ShowCaseProduct() {
                   />
                 </button>
 
-                <div className="flex gap-10 items-center">
+                <div className="flex gap-4 lg:gap-10 items-start">
                   {item.images.slice(0, 3).map((item, index) => (
                     <div className="grid gap-5" key={index}>
                       <Image
@@ -107,9 +107,9 @@ export default function ShowCaseProduct() {
                         alt={"icon"}
                         width={100}
                         height={100}
-                        className="rounded-full"
+                        className="rounded-full lg:w-[100px] w-[64px]"
                       />
-                      <span className="text-center w-[100px] text-slate-300 text-lg font-normal leading-7">
+                      <span className="text-center w-[64px] lg:w-[100px] text-slate-300 lg:text-lg text-sm  lg:font-normal ">
                         {item.imageTitle}
                       </span>
                     </div>
