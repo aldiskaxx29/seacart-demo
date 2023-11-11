@@ -1,5 +1,6 @@
 import Footers from '@/components/molecules/Footers';
 import Header from '@/components/molecules/Header';
+import ArticleList from '@/components/sections/ArticleList';
 import Contact from '@/components/sections/Contact';
 import DocumentasiKegiatan from '@/components/sections/DocumentasiKegiatan';
 import HeroBanner from '@/components/sections/HeroBanner';
@@ -18,9 +19,11 @@ export default function Home() {
 
       <HeroBanner />
       <WhatWeServe />
+      <VideoPlaceholder />
       <ShowCaseProduct />
+      <PartnerList />
       <DocumentasiKegiatan />
-      <Contact />
+      <ArticleList />
 
       <Footers />
     </>
