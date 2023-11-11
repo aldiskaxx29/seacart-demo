@@ -38,10 +38,9 @@ export default function Footers() {
           <div className="w-full  flex-col justify-start items-start gap-8 flex">
             <div className=" flex-col justify-start items-start gap-8 flex">
               <div className=" h-10 justify-center items-center inline-flex">
-                <img
+                <Image
                   className="w-10 h-10"
-                  src="https://via.placeholder.com/40x40"
-                />
+                  src="/public/assets/article-list/Main Logo.png" alt={""}  width={40} height={40}              />
               </div>
               <div className="w-full flex-col justify-start items-start gap-1 flex">
                 <div className=" text-slate-100 text-base font-bold leading-normal">

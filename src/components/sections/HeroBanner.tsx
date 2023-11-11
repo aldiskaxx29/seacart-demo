@@ -4,18 +4,15 @@ import Image from "next/image";
 import Router from "next/router";
 
 export default function HeroBanner() {
-
-  
-
   return (
     <div
-      className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 w-full px-4`}>
+      className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4`}>
       <div className="text-center mb-10 space-y-4 pt-[120px]">
-        <p>Seafood Supplier</p>
+        <span>Seafood Supplier</span>
         <h1 className="text-6xl lg:text-8xl font-bold text-center bg-accent-secondary text-primary  lg:w-[800px] md:w-full">
           Bring The Sea to Your Kitchen!
         </h1>
-        <p>Downstreaming Commodity Through Technology</p>
+        <span>Downstreaming Commodity Through Technology</span>
       </div>
 
       <div className="flex-col flex space-y-10 w-full lg:w-fit justify-center items-center px-8">

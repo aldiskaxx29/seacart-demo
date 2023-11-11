@@ -19,9 +19,9 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -64,16 +64,16 @@ body {
 }
 
 
-/* Contoh CSS reset untuk mereset margin dan padding semua elemen */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li,main,div {
-  margin: 0;
-  padding: 0;
-}
 
 
 *{
   font-family: 'Sen', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
 }
+
+
 
 .header-comp{
   background-color: rgba(248, 249, 252, 0.70);

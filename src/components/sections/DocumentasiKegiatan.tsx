@@ -1,16 +1,32 @@
-import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ImageGalleryItem from "../atomic/ImageGalleryItem";
 import { ImageGallery } from "../../../service/DummyData";
-import ImagePopUp from "../molecules/ImagePopUp";
 
+interface Props {
+  id: number;
+  title: string;
+  url: string;
+}
+[];
 
 export default function DocumentasiKegiatan() {
 
+    
+const [data, setData] = useState<Props[]>([]);
+
+useEffect(() => {
+  const fetchData = async () => {
+    setTimeout(() => {
+      setData(ImageGallery);
+    }, 1000);
+  };
+
+  fetchData();
+}, []);
   
   return (
     <>
-      <div className="flex lg:h-[600px]">
+      <div className="flex lg:h-[800px]">
         {/* Col 1 */}
         <div className="sm:flex-1 lg:block w-full pt-1">
           {/* Col 1 Row 1 */}
@@ -30,14 +46,14 @@ export default function DocumentasiKegiatan() {
           </div>
 
           {/* Col 1 Row 3 */}
-          <div className="relative overflow-hidden h-1/4 flex">
-            <div className="relative overflow-hidden aspect-square w-full max-w-[250px]">
+          <div className="relative overflow-hidden h-1/4 flex ">
+            <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
               <ImageGalleryItem
                 id={ImageGallery[3].id}
                 src={ImageGallery[3].url}
               />
             </div>
-            <div className="relative overflow-hidden aspect-square w-full max-w-[250px]">
+            <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
               <ImageGalleryItem
                 id={ImageGallery[4].id}
                 src={ImageGallery[4].url}
@@ -50,13 +66,13 @@ export default function DocumentasiKegiatan() {
         <div className="sm:flex-1  lg:block hidden pt-1">
           {/* Col 2 Row 3 */}
           <div className="relative overflow-hidden h-1/4 flex">
-            <div className="relative overflow-hidden aspect-square w-full max-w-[250px]">
+            <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
               <ImageGalleryItem
                 id={ImageGallery[5].id}
                 src={ImageGallery[5].url}
               />
             </div>
-            <div className="relative overflow-hidden aspect-square w-full max-w-[250px]">
+            <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
               <ImageGalleryItem
                 id={ImageGallery[6].id}
                 src={ImageGallery[6].url}
@@ -73,13 +89,13 @@ export default function DocumentasiKegiatan() {
           </div>
           {/* Col 2 Row 3 */}
           <div className="relative overflow-hidden h-1/4 flex">
-            <div className="relative overflow-hidden aspect-square w-full max-w-[250px]">
+            <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
               <ImageGalleryItem
                 id={ImageGallery[8].id}
                 src={ImageGallery[8].url}
               />
             </div>
-            <div className="relative overflow-hidden aspect-square w-full max-w-[250px]">
+            <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
               <ImageGalleryItem
                 id={ImageGallery[9].id}
                 src={ImageGallery[9].url}
@@ -108,13 +124,13 @@ export default function DocumentasiKegiatan() {
 
           {/* Col 3 Row 3 */}
           <div className="relative overflow-hidden h-1/4 flex">
-            <div className="relative overflow-hidden aspect-square w-full max-w-[250px]">
+            <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
               <ImageGalleryItem
                 id={ImageGallery[12].id}
                 src={ImageGallery[12].url}
               />
             </div>
-            <div className="relative overflow-hidden aspect-square w-full max-w-[250px]">
+            <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
               <ImageGalleryItem
                 id={ImageGallery[13].id}
                 src={ImageGallery[13].url}

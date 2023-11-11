@@ -7,7 +7,7 @@ import React from "react";
 
 export default function product() {
   return (
-    <div className={`items-center `}>
+    <div className={`items-center bg-red-300`}>
 
       <Header />
 

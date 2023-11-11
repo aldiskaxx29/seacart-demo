@@ -10,13 +10,13 @@ const Header = () => {
     <div>
       <header className="header-comp py-4 flex items-center justify-between px-6 w-full  fixed gap-10 h-[100px] z-50">
         <div className="flex gap-6 items-center border-b w-full h-[100px] border-primary">
-          {/* <Image
-            src="/logo.png"
+          <Image
+            src="/public/favicon.ico"
             alt="Logo"
             className="h-8 mr-4 bg-red-300"
             width={50}
             height={50}
-          /> */}
+          />
 
           <nav className="hidden lg:flex space-x-4">
             <Link href="/" className="hover:text-gray-300 ">
