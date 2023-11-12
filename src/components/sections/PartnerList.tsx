@@ -41,6 +41,25 @@ export default function PartnerList() {
       slidesToShow: 3, // Adjust the number of slides for mobile view
     };
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   return (
     <div className="py-32 flex-col justify-center items-center gap-16">
@@ -91,35 +110,23 @@ export default function PartnerList() {
           </span>
         </div>
         <div>
-          {window.innerWidth > 768 ? (
-            <Slider {...settings}>
-              {data.map((item, index) => (
-                <div key={index} className="flex justify-center items-center">
-                  <Image
-                    src={`/assets/partner-logo/${item.url}`}
-                    alt={"icon"}
-                    width={120}
-                    height={100}
-                    className=""
-                  />
-                </div>
-              ))}
-            </Slider>
-          ) : (
-            <Slider {...mobileSettings}>
-              {data.map((item, index) => (
-                <div key={index} className="px-4 flex justify-center items-center">
-                  <Image
-                    src={`/assets/partner-logo/${item.url}`}
-                    alt={"icon"}
-                    width={100}
-                    height={100}
-                    className=""
-                  />
-                </div>
-              ))}
-            </Slider>
-          )}
+          <Slider {...(isMobile ? mobileSettings : settings)}>
+            {data.map((item, index) => (
+              <div
+                key={index}
+                className={
+                  isMobile ? "px-4" : "flex justify-center items-center"
+                }>
+                <Image
+                  src={`/assets/partner-logo/${item.url}`}
+                  alt={"icon"}
+                  width={isMobile ? 100 : 120}
+                  height={100}
+                  className=""
+                />
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </div>
