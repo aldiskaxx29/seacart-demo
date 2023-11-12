@@ -34,7 +34,7 @@ export default function DropMenu() {
                 Home
               </Link>
               <Link
-                href="#"
+                href="/product"
                 className="block text-primary py-2 hover:text-gray-300">
                 Product
               </Link>
@@ -54,7 +54,7 @@ export default function DropMenu() {
                 Article
               </Link>
               <div className="w-full items-center justify-center lg:border-b border-primary">
-                <button className="bg-primary text-white hover:bg-gray-700 py-2 px-8 font-regular rounded flex items-center justify-center gap-2">
+                <button className="bg-primary text-white hover:bg-gray-700 py-2 px-8 font-regular rounded flex items-center justify-center gap-2 w-full">
                   Let`s Talk{" "}
                   <Image
                     src={"/assets/general/whatsapp.svg"}
