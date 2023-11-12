@@ -58,14 +58,14 @@ export default function Footers() {
                 <div className="justify-start items-center gap-2 flex">
                   <Link
                     className="text-slate-100 mb-5 text-base font-normal leading-normal"
-                    href={""}>
+                    href={"/"}>
                     Home
                   </Link>
                 </div>
                 <div className="justify-start items-center gap-2 flex">
                   <Link
                     className="text-slate-100 mb-5 text-base font-normal leading-normal"
-                    href={""}>
+                    href={"/product"}>
                     Product
                   </Link>
                 </div>

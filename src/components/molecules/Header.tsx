@@ -43,8 +43,11 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:flex w-[300px] items-center justify-center lg:border-b h-[100px] border-primary">
-          
-          <button className="bg-primary text-white hover:bg-gray-700 py-2 px-8 font-regular rounded flex items-center justify-center gap-2">
+          <button
+            className="bg-primary text-white hover:bg-gray-700 py-2 px-8 font-regular rounded flex items-center justify-center gap-2 "
+            onClick={() => {
+              window.location.href = `/product`;
+            }}>
             Let`s Talk{" "}
             <Image
               src={"/assets/general/whatsapp.svg"}

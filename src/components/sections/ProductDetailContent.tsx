@@ -27,7 +27,11 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
     <>
       <div className="flex w-full lg:relative items-center justify-center pt-[150px]">
         <div className=" flex px-4 lg:w-[1200px] absolute w-full items-center">
-          <button className=" text-gray-400 text-sm font-normal font-['Sen'] leading-tight hover:bg-gray-100 rounded-md p-2">
+          <button
+            className=" text-gray-400 text-sm font-normal font-['Sen'] leading-tight hover:bg-gray-100 rounded-md p-2"
+            onClick={() => {
+              window.location.href = `/product`;
+            }}>
             Product
           </button>
           <div>
@@ -42,26 +46,25 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
         </div>
       </div>
 
-      <div
-        className={`flex w-full lg:relative items-start justify-center min-h-screen `}>
-        <div className="lg:absolute lg:w-[1200px] lg:flex w-full grid gap-8 px-4 pb-64">
+      <div className={`flex w-full  items-start justify-center h-fit pt-5`}>
+        <div className=" lg:w-[1200px] lg:flex w-full grid gap-8 px-4 pb-64">
           <div className="lg:w-2/5 grid gap-5">
             <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px] w-3/4">
               Try out Our Fresh {product.productName}
             </h2>
             <div className="relative overflow-hidden  w-full flex gap-5 items-end">
-              <div className="w-1/2 h-[300px] flex items-end">
+              <div className="w-1/2 h-[300px] flex items-end max-w-[3000px]">
                 <Image
-                  src={`/assets/product-detail-collage/salmon_1.png`}
+                  src={`/assets/product-detail-collage${product.featureImageCollage[1].url}`}
                   alt={product.productName}
                   width={700}
                   height={700}
-                  className=" object-cover"
+                  className=" object-cover h-[300px]"
                 />
               </div>
-              <div className="relative overflow-hidden w-1/2  ">
+              <div className="relative overflow-hidden w-1/2  max-w-[3000px] ">
                 <Image
-                  src={`/assets/product-detail-collage/salmon_1.png`}
+                  src={`/assets/product-detail-collage${product.featureImageCollage[2].url}`}
                   alt={product.productName}
                   width={700}
                   height={700}
@@ -70,18 +73,18 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
               </div>
             </div>
             <div className="relative overflow-hidden  w-full flex gap-5 items-start">
-              <div className="w-1/3">
+              <div className="w-1/3 max-w-[3000px]">
                 <Image
-                  src={`/assets/product-detail-collage/salmon_1.png`}
+                  src={`/assets/product-detail-collage${product.featureImageCollage[3].url}`}
                   alt={product.productName}
                   width={700}
                   height={(4 / 3) * 700}
-                  className=" object-cover asp"
+                  className=" object-cover h-[250px]"
                 />
               </div>
-              <div className="relative overflow-hidden w-2/3  ">
+              <div className="relative overflow-hidden w-2/3 max-w-[3000px]  ">
                 <Image
-                  src={`/assets/product-detail-collage/salmon_1.png`}
+                  src={`/assets/product-detail-collage${product.featureImageCollage[0].url}`}
                   alt={product.productName}
                   width={700}
                   height={700}
@@ -91,8 +94,10 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
             </div>
           </div>
           <div
-            className={`lg:w-3/5  flex-col justify-start items-start gap-4 lg:gap-8 inline-flex lg:px-8 ${
-              product.id % 2 !== 0 ? `` : `lg:order-first  lg:pr-20`
+            className={`lg:w-3/5  flex-col justify-start items-start gap-4 lg:gap-8 inline-flex ${
+              product.id % 2 !== 0
+                ? ` lg:px-8`
+                : ` lg:px-0 lg:order-first  lg:pr-20`
             } `}>
             <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px]">
               {product.productName}
@@ -101,21 +106,23 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
               {product.description}
             </p>
             {product.images.map((item, index) => (
-              <div key={index} className="flex w-full py-4 border-b border-gray-100">
-                <div className="lg:w-2/5 w-1/3 flex items-center justify-start gap-5">
+              <div
+                key={index}
+                className="flex w-full py-4 border-b border-gray-100">
+                <div className="lg:w-2/5 w-1/3 flex items-center justify-start gap-5 lg:text-base text-sm">
                   <Image
                     src={`/assets/product-preview${item.url}`}
                     alt={"icon"}
                     width={100}
                     height={100}
-                    className="rounded-full lg:w-[72px] w-[64px]"
+                    className="rounded-full lg:w-[72px] w-[48px]"
                   />{" "}
                   {item.imageTitle}
                 </div>
-                <div className="lg:w-2/5  w-1/3  grid gap-0 ">
+                <div className="lg:w-2/5  w-1/3  grid gap-0 lg:text-base text-sm">
                   <div>{item.weight}</div> <div>{item.cut}</div>{" "}
                 </div>
-                <div className="lg:w-1/5  w-1/3  items-center ">
+                <div className="lg:w-1/5  w-1/3  items-center lg:text-base text-sm">
                   {item.package}
                 </div>
               </div>

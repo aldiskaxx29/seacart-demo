@@ -89,7 +89,11 @@ export default function ShowCaseProduct() {
                   {item.description}
                 </span>
 
-                <button className="text-teal-400 text-sm font-normal  leading-tight flex gap-2 items-center">
+                <button
+                  className="text-teal-400 text-sm font-normal  leading-tight flex gap-2 items-center p-2 hover:bg-teal-400/10 rounded-lg w-fit"
+                  onClick={() => {
+                    window.location.href = `/product/detail-product/${item.id}`;
+                  }}>
                   See Detail
                   <Image
                     src={"/assets/product-icons/arrow-circle-broken-right.svg"}
