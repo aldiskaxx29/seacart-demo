@@ -123,7 +123,7 @@ export default function ShowCaseProduct() {
                   )}
                 </div>
 
-                <div className="flex gap-6">
+                <div className="flex gap-6 lg:w-fit w-full justify-between mt-5">
                   <button className="" onClick={goToPrevious}>
                     {" "}
                     <Image

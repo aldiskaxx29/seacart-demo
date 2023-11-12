@@ -29,7 +29,7 @@ export default function ArticleList() {
   }, []);
 
   return (
-    <div className="py-32 grid gap-4 items-start  lg:px-32 ">
+    <div className="py-32 grid gap-4 items-start  lg:px-32 px-2">
       <span className="text-teal-400 text-base font-extrabold  leading-normal">
         Article & News
       </span>
