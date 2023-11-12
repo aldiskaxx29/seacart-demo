@@ -6,9 +6,9 @@ export default function VideoPlaceholderProduct() {
     <div className="w-full">
       <div className=" overflow-hidden">
         <ReactPlayer
-                  url="/assets/stock-videos/Salmon footage show reel.mp4"
-                  muted
-                  playing
+          url="/assets/stock-videos/Salmon footage show reel.mp4"
+          controls
+          playing
           width="full"
           height="full"
         />

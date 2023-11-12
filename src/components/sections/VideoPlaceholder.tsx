@@ -10,7 +10,8 @@ export default function VideoPlaceholder() {
         url="/assets/stock-videos/Salmon footage show reel.mp4"
         controls
         style={{borderRadius: 20, }}
-        width="900"
+          width="900"
+          playing
           height="432"
 
       />
