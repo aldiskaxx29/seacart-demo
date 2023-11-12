@@ -350,3 +350,344 @@ export const articleList = [
     },
   },
 ];
+
+export const ProductDetailData = [
+  {
+    id: 1,
+    productName: "Salmon",
+    description:
+      "Discover our extensive range of premium salmon, perfect for crafting exquisite sushi, sashimi, and beyond.",
+    featureImageCollage: [
+      {
+        id: 1,
+        url: "/salmon_1.png",
+      },
+      {
+        id: 2,
+        url: "/salmon_2.png",
+      },
+      {
+        id: 3,
+        url: "/salmon_3.png",
+      },
+      {
+        id: 4,
+        url: "/salmon_4.png",
+      },
+    ],
+    featuredImageURL: "Salmon.png",
+    images: [
+      {
+        id: 1,
+        url: "/salmon-belly.png",
+        imageTitle: "Belly",
+        weight: "500gr",
+        cut: "Skin Off",
+        package: "Vacuum, Plastic Sealed, Carton",
+      },
+      {
+        id: 2,
+        url: "/salmon-portion.png",
+        imageTitle: "Portion",
+        weight: "200gr",
+        cut: "Skin Off/Skin on",
+        package: "Vacuum, Plastic Sealed, Carton",
+      },
+      {
+        id: 3,
+        url: "/salmon-head.png",
+        imageTitle: "Head",
+        weight: "500 gr/2pcs",
+        cut: "",
+        package: "Vacuum, Plastic Sealed, Carton",
+      },
+      {
+        id: 4,
+        url: "/salmon-fillet.png",
+        imageTitle: "Fillet",
+        weight: "1400 - 1600 gr/pcs",
+        cut: "Skin off, Skin on",
+        package: "Vacuum, Plastic Sealed, Carton",
+      },
+      {
+        id: 5,
+        url: "/salmon-whole-fish.png",
+        imageTitle: "Whole",
+        weight: "3000 - 3500 gr",
+        cut: "Head on, Headless",
+        package: "Styrofoam with ice shards",
+      },
+      {
+        id: 6,
+        url: "/salmon-trimming.png",
+        imageTitle: "Trimming",
+        weight: "1000gr",
+        cut: "Skin Off",
+        package: "Vacuum, Plastic Sealed, Carton",
+      },
+    ],
+  },
+  {
+    id: 2,
+    productName: "Shrimp",
+    description:
+      "An array of succulent shrimp varieties await your indulgence, each offering its unique flavor and texture.",
+    featureImageCollage: [
+      {
+        id: 1,
+        url: "/shrimp_1.png",
+      },
+      {
+        id: 2,
+        url: "/shrimp_2.png",
+      },
+      {
+        id: 3,
+        url: "/shrimp_3.png",
+      },
+      {
+        id: 4,
+        url: "/shrimp_4.png",
+      },
+    ],
+    featuredImageURL: "Shrimp.png",
+    images: [
+      {
+        id: 1,
+        url: "/shrimp-black-tiger.png",
+        imageTitle: "Black Tiger Shrimp",
+        weight: "1000gr",
+        cut: "Head On",
+        package: "Plastic Sealed, Carton",
+      },
+      {
+        id: 2,
+        url: "/shrimp-banana-shrimp.png",
+        imageTitle: "Banana Shrimp",
+        weight: "1000gr",
+        cut: "Head On",
+        package: "Plastic Sealed, Carton",
+      },
+      {
+        id: 3,
+        url: "/shrimp-IQF-banana.png",
+        imageTitle: "Banana IQF Shrimp",
+        weight: "1000gr",
+        cut: "Head On",
+        package: "Plastic Sealed, Carton",
+      },
+    ],
+  },
+  {
+    id: 3,
+    productName: "Tuna",
+    description:
+      "Low fat content, rich in protein and omega make tuna very popular. Indulge in a variety of meticulously crafted cuts.",
+    featureImageCollage: [
+      {
+        id: 1,
+        url: "/tuna_1.png",
+      },
+      {
+        id: 2,
+        url: "/tuna_2.png",
+      },
+      {
+        id: 3,
+        url: "/tuna_3.png",
+      },
+      {
+        id: 4,
+        url: "/tuna_4.png",
+      },
+    ],
+    featuredImageURL: "Tuna.png",
+    images: [
+      {
+        id: 1,
+        url: "/tuna-saku.png",
+        imageTitle: "Soku",
+        weight: "500gr",
+        cut: "Skin Off",
+        package: "Vacuum, Plastic Sealed, Carton",
+      },
+      {
+        id: 2,
+        url: "/tuna-parcel.png",
+        imageTitle: "Parcel",
+        weight: "500gr",
+        cut: "Skin Off",
+        package: "Vacuum, Plastic Sealed, Carton",
+      },
+      {
+        id: 3,
+        url: "/tuna-steak.png",
+        imageTitle: "Steak",
+        weight: "500gr",
+        cut: "Skin Off",
+        package: "Vacuum, Plastic Sealed, Carton",
+      },
+      {
+        id: 4,
+        url: "/tuna-jaw.png",
+        imageTitle: "Jaw",
+        weight: "500gr",
+        cut: "1000gr",
+        package: "Vacuum, Plastic Sealed, Carton",
+      },
+    ],
+  },
+  {
+    id: 4,
+    productName: "Squid",
+    description:
+      "Savor the exquisite flavor of squid, a culinary gem versatile enough to inspire a myriad of delectable creations.",
+    featureImageCollage: [
+      {
+        id: 1,
+        url: "/squid_1.png",
+      },
+      {
+        id: 2,
+        url: "/squid_2.png",
+      },
+      {
+        id: 3,
+        url: "/squid_3.png",
+      },
+      {
+        id: 4,
+        url: "/squid_4.png",
+      },
+    ],
+    featuredImageURL: "Squid.png",
+    images: [
+      {
+        id: 1,
+        url: "/squid-tube.png",
+        imageTitle: "Tube",
+        weight: "1000gr/ 4-5pcs",
+        cut: "Glazed 30%",
+        package: "Plastic Sealed, Carton",
+      },
+      {
+        id: 2,
+        url: "/squid-ring.png",
+        imageTitle: "Ring",
+        weight: "1000gr",
+        cut: "Glazed 30%",
+        package: "Plastic Sealed, Carton",
+      },
+      {
+        id: 3,
+        url: "/squid-sero.png",
+        imageTitle: "Sero",
+        weight: "1000gr",
+        cut: "Glazed 30%",
+        package: "Plastic Sealed, Carton",
+      },
+    ],
+  },
+  {
+    id: 5,
+    productName: "Mackarel",
+    description:
+      "Savor the exquisite flavor of squid, a culinary gem versatile enough to inspire a myriad of delectable creations.",
+    featureImageCollage: [
+      {
+        id: 1,
+        url: "/mackarel_1.png",
+      },
+      {
+        id: 2,
+        url: "/mackarel_2.png",
+      },
+      {
+        id: 3,
+        url: "/mackarel_3.png",
+      },
+      {
+        id: 4,
+        url: "/mackarel_4.png",
+      },
+    ],
+    featuredImageURL: "Squid.png",
+    images: [
+      {
+        id: 1,
+        url: "/squid-tube.png",
+        imageTitle: "Tube",
+        weight: "1000gr/ 4-5pcs",
+        cut: "Glazed 30%",
+        package: "Plastic Sealed, Carton",
+      },
+      {
+        id: 2,
+        url: "/squid-ring.png",
+        imageTitle: "Ring",
+        weight: "1000gr",
+        cut: "Glazed 30%",
+        package: "Plastic Sealed, Carton",
+      },
+      {
+        id: 3,
+        url: "/squid-sero.png",
+        imageTitle: "Sero",
+        weight: "1000gr",
+        cut: "Glazed 30%",
+        package: "Plastic Sealed, Carton",
+      },
+    ],
+  },
+  {
+    id: 6,
+    productName: "Favourite Sea Food",
+    description:
+      "Savor the exquisite flavor of squid, a culinary gem versatile enough to inspire a myriad of delectable creations.",
+    featureImageCollage: [
+      {
+        id: 1,
+        url: "/others_1.png",
+      },
+      {
+        id: 2,
+        url: "/others_2.png",
+      },
+      {
+        id: 3,
+        url: "/others_3.png",
+      },
+      {
+        id: 4,
+        url: "/others_4.png",
+      },
+    ],
+    featuredImageURL: "Squid.png",
+    images: [
+      {
+        id: 1,
+        url: "/squid-tube.png",
+        imageTitle: "Tube",
+        weight: "1000gr/ 4-5pcs",
+        cut: "Glazed 30%",
+        package: "Plastic Sealed, Carton",
+      },
+      {
+        id: 2,
+        url: "/squid-ring.png",
+        imageTitle: "Ring",
+        weight: "1000gr",
+        cut: "Glazed 30%",
+        package: "Plastic Sealed, Carton",
+      },
+      {
+        id: 3,
+        url: "/squid-sero.png",
+        imageTitle: "Sero",
+        weight: "1000gr",
+        cut: "Glazed 30%",
+        package: "Plastic Sealed, Carton",
+      },
+    ],
+  },
+];
