@@ -15,6 +15,7 @@ interface Props {
 
 export default function PartnerList() {
   const [data, setData] = useState<Props[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,23 +26,6 @@ export default function PartnerList() {
 
     fetchData();
   }, []);
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  };
-
-    const mobileSettings = {
-      ...settings,
-      slidesToShow: 3, // Adjust the number of slides for mobile view
-    };
-
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,6 +43,22 @@ export default function PartnerList() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
+    const mobileSettings = {
+      ...settings,
+      slidesToShow: 3, // Adjust the number of slides for mobile view
+    };
+
 
 
   return (
