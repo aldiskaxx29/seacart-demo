@@ -12,7 +12,7 @@ const Header = () => {
       <header className="header-comp py-4 flex items-center justify-between px-6 w-full fixed top-0 gap-10 h-[100px] z-50 border-b lg:border-b-0 border-primary">
         <div className="flex gap-6 items-center lg:border-b w-full h-[100px] border-primary">
           <Image
-            src="/public/favicon.ico"
+            src="/assets/article-list/Main Logo.png"
             alt="Logo"
             className="h-8 mr-4 bg-red-300"
             width={50}
