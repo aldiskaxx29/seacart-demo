@@ -1,7 +1,7 @@
 import Footers from "@/components/molecules/Footers";
 import Header from "@/components/molecules/Header";
 import Contact from "@/components/sections/Contact";
-import ProductDetailContent from "@/components/sections/ProductDetailContent";
+import ProductCatalogue from "@/components/sections/ProductCatalogue";
 import ProductHero from "@/components/sections/ProductHero";
 import ProductList from "@/components/sections/ProductList";
 import VideoPlaceholderProduct from "@/components/sections/VideoPlaceholderProduct";
@@ -22,6 +22,7 @@ export default function product() {
 
       <ProductList />
       <VideoPlaceholderProduct />
+      <ProductCatalogue />
       <Contact />
 
       <Footers />

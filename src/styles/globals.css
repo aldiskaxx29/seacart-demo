@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --accent-primary: #2F306A;
-  --accent-secondary: #3BC1CB;
-  --accent-tertiary: #8C52FF;
+  --accent-primary: #2f306a;
+  --accent-secondary: #3bc1cb;
+  --accent-tertiary: #8c52ff;
   --text-black: #212121;
 }
 
@@ -36,48 +35,48 @@
 /* styles/fonts.css */
 
 @font-face {
-  font-family: 'Sen';
+  font-family: "Sen";
   font-weight: normal;
   font-style: normal;
-  src: url('/fonts/sen-regular.ttf') format('truetype');
+  src: url("/fonts/sen-regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Sen';
+  font-family: "Sen";
   font-weight: 500;
   font-style: normal;
-  src: url('/fonts/sen-medium.ttf') format('truetype');
+  src: url("/fonts/sen-medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Sen';
+  font-family: "Sen";
   font-weight: bold;
   font-style: normal;
-  src: url('/fonts/sen-bold.ttf') format('truetype');
+  src: url("/fonts/sen-bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Sen';
+  font-family: "Sen";
   font-weight: 800;
   font-style: normal;
-  src: url('/fonts/sen-extraBold.ttf') format('truetype');
+  src: url("/fonts/sen-extraBold.ttf") format("truetype");
 }
 
-
-
-
-*{
-  font-family: 'Sen', sans-serif;
+* {
+  font-family: "Sen", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box !important;
 }
 
+blockquote {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--Accent-Secondary, #3bc1cb);
+}
+.header-comp {
+  background-color: rgba(248, 249, 252, 0.7);
 
-
-.header-comp{
-  background-color: rgba(248, 249, 252, 0.70);
-
-/* Background blur/md */
-backdrop-filter: blur(8px);
+  /* Background blur/md */
+  backdrop-filter: blur(8px);
 }
