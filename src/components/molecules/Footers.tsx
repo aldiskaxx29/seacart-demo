@@ -18,16 +18,18 @@ export default function Footers() {
             </div>
           </div>
           <div className="justify-center items-center gap-3 inline-flex w-full">
-            <div className="w-50 px-3 py-3 rounded-lg justify-center items-center gap-2 flex">
+            <div className="w-50 px-3 py-3 hover:bg-white/10 rounded-lg justify-center items-center gap-2 flex">
               <div className=" h-5 relative" />
-              <div className="text-zinc-200 text-base font-normal leading-normal">
+              <button onClick={() => {
+                    window.location.href = `/product`;
+                  }} className="text-zinc-200 text-base font-normal leading-normal">
                 View product
-              </div>
+              </button>
             </div>
-            <div className="w-50 px-3 py-3 bg-white rounded-lg shadow border  justify-center items-center gap-2 flex">
-              <div className="text-indigo-900 text-base font-normal leading-normal">
+            <div className="w-50 px-3 py-3 hover:bg-gray-300 bg-white rounded-lg shadow border  justify-center items-center gap-2 flex">
+              <button className="text-indigo-900 text-base font-normal leading-normal">
                 Contact us
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -40,7 +42,11 @@ export default function Footers() {
               <div className=" h-10 justify-center items-center inline-flex">
                 <Image
                   className="w-10 h-10"
-                  src="/public/assets/article-list/Main Logo.png" alt={""}  width={40} height={40}              />
+                  src="/public/assets/article-list/Main Logo.png"
+                  alt={""}
+                  width={40}
+                  height={40}
+                />
               </div>
               <div className="w-full flex-col justify-start items-start gap-1 flex">
                 <div className=" text-slate-100 text-base font-bold leading-normal">

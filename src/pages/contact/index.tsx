@@ -5,7 +5,7 @@ import React from "react";
 
 export default function index() {
   return (
-    <main className={`flex min-h-screen flex-col items-center p-24`}>
+    <main className={``}>
       <Header />
 
       <CompanyAdress />
