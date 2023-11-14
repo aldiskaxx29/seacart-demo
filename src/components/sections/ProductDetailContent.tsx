@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
 import React from "react";
 
 interface ProductDetailContentProps {
@@ -14,8 +13,7 @@ interface ProductDetailContentProps {
       url: string;
       imageTitle: string;
       weight: any;
-      cut: string;
-      package: string[];
+      package: any;
     }[];
   };
 }

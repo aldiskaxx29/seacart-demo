@@ -16,32 +16,37 @@ interface Props {
     id: number;
     url: string;
     imageTitle: string;
-    weight: string;
-    cut: string;
-    package: string;
+    weight: any;
+    package: any;
   }[];
 }
 
 export default function ProductDetail() {
   const router = useRouter();
-  const { id } = router.query;
+  const id: string | undefined = router.query?.id as string | undefined;
   const [product, setProduct] = useState<Props | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      // Simulate API call with a delay
-      setTimeout(() => {
-        const productData = ProductDetailData.find(
-          (item) => item.id === Number(id)
-        );
-        setProduct(productData || null);
-      }, 1000);
+      if (id) {
+        // Simulate API call with a delay
+        setTimeout(() => {
+          const productData = ProductDetailData.find(
+            (item) => item.id === Number(id)
+          );
+          setProduct(productData || null);
+        }, 1000);
+      }
     };
 
     if (id) {
       fetchData();
     }
   }, [id]);
+
+  if (!product) {
+    return <p>Product not found</p>;
+  }
 
   return (
     <>

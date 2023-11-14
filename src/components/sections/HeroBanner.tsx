@@ -15,7 +15,7 @@ export default function HeroBanner() {
     <div
       className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4 relative`}>
       
-      {/* <FadeIn> */}
+      <FadeIn>
 
       <div className="text-center mb-10 space-y-4 ">
         <span>Seafood Supplier</span>
@@ -24,7 +24,7 @@ export default function HeroBanner() {
         </h1>
         <span>Downstreaming Commodity Through Technology</span>
       </div>
-      {/* </FadeIn> */}
+      </FadeIn>
 
       <div className="flex-col flex space-y-10 w-full lg:w-fit justify-center items-center px-8">
         <div className="w-fit">
