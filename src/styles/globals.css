@@ -38,28 +38,28 @@
   font-family: "Sen";
   font-weight: normal;
   font-style: normal;
-  src: url("/fonts/sen-regular.ttf") format("truetype");
+  src: url("/fonts/Sen-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Sen";
   font-weight: 500;
   font-style: normal;
-  src: url("/fonts/sen-medium.ttf") format("truetype");
+  src: url("/fonts/Sen-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Sen";
   font-weight: bold;
   font-style: normal;
-  src: url("/fonts/sen-bold.ttf") format("truetype");
+  src: url("/fonts/Sen-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Sen";
   font-weight: 800;
   font-style: normal;
-  src: url("/fonts/sen-extraBold.ttf") format("truetype");
+  src: url("/fonts/Sen-ExtraBold.ttf") format("truetype");
 }
 
 * {

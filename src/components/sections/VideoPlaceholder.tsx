@@ -1,21 +1,18 @@
-import React from "react";
-import ReactPlayer from 'react-player';
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function VideoPlaceholder() {
-  
   return (
     <div className="pb-[60px] flex-col justify-center items-center inline-flex lg:px-10 px-4 mt-[-128px] w-full">
       <div className=" overflow-hidden rounded-lg">
-      <ReactPlayer
-        url="/assets/stock-videos/Salmon footage show reel.mp4"
-        controls
-        style={{borderRadius: 20, }}
+        <ReactPlayer
+          url="/assets/stock-videos/Salmon footage show reel.mp4"
+          controls
           width="900"
           playing
           height="432"
-
-      />
-
+        />
       </div>
     </div>
   );

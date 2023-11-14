@@ -313,7 +313,7 @@ export const articleList = [
       "Indulging in the Richness of Indonesian Seafood: Exploring the Health Benefits of Salmon",
     content:
       "Indonesia, being an archipelagic nation, boasts an abundance of seafood, including the delectable salmon. Salmon is a powerhouse of high-quality protein and omega-3 fatty acids, essential for heart health. Additionally, it is rich in vitamin D, vital for bone health. Salmon can be found in select upscale restaurants across Indonesia, serving dishes that blend local flavors with international finesse. From grilled to smoked, or even served as sushi, relishing salmon not only tantalizes the taste buds but also delivers invaluable health benefits.",
-    image_url: "/image-1.png",
+    image_url: "/Image-1.png",
     date: "2020-10-1 00:00:00",
     writer: {
       name: "Admin",
@@ -327,7 +327,7 @@ export const articleList = [
     title: "Delightful Ocean Treasure Packed with Health Benefits",
     content:
       "Shrimp, one of Indonesia's most beloved seafood options, is a low-fat, high-protein source loaded with minerals like zinc and selenium. These minerals bolster the immune system and maintain healthy skin tissues. Moreover, shrimp contains astaxanthin, a natural antioxidant responsible for its reddish hue, offering anti-aging benefits to humans. Prepared in various ways, from crispy fried to Padang-style sautéed, shrimp is a flavorful dish accessible to all.",
-    image_url: "/image-2.png",
+    image_url: "/Image-2.png",
     date: "2020-10-1 00:00:00",
     writer: {
       name: "Admin",
@@ -341,7 +341,7 @@ export const articleList = [
     title: "Nutrient-Rich Ocean Delight from the Indonesian Waters",
     content:
       "Tuna, globally renowned and abundant in Indonesian waters, is a nutritious powerhouse. It is a high-protein, low-fat fish rich in vitamin B and minerals such as selenium. The omega-3 fatty acids in tuna contribute to heart and brain health. In Indonesia, tuna is often served as sashimi or grilled, providing a unique and delightful culinary experience. With its rich nutritional profile and savory taste, tuna stands as an excellent choice for both health and gastronomic pleasure, making it a favorite seafood option on Indonesian tables.",
-    image_url: "/image.png",
+    image_url: "/Image.png",
     date: "2020-10-1 00:00:00",
     writer: {
       name: "Admin",
