@@ -57,22 +57,27 @@ export default function ShowCaseProduct() {
   }, []);
 
   return (
-    <div className=" bg-indigo-900 h-fit">
+    <div className=" bg-indigo-900 ">
       <Slider ref={sliderRef} {...settings}>
         {data.map((item, index) => (
           <div key={index} className="">
-            <div className="lg:flex flex-wrap-reverse">
-              <div className="flex-1 lg:hidden h-[300px] items-center justify-center overflow-hidden flex  ">
-                <Image
-                  src={`/assets/product-feature/${item.featuredImageURL}`}
-                  alt={""}
-                  width={600}
-                  height={600}
-                  className=" bg-black bg-opacity-10 w-[600px]"
-                />
+            <div className="lg:flex flex-wrap-reverse min-h-screen pt-[100px]">
+
+              <div className="flex-1 lg:flex lg:items-end  lg:justify-end items-center justify-center  overflow-hidden">
+                <div className=" w-full">
+                  <Image
+                    src={`/assets/product-feature/${item.featuredImageURL}`}
+                    alt={""}
+                    width={500}
+                    height={500}
+                    className=" object-cover w-full lg:rounded-ss-xl lg:h-full h-[300px]"
+                  />
+                </div>
               </div>
 
-              <div className="flex-1 px-4 lg:px-[100px] py-[64px] grid gap-4">
+              <div className="flex-1 px-4 lg:px-[100px] grid gap-2 lg:order-first items-end mt-8 pb-8">
+                <div className="grid gap-5">
+
                 <Image
                   src={"/assets/product-icons/box.svg"}
                   alt={"icon"}
@@ -149,19 +154,10 @@ export default function ShowCaseProduct() {
                     />
                   </button>
                 </div>
-              </div>
-
-              <div className="flex-1 lg:flex h-[700px] items-end hidden mb-[-64px]">
-                <div className="bg-red-300 w-full">
-                  <Image
-                    src={`/assets/product-feature/${item.featuredImageURL}`}
-                    alt={""}
-                    width={500}
-                    height={500}
-                    className=" object-cover w-full p-30"
-                  />
                 </div>
               </div>
+
+
             </div>
           </div>
         ))}

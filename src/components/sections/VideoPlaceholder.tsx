@@ -1,18 +1,13 @@
-import dynamic from "next/dynamic";
+import Videos from "../molecules/Videos";
 
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function VideoPlaceholder() {
   return (
-    <div className="pb-[60px] flex-col justify-center items-center inline-flex lg:px-10 px-4 mt-[-128px] w-full">
-      <div className=" overflow-hidden rounded-lg">
-        <ReactPlayer
-          url="/assets/stock-videos/Salmon footage show reel.mp4"
-          controls
-          width="900"
-          playing
-          height="432"
-        />
+    <div className=" flex-col justify-center items-center    w-full lg:min-h-screen lg:grid hidden ">
+      <div className="bg-gray-100 lg:h-[50vh] lg:w-[100vw] lg:flex hidden">
+      </div>
+      <div className=" overflow-hidden rounded-lg px-2 lg:px-20 lg:mt-[-250px] lg:mb-[200px] ">
+        <Videos />
       </div>
     </div>
   );

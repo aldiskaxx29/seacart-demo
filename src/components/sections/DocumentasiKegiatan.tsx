@@ -26,7 +26,7 @@ useEffect(() => {
   
   return (
     <>
-      <div className="flex lg:h-[800px]">
+      <div className="flex min-h-screen pt-[100px]">
         {/* Col 1 */}
         <div className="sm:flex-1 lg:block w-full pt-1">
           {/* Col 1 Row 1 */}

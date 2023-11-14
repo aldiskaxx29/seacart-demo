@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../atomic/Button";
 import Image from "next/image";
 import Router from "next/router";
+import FadeIn from "../animations/FadeIn";
 
 export default function HeroBanner() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <div
-      className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4`}>
+      className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4 relative`}>
+      
+      {/* <FadeIn> */}
+
       <div className="text-center mb-10 space-y-4 ">
         <span>Seafood Supplier</span>
         <h1 className="text-6xl lg:text-8xl font-bold text-center bg-accent-secondary text-primary  font-['Sen'] lg:w-[800px] md:w-full">
@@ -14,6 +24,7 @@ export default function HeroBanner() {
         </h1>
         <span>Downstreaming Commodity Through Technology</span>
       </div>
+      {/* </FadeIn> */}
 
       <div className="flex-col flex space-y-10 w-full lg:w-fit justify-center items-center px-8">
         <div className="w-fit">

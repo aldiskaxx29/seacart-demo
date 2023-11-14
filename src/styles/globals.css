@@ -80,3 +80,13 @@ blockquote {
   /* Background blur/md */
   backdrop-filter: blur(8px);
 }
+
+.snap-container {
+          scroll-snap-type: y mandatory;
+          overflow-y: scroll;
+          height: 100vh; /* Sesuaikan dengan tinggi viewport yang diinginkan */
+        }
+
+        .snap-child {
+          scroll-snap-align: start;
+        }

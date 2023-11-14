@@ -1,14 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import Button from "../atomic/Button";
+import React, { useEffect, useState } from "react";
 import DropMenu from "./DropMenuHeader";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
+    useEffect(() => {
+      setIsVisible(true);
+    }, []);
   return (
     <div>
+
       <header className="header-comp py-4 flex items-center justify-between px-6 w-full fixed top-0 gap-10 h-[100px] z-50 border-b lg:border-b-0 border-primary">
         <div className="flex gap-6 items-center lg:border-b w-full h-[100px] border-primary">
           <Image

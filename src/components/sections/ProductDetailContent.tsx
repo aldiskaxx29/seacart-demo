@@ -13,9 +13,9 @@ interface ProductDetailContentProps {
       id: number;
       url: string;
       imageTitle: string;
-      weight: string;
+      weight: any;
       cut: string;
-      package: string;
+      package: string[];
     }[];
   };
 }
@@ -109,21 +109,33 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
               <div
                 key={index}
                 className="flex w-full py-4 border-b border-gray-100">
-                <div className="lg:w-2/5 w-1/3 flex items-center justify-start gap-5 lg:text-base text-sm">
+                <div className="lg:w-2/5 w-2/4 flex items-center justify-start gap-5 lg:text-base text-sm">
                   <Image
                     src={`/assets/product-preview${item.url}`}
                     alt={"icon"}
                     width={100}
                     height={100}
-                    className="rounded-full lg:w-[72px] w-[48px]"
+                    className="rounded-full lg:w-[72px] w-[64px]"
                   />{" "}
                   {item.imageTitle}
                 </div>
-                <div className="lg:w-2/5  w-1/3  grid gap-0 lg:text-base text-sm">
-                  <div>{item.weight}</div> <div>{item.cut}</div>{" "}
+                <div className="lg:w-2/5  w-1/4  grid gap-0 lg:text-base text-sm">
+                  {Array.isArray(item.weight) ? (
+                    item.weight.map((weight, index) => (
+                      <li key={index}>{weight}</li>
+                    ))
+                  ) : (
+                    <li>{item.weight}</li>
+                  )}
                 </div>
-                <div className="lg:w-1/5  w-1/3  items-center lg:text-base text-sm">
-                  {item.package}
+                <div className="lg:w-1/5  w-1/4  items-center lg:text-base text-sm">
+                  {Array.isArray(item.package) ? (
+                    item.package.map((packageItem, index) => (
+                      <li key={index}>{packageItem}</li>
+                    ))
+                  ) : (
+                    <li>{item.package}</li>
+                  )}
                 </div>
               </div>
             ))}

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import ReactPlayer from "react-player";
+import Videos from "../molecules/Videos";
 
 export default function WhatWeServe() {
   return (
-    <div className="lg:flex bg-gray-100 lg:px-20 pt-32 pb-[256px] lg:gap-24 gap:12 px-4 space-y-12 lg:space-y-0">
+    <div className="lg:flex bg-gray-100 lg:px-20 lg:gap-24 gap:12 px-4 space-y-12 lg:space-y-0 min-h-screen items-center justify-center pt-[120px]">
       {/* First Column */}
       <div className="flex-col flex gap-5">
         <span className="text-teal-400 text-base font-extrabold  leading-normal">
@@ -58,6 +60,10 @@ export default function WhatWeServe() {
             </span>
           </div>
         </div>
+      </div>
+
+      <div className="rounded-xl overflow-hidden lg:hidden">
+        <Videos />
       </div>
     </div>
   );

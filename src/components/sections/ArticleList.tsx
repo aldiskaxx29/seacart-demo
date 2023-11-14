@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { articleList } from "../../../service/DummyData";
+import { formatDate } from "../../../service/utils";
 
 interface Article {
   id: number;
@@ -78,12 +79,12 @@ export default function ArticleList() {
                 height={100}
                 className="w-10 h-10"
               />
-              <div className="flex-col ">
+              <div className="grid">
                 <span className="text-sm font-extrabold font-['Sen'] leading-tight">
                   {item.writer.name}
                 </span>
                 <span className="text-sm font-normal font-['Sen'] leading-tight mt-2">
-                  {item.date}
+                  {formatDate(item.date)}
                 </span>
               </div>
             </div>

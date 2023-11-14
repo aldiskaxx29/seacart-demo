@@ -1,0 +1,20 @@
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+
+export default function Videos() {
+  return (
+    <div>
+      {" "}
+      <div className="rounded-xl overflow-hidden">
+        <ReactPlayer
+          url="/assets/stock-videos/Salmon footage show reel.mp4"
+          controls
+          width="900"
+          // playing
+          height="432"
+        />
+      </div>
+    </div>
+  );
+}
