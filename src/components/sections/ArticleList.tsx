@@ -2,6 +2,9 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { articleList } from "../../../service/DummyData";
 import { formatDate } from "../../../service/utils";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FadeIn, FadeInUp } from "../animations/AnimationTemplate";
 
 interface Article {
   id: number;
@@ -29,8 +32,34 @@ export default function ArticleList() {
     fetchData();
   }, []);
 
+    const [ref, inView] = useInView({ triggerOnce: true });
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+      if (inView) {
+        setIsVisible(true);
+      }
+    }, [inView]);
+
   return (
-    <div className="py-32 grid gap-4 items-start  lg:px-32 px-2">
+    <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.2,
+            },
+          },
+        }}>
+      
+
+      <div className="py-32 grid gap-4 items-start  lg:px-32 px-2">
+        <FadeInUp>
+
+        <div className="p-4">
       <span className="text-teal-400 text-base font-extrabold  leading-normal">
         Article & News
       </span>
@@ -39,21 +68,30 @@ export default function ArticleList() {
       </h2>
       <span className=" text-neutral-800 text-xl font-normal">
         Tool and strategies modern teams need to help their companies grow.
-      </span>
+      </span>          
+        </div>
+        </FadeInUp>
+
 
       {/* Article */}
       <div className="justify-start items-start gap-8 lg:inline-flex">
         {/* article Item */}
         {data.map((item, index) => (
+          
           <div
-            className="p-2 hover:bg-slate-200 flex-1 gap-4 grid mt-10"
+            className="p-4 rounded-md hover:bg-slate-200 flex-1 gap-4 grid mt-10 hover:shadow-lg duration-500"
             key={index}>
+            <FadeIn>
+              <div className=" overflow-hidden">
             <Image
               src={`/assets/article-list${item.image_url}`}
               alt={"article"}
               width={700}
-              height={100}
-            />
+                height={100}
+                className="rounded hover:scale-110 duration-700"
+              />
+              </div>
+
             <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight">
               {item.category}
             </span>
@@ -88,9 +126,11 @@ export default function ArticleList() {
                 </span>
               </div>
             </div>
+        </FadeIn>
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </motion.div>
   );
 }

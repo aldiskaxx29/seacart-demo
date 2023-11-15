@@ -44,15 +44,15 @@ const ImageGalleryItem: React.FC<ImageGalleryItemProps> = ({
         initialSlideId={initialSlideId}
       />
       <div onClick={handleClick}>
-        <div className=" overflow-hidden group">
+        <div className=" overflow-hidden group duration-1000">
           <Image
             src={`/assets/ImageGallery${src}`}
             alt={alt || ""}
-            className="hover:scale-110 absolute inset-0 w-full object-cover h-full  p-1 transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-lg  "
+            className="  absolute inset-0 w-full object-cover h-full  p-1 transform transition-transform  duration-1000  group-hover:blur-lg  "
             height={height}
             width={width}
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-800">
             <button
               className="bg-gray-800 text-white px-4 py-2 rounded-md"
               onClick={handleClick}>

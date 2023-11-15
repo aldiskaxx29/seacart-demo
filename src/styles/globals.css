@@ -82,7 +82,7 @@ blockquote {
 }
 
 .snap-container {
-          scroll-snap-type: y mandatory;
+          scroll-snap-type: both mandatory;
           overflow-y: scroll;
           height: 100vh; /* Sesuaikan dengan tinggi viewport yang diinginkan */
         }
