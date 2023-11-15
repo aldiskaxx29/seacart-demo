@@ -1,5 +1,9 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
+import { FadeIn, FadeInDown } from "../animations/AnimationTemplate";
 
 interface ProductDetailContentProps {
   product: {
@@ -21,10 +25,55 @@ interface ProductDetailContentProps {
 const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
   product,
 }) => {
+
+
+    const [ref, inView] = useInView({ triggerOnce: true });
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+      if (inView) {
+        setIsVisible(true);
+      }
+    }, [inView]);
+  
+  
   return (
     <>
+            <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.2,
+            },
+          },
+        }}>
+        
       <div className="flex w-full lg:relative items-center justify-center pt-[150px]">
         <div className=" flex px-4 lg:w-[1200px] absolute w-full items-center">
+          <button
+            className=" text-gray-400 text-sm font-normal font-['Sen'] leading-tight hover:bg-gray-100 rounded-md p-2 flex item center justify-center"
+            onClick={() => {
+              window.location.href = `/`;
+            }}>
+            <Image
+              src={"/assets/general/_Breadcrumb button base.svg"}
+              width={20}
+              height={20}
+              alt={"next"}
+            />
+          </button>
+          <div>
+            <Image
+              src={"/assets/general/chevron-right (1).svg"}
+              width={20}
+              height={20}
+              alt={"next"}
+            />
+          </div>
           <button
             className=" text-gray-400 text-sm font-normal font-['Sen'] leading-tight hover:bg-gray-100 rounded-md p-2"
             onClick={() => {
@@ -46,48 +95,65 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
 
       <div className={`flex w-full  items-start justify-center h-fit pt-5`}>
         <div className=" lg:w-[1200px] lg:flex w-full grid gap-8 px-4 pb-64">
-          <div className="lg:w-2/5 grid gap-5">
-            <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px] w-3/4">
+            <div className="lg:w-2/5 griditems-start justify-start">
+              <FadeIn>
+
+            <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px] lg:w-3/4 mb-4">
               Try out Our Fresh {product.productName}
             </h2>
-            <div className="relative overflow-hidden  w-full flex gap-5 items-end">
-              <div className="w-1/2 h-[300px] flex items-end max-w-[3000px]">
-                <Image
-                  src={`/assets/product-detail-collage${product.featureImageCollage[1].url}`}
-                  alt={product.productName}
-                  width={700}
-                  height={700}
-                  className=" object-cover h-[300px]"
-                />
+              </FadeIn>
+            <div className="grid gap-4 h-fit">
+              <div className="relative overflow-hidden  w-full flex gap-5 items-end">
+                <div className="w-1/2 h-[300px] flex items-end max-w-[3000px]">
+                    <FadeIn>
+                      
+                  <Image
+                    src={`/assets/product-detail-collage${product.featureImageCollage[1].url}`}
+                    alt={product.productName}
+                    width={700}
+                    height={700}
+                    className=" object-cover h-[300px]"
+                    />
+                    </FadeIn>
+                </div>
+                  <div className="relative overflow-hidden w-1/2  max-w-[3000px] ">
+                    <FadeIn>
+
+                  <Image
+                    src={`/assets/product-detail-collage${product.featureImageCollage[2].url}`}
+                    alt={product.productName}
+                    width={700}
+                    height={700}
+                    className=" object-cover aspect-square"
+                    />
+                    </FadeIn>
+                </div>
               </div>
-              <div className="relative overflow-hidden w-1/2  max-w-[3000px] ">
-                <Image
-                  src={`/assets/product-detail-collage${product.featureImageCollage[2].url}`}
-                  alt={product.productName}
-                  width={700}
-                  height={700}
-                  className=" object-cover aspect-square"
-                />
-              </div>
-            </div>
-            <div className="relative overflow-hidden  w-full flex gap-5 items-start">
-              <div className="w-1/3 max-w-[3000px]">
-                <Image
-                  src={`/assets/product-detail-collage${product.featureImageCollage[3].url}`}
-                  alt={product.productName}
-                  width={700}
-                  height={(4 / 3) * 700}
-                  className=" object-cover h-[250px]"
-                />
-              </div>
-              <div className="relative overflow-hidden w-2/3 max-w-[3000px]  ">
-                <Image
-                  src={`/assets/product-detail-collage${product.featureImageCollage[0].url}`}
-                  alt={product.productName}
-                  width={700}
-                  height={700}
-                  className=" object-cover aspect-square"
-                />
+              <div className="relative overflow-hidden  w-full flex gap-5 items-start">
+                <div className="w-1/3 max-w-[3000px]">
+                    <FadeIn>
+                      
+                    <Image
+                    src={`/assets/product-detail-collage${product.featureImageCollage[3].url}`}
+                    alt={product.productName}
+                    width={700}
+                    height={(4 / 3) * 700}
+                    className=" object-cover h-[250px]"
+                    />
+                    </FadeIn>
+                </div>
+                <div className="relative overflow-hidden w-2/3 max-w-[3000px]  ">
+                    <FadeIn>
+                      
+                    <Image
+                    src={`/assets/product-detail-collage${product.featureImageCollage[0].url}`}
+                    alt={product.productName}
+                    width={700}
+                    height={700}
+                    className=" object-cover aspect-square"
+                    />
+                    </FadeIn>
+                </div>
               </div>
             </div>
           </div>
@@ -97,15 +163,20 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                 ? ` lg:px-8`
                 : ` lg:px-0 lg:order-first  lg:pr-20`
             } `}>
-            <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px]">
+              <FadeIn>
+              <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px]">
               {product.productName}
             </h2>
             <p className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal">
               {product.description}
             </p>
+              </FadeIn>
             {product.images.map((item, index) => (
+              <div className=" w-full"
+                key={index}>
+                
+              <FadeInDown>
               <div
-                key={index}
                 className="flex w-full py-4 border-b border-gray-100">
                 <div className="lg:w-2/5 w-2/4 flex items-center justify-start gap-5 lg:text-base text-sm">
                   <Image
@@ -121,25 +192,28 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                   {Array.isArray(item.weight) ? (
                     item.weight.map((weight, index) => (
                       <li key={index}>{weight}</li>
-                    ))
-                  ) : (
-                    <li>{item.weight}</li>
-                  )}
+                      ))
+                      ) : (
+                        <li>{item.weight}</li>
+                        )}
                 </div>
                 <div className="lg:w-1/5  w-1/4  items-center lg:text-base text-sm">
                   {Array.isArray(item.package) ? (
                     item.package.map((packageItem, index) => (
                       <li key={index}>{packageItem}</li>
-                    ))
-                  ) : (
-                    <li>{item.package}</li>
-                  )}
+                      ))
+                      ) : (
+                        <li>{item.package}</li>
+                        )}
                 </div>
+              </div>
+            </FadeInDown>
               </div>
             ))}
           </div>
         </div>
       </div>
+        </motion.div>
     </>
   );
 };

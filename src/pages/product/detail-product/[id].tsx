@@ -45,7 +45,7 @@ export default function ProductDetail() {
   }, [id]);
 
   if (!product) {
-    return <p>Product not found</p>;
+    return <p>Loading Your Data ... </p>;
   }
 
   return (

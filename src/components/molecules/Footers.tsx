@@ -42,7 +42,7 @@ export default function Footers() {
               <div className=" h-10 justify-center items-center inline-flex">
                 <Image
                   className="w-10 h-10"
-                  src="/public/assets/article-list/Main Logo.png"
+                  src="/assets/article-list/Main Logo.png"
                   alt={""}
                   width={40}
                   height={40}

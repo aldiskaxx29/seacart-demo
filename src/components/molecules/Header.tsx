@@ -39,16 +39,16 @@ const Header = () => {
       <div>
   
           
-      <header className="header-comp px-20 py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[100px] z-50 border-b lg:border-b-0 border-primary shadow-sm">
+      <header className="header-comp lg:px-20 px-8 py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[100px] z-50 border-b lg:border-b-0 border-primary shadow-sm">
         <div className="flex gap-6 items-center lg:border-b w-full h-[100px] border-primary">
             <FadeIn>
               
             <Image
             src="/assets/article-list/Main Logo.png"
             alt="Logo"
-            className="h-8 mr-4 bg-red-300"
-            width={50}
-            height={50}
+            className="w-10 h-10 mr-4"
+            width={200}
+            height={200}
             />
             </FadeIn>
 
@@ -67,7 +67,8 @@ const Header = () => {
             <Link href="/contact" className={`hover:text-gray-300 rounded-lg px-4 py-2  ${isActiveLink("/contact")? "font-bold bg-white shadow-sm":""}`}>
               Contact Us
             </Link>
-                </FadeIn><FadeIn>
+              </FadeIn>
+              {/* <FadeIn>
 
             <Link href="/aboutus" className={`hover:text-gray-300 rounded-lg px-4 py-2  ${isActiveLink("/aboutus")? "font-bold bg-white shadow-sm":""}`}>
               About Us
@@ -77,7 +78,7 @@ const Header = () => {
             <Link href="/article" className={`hover:text-gray-300 rounded-lg px-4 py-2  ${isActiveLink("/article")? "font-bold bg-white shadow-sm":""}`}>
               Article
             </Link>
-                </FadeIn>
+                </FadeIn> */}
           </nav>
         </div>
 

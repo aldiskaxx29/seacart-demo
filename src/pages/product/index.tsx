@@ -23,7 +23,6 @@ export default function product() {
       <ProductList />
       <VideoPlaceholderProduct />
       <ProductCatalogue />
-      <Contact />
 
       <Footers />
     </>
