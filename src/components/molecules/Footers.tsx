@@ -1,8 +1,6 @@
 import React from "react";
-import Button from "../atomic/Button";
 import Link from "next/link";
 import Image from "next/image";
-import { Router } from "next/router";
 
 export default function Footers() {
   return (
