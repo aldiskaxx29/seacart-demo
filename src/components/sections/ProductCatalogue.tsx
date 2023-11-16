@@ -5,6 +5,7 @@ import ApiDescriptionComponent from "../molecules/ArticleHtmlCode";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FadeIn } from "../animations/AnimationTemplate";
+import { MotionDiv } from "../animations/MotionDiv";
 
 interface Props {
   id: number;
@@ -44,19 +45,9 @@ export default function ProductCatalogue() {
 
   return (
     <>
-          <motion.div
-ref={ref}
-initial="hidden"
-animate={isVisible ? "visible" : "hidden"}
-variants={{
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-      }}>
       {data.map((item, index) => (
         <div key={index} className="">
+          <MotionDiv>
           <div
             className={`flex w-full lg:relative items-center justify-center min-h-screen ${
               index % 2 === 0 ? `bg-white` : `bg-gray-100`
@@ -121,9 +112,9 @@ variants={{
               </div>
             </div>
           </div>
+        </MotionDiv>
         </div>
       ))}
-        </motion.div>
     </>
   );
 }

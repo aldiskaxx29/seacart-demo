@@ -1,34 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
 import { FadeInRight, MoveRotate } from "../animations/AnimationTemplate";
+import { MotionDiv } from "../animations/MotionDiv";
 
 export default function ProductHero() {
 
-    const [ref, inView] = useInView({ triggerOnce: true });
-
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-      if (inView) {
-        setIsVisible(true);
-      }
-    }, [inView]);
   
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: 0.2,
-          },
-        },
-      }}>
+    <MotionDiv>
       <div>
         <div className="flex min-h-screen bg-gray-50">
           <div className="flex-1 relative flex items-center justify-center lg:ps-32 ">
@@ -57,6 +36,6 @@ export default function ProductHero() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }

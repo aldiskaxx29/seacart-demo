@@ -21,7 +21,6 @@ export default function product() {
       <ProductHero />
 
       <ProductList />
-      <VideoPlaceholderProduct />
       <ProductCatalogue />
 
       <Footers />

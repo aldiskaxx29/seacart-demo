@@ -1,34 +1,14 @@
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
 import { FadeInDown, FadeInUp } from "../animations/AnimationTemplate";
+import { MotionDiv } from "../animations/MotionDiv";
 
 export default function ProductList() {
-    const [ref, inView] = useInView({ triggerOnce: true });
 
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-      if (inView) {
-        setIsVisible(true);
-      }
-    }, [inView]);
   
   return (
     <main className={`lg:flex items-star justify-center py-24  px-4  relative`}>
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
-        variants={{
-          visible: {
-            transition: {
-              staggerChildren: 0.2,
-            },
-          },
-        }}>
+      <MotionDiv>
         <div className="lg:flex grid">
           <div className="lg:flex-1 w-full lg:w-[500px] lg:px-10 grid justify-start items-start gap-4 h-fit mt-10 px-0  lg:order-first  order-last">
             <div>
@@ -84,7 +64,7 @@ export default function ProductList() {
             </FadeInDown>
           </div>
         </div>
-      </motion.div>
+      </MotionDiv>
     </main>
   );
 }

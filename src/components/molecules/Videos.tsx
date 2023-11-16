@@ -8,7 +8,7 @@ export default function Videos() {
       {" "}
       <div className="rounded-xl overflow-hidden  shadow-2xl">
         <ReactPlayer
-          url="/assets/stock-videos/Salmon footage show reel.mp4"
+          url="/assets/stock-videos/seacart.mp4"
           controls
           width="900"
           // playing

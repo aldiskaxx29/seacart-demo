@@ -2,10 +2,9 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { articleList } from "../../../service/DummyData";
 import { formatDate } from "../../../service/utils";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { FadeIn, FadeInUp } from "../animations/AnimationTemplate";
 import PopUpComingSoon from "./PopUpComingSoon";
+import { MotionDiv } from "../animations/MotionDiv";
 
 interface Article {
   id: number;
@@ -43,30 +42,10 @@ export default function ArticleList() {
       setIsOpen(true);
   }
   
-  
 
-    const [ref, inView] = useInView({ triggerOnce: true });
-
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-      if (inView) {
-        setIsVisible(true);
-      }
-    }, [inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: 0.2,
-          },
-        },
-      }}>
+    <MotionDiv>
       <PopUpComingSoon
         isOpen={isOpen}
         openModal={openModal}
@@ -147,6 +126,6 @@ export default function ArticleList() {
           ))}
         </div>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }

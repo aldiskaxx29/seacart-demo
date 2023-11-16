@@ -1,35 +1,12 @@
 import Videos from "../molecules/Videos";
 
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
 import { FadeInDown } from "../animations/AnimationTemplate";
+import { MotionDiv } from "../animations/MotionDiv";
 
 export default function VideoPlaceholder() {
 
-    const [ref, inView] = useInView({ triggerOnce: true });
-
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-      if (inView) {
-        setIsVisible(true);
-      }
-    }, [inView]);
-  
-  
   return (
-     <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
-        variants={{
-          visible: {
-            transition: {
-              staggerChildren: 0.2,
-            },
-          },
-        }}>
+     <MotionDiv>
       <FadeInDown>
 
     <div className=" flex-col justify-center items-center    w-full lg:min-h-screen lg:grid hidden ">
@@ -40,6 +17,6 @@ export default function VideoPlaceholder() {
       </div>
     </div>
       </FadeInDown>
-        </motion.div>
+        </MotionDiv>
   );
 }

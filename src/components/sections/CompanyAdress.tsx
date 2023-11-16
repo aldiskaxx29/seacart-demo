@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { FadeIn, FadeInDown, FadeInUp } from "../animations/AnimationTemplate";
+import { MotionDiv } from "../animations/MotionDiv";
 
 export default function CompanyAdress() {
     const [ref, inView] = useInView({ triggerOnce: true });
@@ -18,17 +19,7 @@ export default function CompanyAdress() {
   
   
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: 0.2,
-          },
-        },
-      }}>
+    <MotionDiv>
       <div className="lg:grid bg-gray-100 lg:px-20 pt-32 pb-16 lg:gap-24 gap:12 px-4 space-y-12 lg:space-y-0">
         <FadeIn>
           <div className="flex-col flex gap-5">
@@ -132,6 +123,6 @@ export default function CompanyAdress() {
           </FadeIn>
         </div>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }

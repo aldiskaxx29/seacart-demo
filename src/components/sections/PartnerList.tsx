@@ -5,9 +5,8 @@ import Image from "next/image";
 declare module "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
 import { FadeIn, FadeInDown, FadeInUp } from "../animations/AnimationTemplate";
+import { MotionDiv } from "../animations/MotionDiv";
 
 interface Props {
   id: number;
@@ -62,28 +61,10 @@ export default function PartnerList() {
     slidesToShow: 3, // Adjust the number of slides for mobile view
   };
 
-  const [ref, inView] = useInView({ triggerOnce: true });
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-    }
-  }, [inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: 0.2,
-          },
-        },
-      }}>
+    <MotionDiv>
       <div className="py-32 flex-col justify-center items-center gap-16 min-h-screen">
         <div className="flex-col justify-start items-center gap-5 inline-flex lg:px-[200px] px-4 w-full">
           <FadeInUp>
@@ -165,6 +146,6 @@ export default function PartnerList() {
           </div>
         </FadeInDown>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }
