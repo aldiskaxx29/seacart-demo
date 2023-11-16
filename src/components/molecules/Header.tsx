@@ -39,7 +39,7 @@ const Header = () => {
       <div>
   
           
-      <header className="header-comp lg:px-20 px-8 py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[100px] z-50 border-b lg:border-b-0 border-primary shadow-sm">
+      <header className="header-comp lg:px-20 ps-8 pe-2 py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[100px] z-50 border-b lg:border-b-0 border-primary shadow-sm">
         <div className="flex gap-6 items-center lg:border-b w-full h-[100px] border-primary">
             <FadeIn>
               

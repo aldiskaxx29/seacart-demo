@@ -19,29 +19,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/article-list/Main Logo.png" />
       </Head>
-      <main className='snap-container'>
+      <main className='lg:snap-container'>
         <Header />
-        <div className='snap-child'>
+        <div className='lg:snap-child'>
 
       <HeroBanner />
         </div>
-        <div className=' snap-child'>
+        <div className=' lg:snap-child'>
 
       <WhatWeServe />
         </div>
-        <div className=' snap-child'>
+        <div className=' lg:snap-child'>
 
       <VideoPlaceholder />
         </div>
-        <div className=' snap-child'>
+        <div className=' lg:snap-child'>
 
       <ShowCaseProduct />
         </div>
-        <div className=' snap-child'>
+        <div className=' lg:snap-child'>
       <PartnerList />
 
         </div>
-        <div className='snap-child'>
+        <div className='lg:snap-child'>
 
       <DocumentasiKegiatan />
         </div>
