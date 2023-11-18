@@ -9,7 +9,7 @@ export default function HeroBanner() {
   return (
     <MotionDiv>
       <div
-        className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4 relative`}>
+        className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4 relative pt-[100px]`}>
         <div className="text-center mb-10 space-y-4 ">
           <FadeInUp>
             <span>Seafood Supplier</span>
@@ -39,21 +39,13 @@ export default function HeroBanner() {
           <div className="w-full justify-between flex mt-3 gap-3">
             <FadeIn>
               <Image
-                src={"/assets/social-icons-navy/Social icon.svg"}
-                alt={""}
-                width={30}
-                height={30}
-                onClick={() => Router.push("/")}
-                className="w-[52px] h-[52px] px-4 py-3 bg-white rounded-[40px] gap-1 cursor-pointer hover:bg-gray-100"
-              />
-            </FadeIn>
-            <FadeIn>
-              <Image
                 src={"/assets/social-icons-navy/Social icon-1.svg"}
                 alt={""}
                 width={30}
                 height={30}
-                onClick={() => Router.push("/")}
+                onClick={() =>
+                  Router.push("https://www.instagram.com/seacart.id/")
+                }
                 className="w-[52px] h-[52px] px-4 py-3 bg-white rounded-[40px] gap-1 cursor-pointer hover:bg-gray-100"
               />
             </FadeIn>
@@ -63,18 +55,22 @@ export default function HeroBanner() {
                 alt={""}
                 width={30}
                 height={30}
-                onClick={() => Router.push("/")}
+                onClick={() =>
+                  Router.push("https://www.facebook.com/seacart.id?_rdc=1&_rdr")
+                }
                 className="w-[52px] h-[52px] px-4 py-3 bg-white rounded-[40px] gap-1 cursor-pointer hover:bg-gray-100"
               />
             </FadeIn>
             <FadeIn>
               <Image
-                src={"/assets/social-icons-navy/Social icon-3.svg"}
+                src={"/assets/social-icons-navy/linkedin.svg"}
                 alt={""}
-                width={30}
+                width={33}
                 height={30}
-                onClick={() => Router.push("/")}
-                className="w-[52px] h-[52px] px-4 py-3 bg-white rounded-[40px] gap-1 cursor-pointer hover:bg-gray-100"
+                onClick={() =>
+                  Router.push("https://www.linkedin.com/company/seacart/about/")
+                }
+                className="w-[56px] h-[52px] px-4 py-3 bg-white rounded-[40px] gap-1 cursor-pointer hover:bg-gray-100"
               />
             </FadeIn>
           </div>

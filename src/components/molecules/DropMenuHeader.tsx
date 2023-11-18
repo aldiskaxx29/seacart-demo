@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function DropMenu() {
   return (
     <div className="">
-      <Menu as="div" className="relative inline-block text-left">
+      <Menu as="div" className=" inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md  px-4 py-2 text-sm font-medium text-primary  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
             <Image
@@ -26,32 +26,57 @@ export default function DropMenu() {
           leave="transition ease-in duration-75"
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95">
-          <Menu.Items className="absolute right-5 snap-center mt-2 w-[300px] origin-center divide-y divide-gray-100 rounded-md bg-primary shadow-lg ring-1 ring-black/5 focus:outline-none">
-            <div className="lg:hidden   bg-white p-4 rounded shadow-lg w-full">
+          <Menu.Items className="fixed left-0 w-screen  divide-gray-100 rounded-md bg-primary shadow-lg ring-1 ring-black/5 focus:outline-none">
+            <div className="lg:hidden   bg-white p-4 rounded shadow-lg w-full grid gap-5">
               <Link
                 href="/"
-                className="block text-primary py-2 hover:text-gray-300 ">
-                Home
+                className="block text-primary mt-[24px]  mb-1 py-2 hover:text-gray-300 ps-3 ">
+                <p className="text-indigo-900 mb-2 text-base font-bold font-['Sen'] leading-normal">
+                  Home
+                </p>
+                <p className="text-slate-600 text-sm font-normal font-['Sen'] leading-tight">
+                  Start here.
+                </p>
               </Link>
               <Link
                 href="/product"
-                className="block text-primary py-2 hover:text-gray-300">
-                Product
+                className="block text-primary  mb-1 py-2 hover:text-gray-300 ps-3">
+                <p className="text-indigo-900  mb-2 text-base font-bold font-['Sen'] leading-normal">
+                  Product
+                </p>
+                <p className="text-slate-600 text-sm font-normal font-['Sen'] leading-tight">
+                  Explore our offerings.
+                </p>
+              </Link>
+              <Link
+                href="/contact"
+                className="block text-primary  mb-1 py-2 hover:text-gray-300 ps-3">
+                <p className="text-indigo-900  mb-2 text-base font-bold font-['Sen'] leading-normal">
+                  Contact
+                </p>
+                <p className="text-slate-600 text-sm font-normal font-['Sen'] leading-tight">
+                  Reach out anytime.
+                </p>
               </Link>
               <Link
                 href="#"
-                className="block text-primary py-2 hover:text-gray-300">
-                Contact Us
+                className=" text-primary py-2  mb-1 hover:text-gray-300 hidden ps-3">
+                <p className="text-indigo-900  mb-2 text-base font-bold font-['Sen'] leading-normal">
+                  About Us
+                </p>
+                <p className="text-slate-600 text-sm font-normal font-['Sen'] leading-tight">
+                  Meet the team.
+                </p>
               </Link>
               <Link
                 href="#"
-                className="block text-primary py-2 hover:text-gray-300">
-                About Us
-              </Link>
-              <Link
-                href="#"
-                className="block text-primary py-2 hover:text-gray-300">
-                Article
+                className=" text-primary py-2 hover:text-gray-300 hidden ps-3">
+                <p className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal">
+                  Article & News
+                </p>
+                <p className="text-slate-600 text-sm font-normal font-['Sen'] leading-tight">
+                  Stay updated with us.
+                </p>
               </Link>
               <div className="w-full items-center justify-center lg:border-b border-primary">
                 <button className="bg-primary text-white hover:bg-gray-700 py-2 px-8 font-regular rounded flex items-center justify-center gap-2 w-full">

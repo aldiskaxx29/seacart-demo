@@ -18,9 +18,11 @@ export default function Footers() {
           <div className="justify-center items-center gap-3 inline-flex w-full">
             <div className="w-50 px-3 py-3 hover:bg-white/10 rounded-lg justify-center items-center gap-2 flex">
               <div className=" h-5 relative" />
-              <button onClick={() => {
-                    window.location.href = `/product`;
-                  }} className="text-zinc-200 text-base font-normal leading-normal">
+              <button
+                onClick={() => {
+                  window.location.href = `/product`;
+                }}
+                className="text-zinc-200 text-base font-normal leading-normal">
                 View product
               </button>
             </div>
@@ -40,7 +42,7 @@ export default function Footers() {
               <div className=" h-10 justify-center items-center inline-flex">
                 <Image
                   className="w-10 h-10"
-                  src="/assets/article-list/Main Logo.png"
+                  src="/assets/general/Seacart__Logo Normal White.png"
                   alt={""}
                   width={40}
                   height={40}
@@ -76,7 +78,7 @@ export default function Footers() {
                 <div className="justify-start items-center gap-2 flex">
                   <Link
                     className="text-slate-100 mb-5 text-base font-normal leading-normal"
-                    href={""}>
+                    href={"/contact"}>
                     Contact us
                   </Link>
                 </div>
@@ -103,16 +105,7 @@ export default function Footers() {
 
         <div className="w-full pt-8 border-t border-slate-400 justify-between items-center gap-8 lg:flex lg:flex-row-reverse flex-col space-y-5">
           <div className="flex gap-5">
-            <Link href="/">
-              <Image
-                src={"/assets/social-icons-white/Social icon.svg"}
-                alt={"icon"}
-                width={24}
-                height={23}
-                className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1"
-              />
-            </Link>
-            <Link href="/">
+            <Link href="https://www.instagram.com/seacart.id/">
               <Image
                 src={"/assets/social-icons-white/Social icon-1.svg"}
                 alt={"icon"}
@@ -121,7 +114,7 @@ export default function Footers() {
                 className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1"
               />
             </Link>
-            <Link href="/">
+            <Link href="https://www.facebook.com/seacart.id?_rdc=1&_rdr">
               <Image
                 src={"/assets/social-icons-white/Social icon-2.svg"}
                 alt={"icon"}
@@ -130,11 +123,11 @@ export default function Footers() {
                 className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1"
               />
             </Link>
-            <Link href="/">
+            <Link href="https://www.linkedin.com/company/seacart/about/">
               <Image
-                src={"/assets/social-icons-white/Social icon-3.svg"}
+                src={"/assets/social-icons-white/linkedin-1.svg"}
                 alt={"icon"}
-                width={24}
+                width={27}
                 height={23}
                 className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1"
               />
