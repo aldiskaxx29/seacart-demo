@@ -124,20 +124,22 @@ export default function PartnerList() {
                 Trusted
               </span>
             </div>
-            <div>
-              <Slider {...(isMobile ? mobileSettings : settings)}>
+            <div className="py-2 bg-indigo-900 ">
+              <Slider {...(isMobile ? mobileSettings : settings)} className="flex items-center justify-center">
                 {data.map((item, index) => (
                   <div
                     key={index}
                     className={
-                      isMobile ? "px-4" : "flex justify-center items-center"
+                      isMobile
+                        ? "px-4 flex justify-center items-center"
+                        : "flex justify-center items-center"
                     }>
                     <Image
                       src={`/assets/partner-logo/${item.url}`}
                       alt={"icon"}
-                      width={isMobile ? 100 : 120}
+                      width={100}
                       height={100}
-                      className=""
+                      className=" lg:w-[100px] w-[100px] flex items-center justify-center"
                     />
                   </div>
                 ))}

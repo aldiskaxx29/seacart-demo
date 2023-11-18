@@ -5,7 +5,7 @@ import ImagePopUp from "../molecules/ImagePopUp";
 import { ImageGallery } from "../../../service/DummyData";
 
 interface ImageGalleryItemProps {
-  id: number; // Menambahkan ID
+  id: number; 
   src: string;
   alt?: string;
   height?: number;
@@ -46,8 +46,8 @@ const ImageGalleryItem: React.FC<ImageGalleryItemProps> = ({
       <div onClick={handleClick}>
         <div className=" overflow-hidden group duration-1000">
           <Image
-            src={`/assets/ImageGallery${src}`}
-            alt={alt || ""}
+            src={`${src}`}
+            alt={alt || "gallery-item"}
             className="  absolute inset-0 w-full object-cover h-full  p-1 transform transition-transform  duration-1000  group-hover:blur-lg  "
             height={height}
             width={width}

@@ -7,8 +7,8 @@ import Image from "next/image";
 interface ImagePopUpProps {
   isOpen: boolean;
   onClose: () => void;
-  images: Array<{ id: number; url: string }>; // Menambahkan ID ke images
-  initialSlideId?: number; // Menambahkan ID untuk slide awal
+  images: Array<{ id: number; filename: string }>;
+  initialSlideId?: number;
 }
 
 export default function ImagePopUp({
@@ -23,7 +23,7 @@ export default function ImagePopUp({
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: images.findIndex((img) => img.id === initialSlideId), // Atur indeks awal berdasarkan ID
+    initialSlide: images.findIndex((img) => img.id === initialSlideId), 
   };
 
   return (
@@ -58,7 +58,7 @@ export default function ImagePopUp({
                         key={index}
                         className=" w-full max-h-[500px] items-center justify-center object-center relative rounded-2xl overflow-hidden">
                         <Image
-                          src={`/assets/ImageGallery${item.url}`}
+                          src={`${item.filename}`}
                           alt={"icon"}
                           height={300}
                           width={100}

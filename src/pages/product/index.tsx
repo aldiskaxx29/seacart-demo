@@ -1,6 +1,7 @@
 import Footers from "@/components/molecules/Footers";
 import Header from "@/components/molecules/Header";
 import Contact from "@/components/sections/Contact";
+import DocumentasiMakanan from "@/components/sections/DocumentasiMakanan";
 import ProductCatalogue from "@/components/sections/ProductCatalogue";
 import ProductHero from "@/components/sections/ProductHero";
 import ProductList from "@/components/sections/ProductList";
@@ -21,6 +22,7 @@ export default function product() {
       <ProductHero />
 
       <ProductList />
+      <DocumentasiMakanan />
       <ProductCatalogue />
 
       <Footers />

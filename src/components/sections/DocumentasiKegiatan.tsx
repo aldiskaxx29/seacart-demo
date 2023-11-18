@@ -7,7 +7,7 @@ import { MotionDiv } from "../animations/MotionDiv";
 interface Props {
   id: number;
   title: string;
-  url: string;
+  filename: string;
 }
 [];
 
@@ -36,7 +36,7 @@ export default function DocumentasiKegiatan() {
               <FadeIn>
                 <ImageGalleryItem
                   id={ImageGallery[1].id}
-                  src={ImageGallery[1].url}
+                  src={ImageGallery[1].filename}
                 />
               </FadeIn>
             </div>
@@ -47,7 +47,7 @@ export default function DocumentasiKegiatan() {
               <FadeIn>
                 <ImageGalleryItem
                   id={ImageGallery[2].id}
-                  src={ImageGallery[2].url}
+                  src={ImageGallery[2].filename}
                 />
               </FadeIn>
             </div>
@@ -59,7 +59,7 @@ export default function DocumentasiKegiatan() {
                 <FadeIn>
                   <ImageGalleryItem
                     id={ImageGallery[3].id}
-                    src={ImageGallery[3].url}
+                    src={ImageGallery[3].filename}
                   />
                 </FadeIn>
               </div>
@@ -68,7 +68,7 @@ export default function DocumentasiKegiatan() {
                 <FadeIn>
                   <ImageGalleryItem
                     id={ImageGallery[4].id}
-                    src={ImageGallery[4].url}
+                    src={ImageGallery[4].filename}
                   />
                 </FadeIn>
               </div>
@@ -83,7 +83,7 @@ export default function DocumentasiKegiatan() {
                 <FadeIn>
                   <ImageGalleryItem
                     id={ImageGallery[5].id}
-                    src={ImageGallery[5].url}
+                    src={ImageGallery[5].filename}
                   />
                 </FadeIn>
               </div>
@@ -91,7 +91,7 @@ export default function DocumentasiKegiatan() {
                 <FadeIn>
                   <ImageGalleryItem
                     id={ImageGallery[6].id}
-                    src={ImageGallery[6].url}
+                    src={ImageGallery[6].filename}
                   />
                 </FadeIn>
               </div>
@@ -102,7 +102,7 @@ export default function DocumentasiKegiatan() {
               <FadeIn>
                 <ImageGalleryItem
                   id={ImageGallery[7].id}
-                  src={ImageGallery[7].url}
+                  src={ImageGallery[7].filename}
                 />
               </FadeIn>
             </div>
@@ -112,7 +112,7 @@ export default function DocumentasiKegiatan() {
                 <FadeIn>
                   <ImageGalleryItem
                     id={ImageGallery[8].id}
-                    src={ImageGallery[8].url}
+                    src={ImageGallery[8].filename}
                   />
                 </FadeIn>
               </div>
@@ -120,7 +120,7 @@ export default function DocumentasiKegiatan() {
                 <FadeIn>
                   <ImageGalleryItem
                     id={ImageGallery[9].id}
-                    src={ImageGallery[9].url}
+                    src={ImageGallery[9].filename}
                   />
                 </FadeIn>
               </div>
@@ -131,7 +131,7 @@ export default function DocumentasiKegiatan() {
               <FadeIn>
                 <ImageGalleryItem
                   id={ImageGallery[10].id}
-                  src={ImageGallery[10].url}
+                  src={ImageGallery[10].filename}
                 />
               </FadeIn>
             </div>
@@ -144,7 +144,7 @@ export default function DocumentasiKegiatan() {
               <FadeIn>
                 <ImageGalleryItem
                   id={ImageGallery[11].id}
-                  src={ImageGallery[11].url}
+                  src={ImageGallery[11].filename}
                 />
               </FadeIn>
             </div>
@@ -155,7 +155,7 @@ export default function DocumentasiKegiatan() {
                 <FadeIn>
                   <ImageGalleryItem
                     id={ImageGallery[12].id}
-                    src={ImageGallery[12].url}
+                    src={ImageGallery[12].filename}
                   />
                 </FadeIn>
               </div>
@@ -163,7 +163,7 @@ export default function DocumentasiKegiatan() {
                 <FadeIn>
                   <ImageGalleryItem
                     id={ImageGallery[13].id}
-                    src={ImageGallery[13].url}
+                    src={ImageGallery[13].filename}
                   />
                 </FadeIn>
               </div>
@@ -174,7 +174,7 @@ export default function DocumentasiKegiatan() {
               <FadeIn>
                 <ImageGalleryItem
                   id={ImageGallery[14].id}
-                  src={ImageGallery[14].url}
+                  src={ImageGallery[14].filename}
                 />
               </FadeIn>
             </div>

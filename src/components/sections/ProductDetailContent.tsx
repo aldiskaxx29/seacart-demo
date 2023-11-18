@@ -1,21 +1,24 @@
 import Image from "next/image";
-import React from "react";
 import { FadeIn, FadeInDown } from "../animations/AnimationTemplate";
 import { MotionDiv } from "../animations/MotionDiv";
+import { ProductProps } from "../../../service/type";
+import { ProductSlider } from "../../../service/DummyData";
+import { getProductHome } from "../../../service/API";
+import React, { useEffect,  useState } from "react";
 
 interface ProductDetailContentProps {
   product: {
     id: number;
-    productName: string;
+    name: string;
+    short_description: string;
     description: string;
-    featureImageCollage: { id: number; url: string }[];
-    featuredImageURL: string;
-    images: {
-      id: number;
-      url: string;
-      imageTitle: string;
-      weight: any;
-      package: any;
+    images_url: string[];
+    sub_products: {
+      name: string;
+      image_url: string;
+      weight: string;
+      type: string;
+      wrap: string;
     }[];
   };
 }
@@ -23,10 +26,24 @@ interface ProductDetailContentProps {
 const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
   product,
 }) => {
+  const [data, setData] = useState<ProductProps[]>([]);
+  const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getProductHome();
+        setData(res);
+        setDataDummy(ProductSlider);
+        console.log(res);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-  
-  
+    fetchData();
+  }, []);
+
   return (
     <>
       <MotionDiv>
@@ -67,7 +84,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                 alt={"next"}
               />
             </div>
-            <div className="p-2">{product.productName}</div>
+            <div className="p-2">{product.name}</div>
           </div>
         </div>
 
@@ -76,7 +93,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
             <div className="lg:w-2/5 griditems-start justify-start">
               <FadeIn>
                 <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px] lg:w-3/4 mb-4">
-                  Try out Our Fresh {product.productName}
+                  Try out Our Fresh {product.name}
                 </h2>
               </FadeIn>
               <div className="grid gap-4 h-fit">
@@ -84,8 +101,8 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                   <div className="w-1/2 h-[300px] flex items-end max-w-[3000px]">
                     <FadeIn>
                       <Image
-                        src={`/assets/product-detail-collage${product.featureImageCollage[1].url}`}
-                        alt={product.productName}
+                        src={`${product.images_url[1]}`}
+                        alt={product.name}
                         width={700}
                         height={700}
                         className=" object-cover h-[300px]"
@@ -95,8 +112,8 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                   <div className="relative overflow-hidden w-1/2  max-w-[3000px] ">
                     <FadeIn>
                       <Image
-                        src={`/assets/product-detail-collage${product.featureImageCollage[2].url}`}
-                        alt={product.productName}
+                        src={`${product.images_url[2]}`}
+                        alt={product.name}
                         width={700}
                         height={700}
                         className=" object-cover aspect-square"
@@ -108,8 +125,8 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                   <div className="w-1/3 max-w-[3000px]">
                     <FadeIn>
                       <Image
-                        src={`/assets/product-detail-collage${product.featureImageCollage[3].url}`}
-                        alt={product.productName}
+                        src={`${product.images_url[3]}`}
+                        alt={product.name}
                         width={700}
                         height={(4 / 3) * 700}
                         className=" object-cover h-[250px]"
@@ -119,8 +136,8 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                   <div className="relative overflow-hidden w-2/3 max-w-[3000px]  ">
                     <FadeIn>
                       <Image
-                        src={`/assets/product-detail-collage${product.featureImageCollage[0].url}`}
-                        alt={product.productName}
+                        src={`${product.images_url[0]}`}
+                        alt={product.name}
                         width={700}
                         height={700}
                         className=" object-cover aspect-square"
@@ -138,48 +155,57 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
               } `}>
               <FadeIn>
                 <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px]">
-                  {product.productName}
+                  {product.name}
                 </h2>
                 <p className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal">
-                  {product.description}
+                  {product.short_description}
                 </p>
               </FadeIn>
-              {product.images.map((item, index) => (
-                <div className=" w-full" key={index}>
-                  <FadeInDown>
-                    <div className="flex w-full py-4 border-b border-gray-100">
-                      <div className="lg:w-2/5 w-2/4 flex items-center justify-start gap-5 lg:text-base text-indigo-900 text-xl font-bold font-['Sen'] leading-[30px]">
-                        <Image
-                          src={`/assets/product-preview${item.url}`}
-                          alt={"icon"}
-                          width={100}
-                          height={100}
-                          className="rounded-full lg:w-[72px] w-[64px]"
-                        />{" "}
-                        {item.imageTitle}
+              <div className="grid gap-2">
+                {product.sub_products.map((item, index) => (
+                  <div className=" w-full" key={index}>
+                    <FadeInDown>
+                      <div className="flex w-full lg:py-1 border-b border-gray-200">
+                        <div className="lg:w-2/5 w-[120px] lg:flex grid items-center  justify-center lg:justify-start lg:gap-5 gap-1 lg:text-base bg-indigo-900 text-white text-base font-bold font-['Sen'] lg:leading-[30px] lg:h-[100px] h-[120px] me-5 lg:ms-5 rounded">
+                          <Image
+                            src={`${item.image_url}`}
+                            alt={"icon"}
+                            width={100}
+                            height={100}
+                            className="rounded-full lg:w-[80px] w-[64px] lg:ms-[-25px]"
+                          />{" "}
+                          {item.name}
+                        </div>
+                        <div className="lg:w-2/5  w-1/3  grid gap-0 lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-start justify-start">
+                          {Array.isArray(item.weight) ? (
+                            item.weight.map((weight, index) => (
+                              <li key={index} className="mt-[-10px] p-0">
+                                {weight}
+                              </li>
+                            ))
+                          ) : (
+                            <div>
+                              <li>{item.weight}</li>
+                              {item.type ? <li> {item.type}</li> : null}
+                            </div>
+                          )}
+                        </div>
+                        <div className="lg:w-2/5  w-1/3  items-center lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px]">
+                          <div>
+                            {item.wrap.split(", ").map((wrapItem, index) => (
+                              <li key={index}>
+                                {wrapItem}
+                                {index < item.wrap.split(", ").length - 1 &&
+                                  ", "}
+                              </li>
+                            ))}
+                          </div>
+                        </div>
                       </div>
-                      <div className="lg:w-2/5  w-1/4  grid gap-0 lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-start justify-start">
-                        {Array.isArray(item.weight) ? (
-                          item.weight.map((weight, index) => (
-                            <li key={index} className="mt-[-10px] p-0">{weight}</li>
-                          ))
-                        ) : (
-                          <li>{item.weight}</li>
-                        )}
-                      </div>
-                      <div className="lg:w-2/5  w-1/4  items-center lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px]">
-                        {Array.isArray(item.package) ? (
-                          item.package.map((packageItem, index) => (
-                            <li key={index}>{packageItem}</li>
-                          ))
-                        ) : (
-                          <li>{item.package}</li>
-                        )}
-                      </div>
-                    </div>
-                  </FadeInDown>
-                </div>
-              ))}
+                    </FadeInDown>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
