@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import {  ProductSlider } from "../../../../service/DummyData";
 import Head from "next/head";
 import { ProductProps } from "../../../../service/type";
+import { getProductDetail } from "../../../../service/API";
 
 
 
@@ -15,7 +16,7 @@ export default function ProductDetail() {
   const [product, setProduct] = useState<ProductProps | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchDataDummy = async () => {
       if (id) {
         setTimeout(() => {
           const productData = ProductSlider.find(
@@ -27,13 +28,30 @@ export default function ProductDetail() {
     };
 
     if (id) {
-      fetchData();
+      fetchDataDummy();
     }
   }, [id]);
 
   if (!product) {
     return <p>Loading Your Data ... </p>;
   }
+
+//   const [data, setData] = useState<ProductProps>();
+// const [dataDummy, setDataDummy] = useState<ProductProps>();
+
+//   useEffect(() => {
+//     const fetchData = async (id: any) => {
+//       try {
+//         const res = await getProductDetail(id);
+//         setData(res);
+//         console.log(res);
+//       } catch (error) {
+//         console.error("Error fetching data:", error);
+//       }
+//     };
+
+//     fetchData(id);
+//   }, []);
 
   return (
     <>
