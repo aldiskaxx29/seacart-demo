@@ -66,7 +66,7 @@ const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
                     <div className=" w-full">
                       <FadeInRight>
                         <Image
-                          src={`${item?.images_url[1]}`}
+                          src={`${item?.featured_image}`}
                           alt={item.name}
                           width={500}
                           height={500}
@@ -122,7 +122,7 @@ const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
                                 alt={"icon"}
                                 width={100}
                                 height={100}
-                                className="rounded-full lg:w-[100px] w-[64px]"
+                                className="rounded-full lg:w-[100px] w-[64px] aspect-square object-cover"
                               />
                               <span className="text-center w-[64px] lg:w-[100px] text-slate-300 lg:text-lg text-sm  lg:font-normal ">
                                 {item.name}

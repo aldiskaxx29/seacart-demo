@@ -41,11 +41,11 @@ export default function Footers() {
             <div className=" flex-col justify-start items-start gap-8 flex">
               <div className=" h-10 justify-center items-center inline-flex">
                 <Image
-                  className="w-10 h-10"
-                  src="/assets/general/Seacart__Logo Normal White.png"
+                  className="w-full h-full"
+                  src="/assets/general/Seacart__Logo Long_White.png"
                   alt={""}
-                  width={40}
-                  height={40}
+                  width={300}
+                  height={300}
                 />
               </div>
               <div className="w-full flex-col justify-start items-start gap-1 flex">
@@ -84,20 +84,20 @@ export default function Footers() {
                 </div>
               </div>
               <div className=" lg:space-y-0 gap-5 lg:flex mobile:inline-flex justify-start items-start">
-                <div className="justify-start items-start gap-2 flex">
+                {/* <div className="justify-start items-start gap-2 flex">
                   <Link
                     className="text-slate-100 mb-5 text-base font-normal leading-normal"
-                    href={""}>
+                    href={"/"}>
                     About us
                   </Link>
-                </div>
-                <div className="justify-start items-center gap-2 flex">
+                </div> */}
+                {/* <div className="justify-start items-center gap-2 flex">
                   <Link
                     className="text-slate-100 mb-5 text-base font-normal leading-normal"
-                    href={""}>
+                    href={"/"}>
                     Article & News
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

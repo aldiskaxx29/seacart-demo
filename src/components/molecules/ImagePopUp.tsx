@@ -1,6 +1,6 @@
 // ImagePopUp.tsx
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 
@@ -26,6 +26,10 @@ export default function ImagePopUp({
     initialSlide: images.findIndex((img) => img.id === initialSlideId), 
   };
 
+
+  let [isOpenDialogue, setIsOpenDialogue] = useState(true);
+  
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -38,11 +42,11 @@ export default function ImagePopUp({
             leave="ease-in duration-200"
             leaveFrom="opacity-100"
             leaveTo="opacity-0">
-            <div className="fixed inset-0 bg-black/25" />
+            <div className="fixed inset-0 bg-[#2F306A]/40 blur-background" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <div className="fixed top-20 inset-0 flex items-center justify-center object-center">
+            <div className="flex min-h-full items-center justify-center text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -51,19 +55,27 @@ export default function ImagePopUp({
                 leave="ease-in duration-200"
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95">
-                <Dialog.Panel className="w-full transform  max-w-lg   text-left align-middle transition-all ">
-                  <Slider {...settings}>
+                <Dialog.Panel className=" transform  transition-all flex items-center justify-center object-center">
+                  <button onClick={onClose} className="fixed top-[180px] right-[-50px] z-50">
+                    <Image
+                      src={`/assets/general/Button close X.svg`}
+                      alt={"icon"}
+                      height={800}
+                      width={800}
+                      className="object-cover shadow-xl w-full h-full "
+                    />
+                  </button>
+                  <Slider {...settings} className="w-[900px]">
                     {images.map((item, index) => (
                       <div
                         key={index}
-                        className=" w-full max-h-[500px] items-center justify-center object-center relative rounded-2xl overflow-hidden">
+                        className="w-[900px] max-h-[900px] items-center justify-center object-center relative rounded-2xl overflow-hidden">
                         <Image
                           src={`${item.filename}`}
                           alt={"icon"}
-                          height={300}
-                          width={100}
-                          className=" object-cover shadow-xl    "
-                          layout="responsive"
+                          height={800}
+                          width={800}
+                          className="object-cover shadow-xl w-full h-full"
                         />
                       </div>
                     ))}

@@ -47,7 +47,7 @@ const PopUpComingSoon: React.FC<PopUpComingSoonProps> = ({
                     alt="Image"
                     width={500}
                     height={500}
-                    className="w-full"
+                    className="w-full mb-5 rounded-xl"
                   />
                   <Dialog.Title
                     as="h3"
@@ -61,7 +61,7 @@ const PopUpComingSoon: React.FC<PopUpComingSoonProps> = ({
                     </p>
                   </div>
 
-                  <div className="mt-4 flex w-full gap-3">
+                  <div className="mt-4 lg:flex w-full gap-3 grid ">
                     <button
                       type="button"
                       className="inline-flex flex-1 justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"

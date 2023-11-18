@@ -124,7 +124,7 @@ export default function PartnerList() {
                 Trusted
               </span>
             </div>
-            <div className="py-2 bg-indigo-900 ">
+            <div className="py-2">
               <Slider {...(isMobile ? mobileSettings : settings)} className="flex items-center justify-center">
                 {data.map((item, index) => (
                   <div

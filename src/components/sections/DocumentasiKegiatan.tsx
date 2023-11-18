@@ -3,22 +3,28 @@ import ImageGalleryItem from "../atomic/ImageGalleryItem";
 import { ImageGallery } from "../../../service/DummyData";
 import { FadeIn } from "../animations/AnimationTemplate";
 import { MotionDiv } from "../animations/MotionDiv";
+import { getGalleryHome } from "../../../service/API";
 
 interface Props {
-  id: number;
-  title: string;
+  id: any;
   filename: string;
 }
 [];
 
 export default function DocumentasiKegiatan() {
   const [data, setData] = useState<Props[]>([]);
+  const [dataDummy, setDataDummy] = useState<Props[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      setTimeout(() => {
-        setData(ImageGallery);
-      }, 1000);
+      try {
+        const res = await getGalleryHome();
+        setData(res);
+        setDataDummy(ImageGallery)
+        console.log(res);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
     fetchData();
@@ -28,38 +34,31 @@ export default function DocumentasiKegiatan() {
     <>
       <MotionDiv>
         <div className="flex min-h-screen pt-[100px]">
-          {/* Col 1 */}
           <div className="sm:flex-1 lg:block w-full pt-1">
-            {/* Col 1 Row 1 */}
-
             <div className="relative overflow-hidden h-1/2 aspect-square w-full">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[1].id}
-                  src={ImageGallery[1].filename}
+                  id={dataDummy[1]?.id}
+                  src={dataDummy[1]?.filename}
                 />
               </FadeIn>
             </div>
-
-            {/* Col 1 Row 2 */}
 
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[2].id}
-                  src={ImageGallery[2].filename}
+                  id={dataDummy[2]?.id}
+                  src={dataDummy[2]?.filename}
                 />
               </FadeIn>
             </div>
-
-            {/* Col 1 Row 3 */}
 
             <div className="relative overflow-hidden h-1/4 flex ">
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[3].id}
-                    src={ImageGallery[3].filename}
+                    id={dataDummy[3]?.id}
+                    src={dataDummy[3]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -67,114 +66,105 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[4].id}
-                    src={ImageGallery[4].filename}
+                    id={dataDummy[4]?.id}
+                    src={dataDummy[4]?.filename}
                   />
                 </FadeIn>
               </div>
             </div>
           </div>
 
-          {/* Col 2 */}
           <div className="sm:flex-1  lg:block hidden pt-1">
-            {/* Col 2 Row 3 */}
             <div className="relative overflow-hidden h-1/4 flex">
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[5].id}
-                    src={ImageGallery[5].filename}
+                    id={dataDummy[5]?.id}
+                    src={dataDummy[5]?.filename}
                   />
                 </FadeIn>
               </div>
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[6].id}
-                    src={ImageGallery[6].filename}
+                    id={dataDummy[6]?.id}
+                    src={dataDummy[6]?.filename}
                   />
                 </FadeIn>
               </div>
             </div>
 
-            {/* Col 2 Row 2 */}
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[7].id}
-                  src={ImageGallery[7].filename}
+                  id={dataDummy[7]?.id}
+                  src={dataDummy[7]?.filename}
                 />
               </FadeIn>
             </div>
-            {/* Col 2 Row 3 */}
             <div className="relative overflow-hidden h-1/4 flex">
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[8].id}
-                    src={ImageGallery[8].filename}
+                    id={dataDummy[8]?.id}
+                    src={dataDummy[8]?.filename}
                   />
                 </FadeIn>
               </div>
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[9].id}
-                    src={ImageGallery[9].filename}
+                    id={dataDummy[9]?.id}
+                    src={dataDummy[9]?.filename}
                   />
                 </FadeIn>
               </div>
             </div>
 
-            {/* Col 2 Row 2 */}
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[10].id}
-                  src={ImageGallery[10].filename}
+                  id={dataDummy[10]?.id}
+                  src={dataDummy[10]?.filename}
                 />
               </FadeIn>
             </div>
           </div>
 
-          {/* Col 3 */}
           <div className="sm:flex-1  lg:block hidden pt-1">
-            {/* Col 3 Row 2 */}
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[11].id}
-                  src={ImageGallery[11].filename}
+                  id={dataDummy[11]?.id}
+                  src={dataDummy[11]?.filename}
                 />
               </FadeIn>
             </div>
 
-            {/* Col 3 Row 3 */}
             <div className="relative overflow-hidden h-1/4 flex">
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[12].id}
-                    src={ImageGallery[12].filename}
+                    id={dataDummy[12]?.id}
+                    src={dataDummy[12]?.filename}
                   />
                 </FadeIn>
               </div>
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[13].id}
-                    src={ImageGallery[13].filename}
+                    id={dataDummy[13]?.id}
+                    src={dataDummy[13]?.filename}
                   />
                 </FadeIn>
               </div>
             </div>
 
-            {/* Col 3 Row 1 */}
             <div className="relative overflow-hidden h-1/2 aspect-square w-full ">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[14].id}
-                  src={ImageGallery[14].filename}
+                  id={dataDummy[14]?.id}
+                  src={dataDummy[14]?.filename}
                 />
               </FadeIn>
             </div>

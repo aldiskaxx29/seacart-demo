@@ -1,12 +1,15 @@
 // API.ts
 
 import axios from "axios";
-import { ProductProps } from "./type";
+import { GalleryProps, ProductProps } from "./type";
 
 
 export const getProductHome = async (limit?: number): Promise<ProductProps[]> => {
-  const res = await axios.get(
-    "https://run.mocky.io/v3/0ba08f22-abdb-4a40-a1eb-663e6d4c34f3"
-  );
+  const res = await axios.get("http://api.seacart.id/api/products");
   return res.data.data.products as ProductProps[];
+};
+
+export const getGalleryHome = async (limit?: number): Promise<GalleryProps[]> => {
+  const res = await axios.get("http://api.seacart.id/api/galleries");
+  return res.data.data.galleries as GalleryProps[];
 };

@@ -6,13 +6,13 @@ export default function Videos() {
   return (
     <div>
       {" "}
-      <div className="rounded-xl overflow-hidden  shadow-2xl">
+      <div className="rounded-xl overflow-hidden  shadow-2xl w-[1000px]">
         <ReactPlayer
           url="/assets/stock-videos/seacart.mp4"
           controls
-          width="900"
+          width="700"
           // playing
-          height="432"
+          height="232"
         />
       </div>
     </div>

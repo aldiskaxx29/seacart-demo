@@ -5,7 +5,7 @@ import ImagePopUp from "../molecules/ImagePopUp";
 import { ImageGallery } from "../../../service/DummyData";
 
 interface ImageGalleryItemProps {
-  id: number; 
+  id: any; 
   src: string;
   alt?: string;
   height?: number;
@@ -34,6 +34,12 @@ const ImageGalleryItem: React.FC<ImageGalleryItemProps> = ({
   const closePopUp = () => {
     setIsPopUpOpen(false);
   };
+
+
+    if (!src) {
+      // If src is undefined, you can render a placeholder or handle it accordingly
+      return null;
+    }
 
   return (
     <>

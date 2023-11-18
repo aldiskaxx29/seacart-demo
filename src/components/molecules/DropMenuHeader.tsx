@@ -9,12 +9,12 @@ export default function DropMenu() {
     <div className="">
       <Menu as="div" className=" inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md  px-5 py-2 text-sm font-medium text-primary  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+          <Menu.Button className="inline-flex w-full justify-center rounded-md py-2 text-sm font-medium text-primary  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
             <Image
               src={"/assets/general/_Nav menu button.svg"}
               alt={""}
-              width={50}
-              height={50}
+              width={72}
+              height={72}
             />
           </Menu.Button>
         </div>

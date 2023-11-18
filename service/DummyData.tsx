@@ -12,6 +12,7 @@ export const ProductSlider = [
       "/assets/product-detail-collage/salmon_3.png",
       "/assets/product-detail-collage/salmon_4.png",
     ],
+    featured_image: "/assets/product-feature/Salmon.png",
     sub_products: [
       {
         id: 1,
@@ -76,6 +77,7 @@ export const ProductSlider = [
       "/assets/product-detail-collage/shrimp_4.png",
       "/assets/product-detail-collage/shrimp_1.png",
     ],
+    featured_image: "/assets/product-feature/Shrimp.png",
     sub_products: [
       {
         id: 1,
@@ -116,6 +118,7 @@ export const ProductSlider = [
       "/assets/product-detail-collage/tuna_3.png",
       "/assets/product-detail-collage/tuna_4.png",
     ],
+    featured_image: "/assets/product-feature/Tuna.png",
     sub_products: [
       {
         id: 1,
@@ -162,6 +165,7 @@ export const ProductSlider = [
       "/assets/product-detail-collage/squid_2.png",
       "/assets/product-detail-collage/squid_3.png",
     ],
+    featured_image: "/assets/product-feature/Squid.png",
     description:
       "Squid, with its mysterious appearance and tender flesh, has carved a unique niche in the world of seafood, captivating adventurous palates and inspiring culinary creativity. Dive into the depths of the oceanic world as we explore the allure of squid and its journey from the sea to the plate. <br/> <br/> <blockquote>Beyond its gastronomic appeal, squid boasts a range of nutritional benefits. It is a low-fat source of protein, making it an excellent choice for those seeking a lean and healthy protein option. Squid also provides essential vitamins and minerals, including B vitamins, copper, selenium, and zinc, contributing to overall well-being.</blockquote> ",
     sub_products: [
@@ -204,6 +208,7 @@ export const ProductSlider = [
       "/assets/product-detail-collage/mackarel_3.png",
       "/assets/product-detail-collage/mackarel_4.png",
     ],
+    featured_image: "/assets/product-feature/Mackarel.png",
     sub_products: [
       {
         id: 1,
@@ -244,6 +249,7 @@ export const ProductSlider = [
       "/assets/product-detail-collage/others_2.png",
       "/assets/product-detail-collage/others_4.png",
     ],
+    featured_image: "/assets/product-feature/Image.png",
     sub_products: [
       {
         id: 1,
@@ -286,97 +292,87 @@ export const ImageGallery = [
   {
     id: 1,
     title: "",
-    filename: "/assets/ImageGallery/1-.png",
+    filename: "/assets/ImageGallery/gallery1.png",
   },
   {
     id: 2,
     title: "",
-    filename: "/assets/ImageGallery/2-.png",
+    filename: "/assets/ImageGallery/gallery2.png",
   },
   {
     id: 3,
     title: "",
-    filename: "/assets/ImageGallery/3-.png",
+    filename: "/assets/ImageGallery/gallery3.png",
   },
   {
     id: 4,
     title: "",
-    filename: "/assets/ImageGallery/4-.png",
+    filename: "/assets/ImageGallery/gallery4.png",
   },
   {
     id: 5,
     title: "",
-    filename: "/assets/ImageGallery/5-.png",
+    filename: "/assets/ImageGallery/gallery5.png",
   },
   {
     id: 6,
     title: "",
-    filename: "/assets/ImageGallery/6-.png",
+    filename: "/assets/ImageGallery/gallery6.png",
   },
   {
     id: 7,
     title: "",
-    filename: "/assets/ImageGallery/7-.png",
+    filename: "/assets/ImageGallery/gallery7.png",
   },
   {
     id: 8,
     title: "",
-    filename: "/assets/ImageGallery/8-.png",
+    filename: "/assets/ImageGallery/gallery8.png",
   },
   {
     id: 9,
     title: "",
-    filename: "/assets/ImageGallery/9-.png",
+    filename: "/assets/ImageGallery/gallery9.png",
   },
   {
     id: 10,
     title: "",
-    filename: "/assets/ImageGallery/10-.png",
+    filename: "/assets/ImageGallery/gallery10.png",
   },
   {
     id: 11,
     title: "",
-    filename: "/assets/ImageGallery/11-.png",
+    filename: "/assets/ImageGallery/gallery11.png",
   },
   {
     id: 12,
     title: "",
-    filename: "/assets/ImageGallery/12-.png",
+    filename: "/assets/ImageGallery/gallery12.png",
   },
   {
     id: 13,
     title: "",
-    filename: "/assets/ImageGallery/13-.png",
+    filename: "/assets/ImageGallery/gallery13.png",
   },
   {
     id: 14,
     title: "",
-    filename: "/assets/ImageGallery/14-.png",
+    filename: "/assets/ImageGallery/gallery14.png",
   },
   {
     id: 15,
     title: "",
-    filename: "/assets/ImageGallery/15-.png",
+    filename: "/assets/ImageGallery/gallery15.png",
   },
   {
     id: 16,
     title: "",
-    filename: "/assets/ImageGallery/19-.png",
+    filename: "/assets/ImageGallery/gallery19.png",
   },
   {
     id: 17,
     title: "",
-    filename: "/assets/ImageGallery/17-.png",
-  },
-  {
-    id: 18,
-    title: "",
-    filename: "/assets/ImageGallery/18-.png",
-  },
-  {
-    id: 19,
-    title: "",
-    filename: "/assets/ImageGallery/11-.png",
+    filename: "/assets/ImageGallery/gallery17.png",
   },
 ];
 
@@ -433,57 +429,57 @@ export const ClientList = [
   {
     id: 2,
     client: "",
-    url: "Logo-1-_.png",
+    url: "partner1.png",
   },
   {
     id: 3,
     client: "",
-    url: "Logo-2-_.png",
+    url: "partner2.png",
   },
   {
     id: 4,
     client: "",
-    url: "Logo-3-_.png",
+    url: "partner3.png",
   },
   {
     id: 5,
     client: "",
-    url: "Logo-4-_.png",
+    url: "partner4.png",
   },
   {
     id: 6,
     client: "",
-    url: "Logo-5-_.png",
+    url: "partner5.png",
   },
   {
     id: 7,
     client: "",
-    url: "Logo-7-_.png",
+    url: "partner7.png",
   },
   {
     id: 8,
     client: "",
-    url: "Logo-8-_.png",
+    url: "partner8.png",
   },
   {
     id: 9,
     client: "",
-    url: "Logo-9-_.png",
+    url: "partner9.png",
   },
   {
     id: 10,
     client: "",
-    url: "Logo-10-_.png",
+    url: "partner10.png",
   },
   {
     id: 11,
     client: "",
-    url: "Logo-11-_.png",
+    url: "partner11.png",
   },
   {
     id: 12,
     client: "",
-    url: "Logo-12-_.png",
+    url: "partner12.png",
   },
 ];
 

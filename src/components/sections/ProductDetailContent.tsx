@@ -161,36 +161,43 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                   {product.short_description}
                 </p>
               </FadeIn>
-              <div className="grid gap-2">
+              <div className="grid gap-2 w-full">
                 {product.sub_products.map((item, index) => (
                   <div className=" w-full" key={index}>
                     <FadeInDown>
                       <div className="flex w-full lg:py-1 border-b border-gray-200">
-                        <div className="lg:w-2/5 w-[120px] lg:flex grid items-center  justify-center lg:justify-start lg:gap-5 gap-1 lg:text-base bg-indigo-900 text-white text-base font-bold font-['Sen'] lg:leading-[30px] lg:h-[100px] h-[120px] me-5 lg:ms-5 rounded">
-                          <Image
-                            src={`${item.image_url}`}
-                            alt={"icon"}
-                            width={100}
-                            height={100}
-                            className="rounded-full lg:w-[80px] w-[64px] lg:ms-[-25px]"
-                          />{" "}
-                          {item.name}
+                        <div className="lg:w-1/3 w-[120px] lg:flex grid items-center  justify-center lg:justify-start lg:gap-5  lg:text-base bg-indigo-900 text-white text-base font-bold font-['Sen'] lg:leading-[30px] lg:h-[100px] h-full  rounded lg:text-start text-center py-2">
+                          <div className=" lg:w-[80px] w-full flex items-center justify-center my-2">
+                            <Image
+                              src={`${item.image_url}`}
+                              alt={"icon"}
+                              width={100}
+                              height={100}
+                              className="rounded-full lg:w-[80px] w-[64px] lg:ms-[-25px] flex items-center justify-center"
+                            />{" "}
+                          </div>
+
+                          <div className="w-full text-center px-1">{item.name}</div>
                         </div>
-                        <div className="lg:w-2/5  w-1/3  grid gap-0 lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-start justify-start">
+                        <div className="lg:w-1/3  w-1/3  grid gap-0 lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-center justify-center">
                           {Array.isArray(item.weight) ? (
                             item.weight.map((weight, index) => (
-                              <li key={index} className="mt-[-10px] p-0">
+                              <li
+                                key={index}
+                                className="mt-[-10px] p-0 text-center grid justify-center items-center w-full">
                                 {weight}
                               </li>
                             ))
                           ) : (
-                            <div>
+                            <div className="text-center grid justify-center items-center w-full">
                               <li>{item.weight}</li>
-                              {item.type ? <li> {item.type}</li> : null}
+                              {item.type == "" && "" ? (
+                                <li> {item.type}</li>
+                              ) : null}
                             </div>
                           )}
                         </div>
-                        <div className="lg:w-2/5  w-1/3  items-center lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px]">
+                        <div className="lg:w-1/3  w-1/3  items-center lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] justify-center text-center grid">
                           <div>
                             {item.wrap.split(", ").map((wrapItem, index) => (
                               <li key={index}>

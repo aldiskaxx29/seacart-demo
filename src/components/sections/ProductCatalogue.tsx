@@ -43,7 +43,7 @@ useEffect(() => {
                   <div className="relative overflow-hidden  w-full">
                     <FadeIn>
                       <Image
-                        src={`${item?.images_url[1]}`}
+                        src={`${item?.featured_image}`}
                         alt={item.name}
                         width={700}
                         height={700}

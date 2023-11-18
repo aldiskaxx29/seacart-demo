@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["www.google.com"],
+    domains: [
+      "www.google.com",
+      "api.seacart.id",
+      "http://api.seacart.id/uploads/",
+    ],
   },
 };
 
