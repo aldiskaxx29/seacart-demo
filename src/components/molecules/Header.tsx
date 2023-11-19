@@ -21,7 +21,7 @@ const Header = () => {
               <Image
                 src="/assets/general/Seacart__Logo Long_Color.png"
                 alt="Logo"
-                className="w-full h-12 mr-4 p-1 object-cover"
+                className="w-full lg:h-12 mr-4 p-1 object-cover h-7"
                 width={200}
                 height={200}
               />

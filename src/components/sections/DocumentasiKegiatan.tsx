@@ -15,25 +15,39 @@ export default function DocumentasiKegiatan() {
   const [data, setData] = useState<Props[]>([]);
   const [dataDummy, setDataDummy] = useState<Props[]>([]);
 
+//   useEffect(() => {
+//     console.log("dataDummy", dataDummy);
+//   }, [dataDummy]);
+
+// useEffect(() => {
+//   const fetchData = async () => {
+//     try {
+//       const res = await getGalleryHome();
+//       console.log("API Response", res);
+//       setData(res);
+//       setDataDummy(ImageGallery);
+//     } catch (error) {
+//       console.error("Error fetching data:", error);
+//     }
+//   };
+
+//   fetchData();
+// }, []);
+
+      const GetGalleryHomeData = () => {
+        getGalleryHome()
+          .then((res) => {
+            console.log(res);
+            setData(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      };
+
   useEffect(() => {
-    console.log("dataDummy", dataDummy);
-  }, [dataDummy]);
-
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await getGalleryHome();
-      console.log("API Response", res);
-      setData(res);
-      setDataDummy(ImageGallery);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  fetchData();
+    GetGalleryHomeData();
 }, []);
-
 
   
 
