@@ -41,7 +41,7 @@ export default function Footers() {
             <div className=" flex-col justify-start items-start gap-8 flex">
               <div className=" h-10 justify-center items-center inline-flex">
                 <Image
-                  className="w-full h-full"
+                  className="w-full h-full object-cover"
                   src="/assets/general/Seacart__Logo Long_White.png"
                   alt={""}
                   width={300}

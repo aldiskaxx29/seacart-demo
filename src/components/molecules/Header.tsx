@@ -21,9 +21,9 @@ const Header = () => {
               <Image
                 src="/assets/general/Seacart__Logo Long_Color.png"
                 alt="Logo"
-                className="w-full lg:h-12 mr-4 p-1  h-7"
-                width={200}
-                height={200}
+                className="w-full lg:h-12 mr-4   h-full"
+                width={100}
+                height={100}
               />
             </FadeIn>
 
