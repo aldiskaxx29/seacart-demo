@@ -56,7 +56,9 @@ export default function ImagePopUp({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95">
                 <Dialog.Panel className=" transform  transition-all flex items-center justify-center object-center">
-                  <button onClick={onClose} className="fixed top-[180px] right-[-50px] z-50">
+                  <button
+                    onClick={onClose}
+                    className="fixed lg:top-[180px] lg:right-[-50px] top-[50px] right-[-40px] z-50">
                     <Image
                       src={`/assets/general/Button close X.svg`}
                       alt={"icon"}
@@ -65,11 +67,11 @@ export default function ImagePopUp({
                       className="object-cover shadow-xl w-full h-full "
                     />
                   </button>
-                  <Slider {...settings} className="w-[900px]">
+                  <Slider {...settings} className="lg:w-[900px] w-[350px]">
                     {images.map((item, index) => (
                       <div
                         key={index}
-                        className="w-[900px] max-h-[900px] items-center justify-center object-center relative rounded-2xl overflow-hidden">
+                        className="lg:w-[900px] w-[500px] max-h-[900px] items-center justify-center object-center relative rounded-2xl overflow-hidden">
                         <Image
                           src={`${item.filename}`}
                           alt={"icon"}

@@ -6,7 +6,7 @@ export default function Videos() {
   return (
     <div>
       {" "}
-      <div className="rounded-xl overflow-hidden  shadow-2xl w-[1000px]">
+      <div className="rounded-xl overflow-hidden object-cover shadow-2xl lg:w-[1000px]">
         <ReactPlayer
           url="/assets/stock-videos/seacart.mp4"
           controls

@@ -16,19 +16,26 @@ export default function DocumentasiKegiatan() {
   const [dataDummy, setDataDummy] = useState<Props[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await getGalleryHome();
-        setData(res);
-        setDataDummy(ImageGallery)
-        console.log(res);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+    console.log("dataDummy", dataDummy);
+  }, [dataDummy]);
 
-    fetchData();
-  }, []);
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await getGalleryHome();
+      console.log("API Response", res);
+      setData(res);
+      setDataDummy(ImageGallery);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  fetchData();
+}, []);
+
+
+  
 
   return (
     <>
@@ -38,8 +45,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/2 aspect-square w-full">
               <FadeIn>
                 <ImageGalleryItem
-                  id={dataDummy[1]?.id}
-                  src={dataDummy[1]?.filename}
+                  id={ImageGallery[1]?.id}
+                  src={ImageGallery[1]?.filename}
                 />
               </FadeIn>
             </div>
@@ -47,8 +54,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={dataDummy[2]?.id}
-                  src={dataDummy[2]?.filename}
+                  id={ImageGallery[2]?.id}
+                  src={ImageGallery[2]?.filename}
                 />
               </FadeIn>
             </div>
@@ -57,8 +64,8 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={dataDummy[3]?.id}
-                    src={dataDummy[3]?.filename}
+                    id={ImageGallery[3]?.id}
+                    src={ImageGallery[3]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -66,8 +73,8 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={dataDummy[4]?.id}
-                    src={dataDummy[4]?.filename}
+                    id={ImageGallery[4]?.id}
+                    src={ImageGallery[4]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -79,16 +86,16 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={dataDummy[5]?.id}
-                    src={dataDummy[5]?.filename}
+                    id={ImageGallery[5]?.id}
+                    src={ImageGallery[5]?.filename}
                   />
                 </FadeIn>
               </div>
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={dataDummy[6]?.id}
-                    src={dataDummy[6]?.filename}
+                    id={ImageGallery[6]?.id}
+                    src={ImageGallery[6]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -97,8 +104,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={dataDummy[7]?.id}
-                  src={dataDummy[7]?.filename}
+                  id={ImageGallery[7]?.id}
+                  src={ImageGallery[7]?.filename}
                 />
               </FadeIn>
             </div>
@@ -106,16 +113,16 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={dataDummy[8]?.id}
-                    src={dataDummy[8]?.filename}
+                    id={ImageGallery[8]?.id}
+                    src={ImageGallery[8]?.filename}
                   />
                 </FadeIn>
               </div>
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={dataDummy[9]?.id}
-                    src={dataDummy[9]?.filename}
+                    id={ImageGallery[9]?.id}
+                    src={ImageGallery[9]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -124,8 +131,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={dataDummy[10]?.id}
-                  src={dataDummy[10]?.filename}
+                  id={ImageGallery[10]?.id}
+                  src={ImageGallery[10]?.filename}
                 />
               </FadeIn>
             </div>
@@ -135,8 +142,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={dataDummy[11]?.id}
-                  src={dataDummy[11]?.filename}
+                  id={ImageGallery[11]?.id}
+                  src={ImageGallery[11]?.filename}
                 />
               </FadeIn>
             </div>
@@ -145,16 +152,16 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={dataDummy[12]?.id}
-                    src={dataDummy[12]?.filename}
+                    id={ImageGallery[12]?.id}
+                    src={ImageGallery[12]?.filename}
                   />
                 </FadeIn>
               </div>
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={dataDummy[13]?.id}
-                    src={dataDummy[13]?.filename}
+                    id={ImageGallery[13]?.id}
+                    src={ImageGallery[13]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -163,8 +170,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/2 aspect-square w-full ">
               <FadeIn>
                 <ImageGalleryItem
-                  id={dataDummy[14]?.id}
-                  src={dataDummy[14]?.filename}
+                  id={ImageGallery[14]?.id}
+                  src={ImageGallery[14]?.filename}
                 />
               </FadeIn>
             </div>

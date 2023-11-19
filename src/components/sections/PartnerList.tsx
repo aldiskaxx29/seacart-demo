@@ -66,14 +66,14 @@ export default function PartnerList() {
   return (
     <MotionDiv>
       <div className="py-32 flex-col justify-center items-center gap-16 min-h-screen">
-        <div className="flex-col justify-start items-center gap-5 inline-flex lg:px-[200px] px-4 w-full">
+        <div className="flex-col lg:justify-start items-center gap-5 inline-flex lg:px-[200px] px-4 w-full justify-center">
           <FadeInUp>
             <span className="text-center text-teal-400 text-base font-extrabold leading-normal">
               Integration
             </span>
           </FadeInUp>
           <FadeInUp>
-            <span className="text-center text-indigo-900 text-4xl font-extrabold">
+            <span className="text-center flex w-full text-indigo-900 text-4xl font-extrabold">
               Trust and Transparency
             </span>
           </FadeInUp>

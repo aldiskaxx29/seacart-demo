@@ -6,7 +6,7 @@ import { ImageGallery } from "../../../service/DummyData";
 
 interface ImageGalleryItemProps {
   id: any; 
-  src: string;
+  src: any;
   alt?: string;
   height?: number;
   width?: number;
@@ -36,10 +36,7 @@ const ImageGalleryItem: React.FC<ImageGalleryItemProps> = ({
   };
 
 
-    if (!src) {
-      // If src is undefined, you can render a placeholder or handle it accordingly
-      return null;
-    }
+
 
   return (
     <>
