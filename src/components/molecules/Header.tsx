@@ -15,13 +15,13 @@ const Header = () => {
   return (
     <MotionDiv>
       <div>
-        <header className="header-comp lg:px-20 ps-3  py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[100px] z-50 border-b lg:border-b-0 border-primary shadow-sm">
+        <header className="header-comp lg:px-20 ps-1  py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[100px] z-50 border-b lg:border-b-0 border-primary shadow-sm">
           <div className="flex gap-6 items-center lg:border-b w-full h-[100px] border-primary">
             <FadeIn>
               <Image
                 src="/assets/general/Seacart__Logo Long_Color.png"
                 alt="Logo"
-                className="w-full lg:h-12 mr-4 p-1 object-cover h-7"
+                className="w-full lg:h-12 mr-4 p-1  h-7"
                 width={200}
                 height={200}
               />
