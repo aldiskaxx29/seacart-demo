@@ -13,54 +13,41 @@ interface Props {
 
 export default function DocumentasiKegiatan() {
   const [data, setData] = useState<Props[]>([]);
+  const [loading, setLoading] = useState(true); 
   const [dataDummy, setDataDummy] = useState<Props[]>([]);
 
-//   useEffect(() => {
-//     console.log("dataDummy", dataDummy);
-//   }, [dataDummy]);
+  const GetGalleryHomeData = () => {
+    getGalleryHome()
+      .then((res) => {
+        console.log(res);
+        setData(ImageGallery);
+        setLoading(false); 
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  };
 
-// useEffect(() => {
-//   const fetchData = async () => {
-//     try {
-//       const res = await getGalleryHome();
-//       console.log("API Response", res);
-//       setData(res);
-//       setDataDummy(ImageGallery);
-//     } catch (error) {
-//       console.error("Error fetching data:", error);
-//     }
-//   };
-
-//   fetchData();
-// }, []);
-
-      const GetGalleryHomeData = () => {
-        getGalleryHome()
-          .then((res) => {
-            console.log(res);
-            setData(res);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      };
-
-  useEffect(() => {
-    GetGalleryHomeData();
-}, []);
-
-  
+    useEffect(() => {
+      GetGalleryHomeData();
+    }, []);
 
   return (
     <>
       <MotionDiv>
+        {loading ? (
+          <div>
+          <p>Loading ... </p>
+          </div>) : (
+
         <div className="flex min-h-screen pt-[100px]">
           <div className="sm:flex-1 lg:block w-full pt-1">
             <div className="relative overflow-hidden h-1/2 aspect-square w-full">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[1]?.id}
-                  src={ImageGallery[1]?.filename}
+                  id={data[1]?.id}
+                  src={data[1]?.filename}
                 />
               </FadeIn>
             </div>
@@ -68,8 +55,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[2]?.id}
-                  src={ImageGallery[2]?.filename}
+                  id={data[2]?.id}
+                  src={data[2]?.filename}
                 />
               </FadeIn>
             </div>
@@ -78,8 +65,8 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[3]?.id}
-                    src={ImageGallery[3]?.filename}
+                    id={data[3]?.id}
+                    src={data[3]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -87,8 +74,8 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[4]?.id}
-                    src={ImageGallery[4]?.filename}
+                    id={data[4]?.id}
+                    src={data[4]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -100,16 +87,16 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[5]?.id}
-                    src={ImageGallery[5]?.filename}
+                    id={data[5]?.id}
+                    src={data[5]?.filename}
                   />
                 </FadeIn>
               </div>
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[6]?.id}
-                    src={ImageGallery[6]?.filename}
+                    id={data[6]?.id}
+                    src={data[6]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -118,8 +105,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[7]?.id}
-                  src={ImageGallery[7]?.filename}
+                  id={data[7]?.id}
+                  src={data[7]?.filename}
                 />
               </FadeIn>
             </div>
@@ -127,16 +114,16 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[8]?.id}
-                    src={ImageGallery[8]?.filename}
+                    id={data[8]?.id}
+                    src={data[8]?.filename}
                   />
                 </FadeIn>
               </div>
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[9]?.id}
-                    src={ImageGallery[9]?.filename}
+                    id={data[9]?.id}
+                    src={data[9]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -145,8 +132,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[10]?.id}
-                  src={ImageGallery[10]?.filename}
+                  id={data[10]?.id}
+                  src={data[10]?.filename}
                 />
               </FadeIn>
             </div>
@@ -156,8 +143,8 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/4">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[11]?.id}
-                  src={ImageGallery[11]?.filename}
+                  id={data[11]?.id}
+                  src={data[11]?.filename}
                 />
               </FadeIn>
             </div>
@@ -166,16 +153,16 @@ export default function DocumentasiKegiatan() {
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[12]?.id}
-                    src={ImageGallery[12]?.filename}
+                    id={data[12]?.id}
+                    src={data[12]?.filename}
                   />
                 </FadeIn>
               </div>
               <div className="relative overflow-hidden aspect-square w-full max-w-[3000px]">
                 <FadeIn>
                   <ImageGalleryItem
-                    id={ImageGallery[13]?.id}
-                    src={ImageGallery[13]?.filename}
+                    id={data[13]?.id}
+                    src={data[13]?.filename}
                   />
                 </FadeIn>
               </div>
@@ -184,13 +171,16 @@ export default function DocumentasiKegiatan() {
             <div className="relative overflow-hidden h-1/2 aspect-square w-full ">
               <FadeIn>
                 <ImageGalleryItem
-                  id={ImageGallery[14]?.id}
-                  src={ImageGallery[14]?.filename}
+                  id={data[14]?.id}
+                  src={data[14]?.filename}
                 />
               </FadeIn>
             </div>
           </div>
-        </div>
+        </div>            
+          )
+        }
+
       </MotionDiv>
     </>
   );

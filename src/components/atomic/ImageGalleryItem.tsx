@@ -48,13 +48,15 @@ const ImageGalleryItem: React.FC<ImageGalleryItemProps> = ({
       />
       <div onClick={handleClick}>
         <div className=" overflow-hidden group duration-1000">
-          <Image
-            src={`${src}`}
-            alt={alt || "gallery-item"}
-            className="  absolute inset-0 w-full object-cover h-full  p-1 transform transition-transform  duration-1000  group-hover:blur-lg  "
-            height={height}
-            width={width}
-          />
+          {src && (
+            <Image
+              src={`${src}`}
+              alt={alt || "gallery-item"}
+              className="absolute inset-0 w-full object-cover h-full p-1 transform transition-transform duration-1000 group-hover:blur-lg"
+              height={height}
+              width={width}
+            />
+          )}
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-800">
             <button
               className="bg-gray-800 text-white px-4 py-2 rounded-md"
