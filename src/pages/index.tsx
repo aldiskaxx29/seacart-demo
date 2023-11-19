@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/general/Seacart__Logo Normal Color.png" />
       </Head>
-      <main className="snap-container">
+      <main className="snap-container w-screen overflow-hidden">
         <Header />
         <div className="snap-child">
           <HeroBanner />

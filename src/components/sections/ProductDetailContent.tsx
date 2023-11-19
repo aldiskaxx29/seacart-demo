@@ -166,8 +166,8 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                   <div className=" w-full" key={index}>
                     <FadeInDown>
                       <div className="flex w-full lg:py-1 border-b border-gray-200">
-                        <div className="lg:w-1/3 w-[120px] lg:flex grid items-center  justify-center lg:justify-start lg:gap-5  lg:text-base bg-indigo-900 text-white text-base font-bold font-['Sen'] lg:leading-[30px] lg:h-[100px] h-full  rounded lg:text-start text-center py-2">
-                          <div className=" lg:w-[80px] w-full flex items-center justify-center my-2">
+                        <div className="lg:w-1/3 w-[120px] lg:flex grid items-center  justify-center lg:justify-start lg:gap-0  lg:text-base bg-indigo-900 text-white text-base font-bold font-['Sen'] lg:leading-[30px] lg:h-[100px] h-full  rounded lg:text-start text-center py-2">
+                          <div className=" lg:w-[130px] w-full flex lg:items-start lg:justify-start items-center justify-center my-2">
                             <Image
                               src={`${item.image_url}`}
                               alt={"icon"}
@@ -177,7 +177,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                             />{" "}
                           </div>
 
-                          <div className="w-full text-center px-1">{item.name}</div>
+                          <div className="w-full lg:text-start text-center px-1">{item.name}</div>
                         </div>
                         <div className="lg:w-1/3  w-1/3  grid gap-0 lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-center justify-center">
                           {Array.isArray(item.weight) ? (
