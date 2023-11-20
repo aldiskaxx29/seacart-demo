@@ -28,7 +28,7 @@ export default function Footers() {
             </div>
             <div className="w-50 px-3 py-3 hover:bg-gray-300 bg-white rounded-lg shadow border  justify-center items-center gap-2 flex">
               <button className="text-indigo-900 text-base font-normal leading-normal" onClick={() => {
-                  window.location.href = `/product`;
+                  window.location.href = `/contact`;
                 }}>
                 Contact us
               </button>
