@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sea Cart by Solutee</title>
+        <title>Seacart by Solutee</title>
         <meta
           name="Seafood Supplier"
           content="Downstreaming Commodity Through Technology"
