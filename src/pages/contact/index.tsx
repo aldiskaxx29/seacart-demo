@@ -8,7 +8,7 @@ export default function index() {
   return (
     <main className={``}>
       <Head>
-        <title>Sea Cart by Solutee</title>
+        <title>Seacart by Solutee</title>
         <meta
           name="Contact Us"
           content="Downstreaming Commodity Through Technology"
