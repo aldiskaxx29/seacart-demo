@@ -56,7 +56,7 @@ export default function ProductDetail() {
   return (
     <>
       <Head>
-        <title>{product?.name} - SeaCart </title>
+        <title>{product?.name} - Seacart </title>
         <meta
           name={product?.short_description}
           content={product?.description}
