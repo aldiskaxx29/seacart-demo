@@ -11,7 +11,7 @@ export default function product() {
   return (
     <>
       <Head>
-        <title>Sea Cart by Solutee</title>
+        <title>Seacart by Solutee</title>
         <meta
           name="Product Catalogue"
           content="FRESH FROM THE OCEAN TO YOUR PLATE"
