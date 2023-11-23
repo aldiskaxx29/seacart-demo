@@ -1,19 +1,16 @@
-import dynamic from "next/dynamic";
-
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
-
 export default function Videos() {
   return (
     <div>
       {" "}
-      <div className="rounded-xl overflow-hidden object-cover shadow-2xl lg:w-[1000px]">
-        <ReactPlayer
-          url="/assets/stock-videos/seacart.mp4"
-          controls
-          width="700"
-          // playing
-          height="232"
-        />
+      <div className="rounded-xl h-[500px] object-cover shadow-2xl lg:w-[1000px] overflow-hidden flex items-center justify-center ">
+        <iframe
+          width="100%"
+          height="700" // You can adjust the height based on your preference
+          src="https://www.youtube.com/embed/LaEqJs0HIio?si=WVAzqnDFWedn0DFl"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen></iframe>
       </div>
     </div>
   );

@@ -177,7 +177,9 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                             />{" "}
                           </div>
 
-                          <div className="w-full lg:text-start text-center px-1">{item.name}</div>
+                          <div className="w-full lg:text-start text-center px-1">
+                            {item.name}
+                          </div>
                         </div>
                         <div className="lg:w-1/3  w-1/3  grid gap-0 lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-center justify-center">
                           {Array.isArray(item.weight) ? (
@@ -201,8 +203,8 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                           <div>
                             {item.wrap.split(", ").map((wrapItem, index) => (
                               <li key={index}>
-                                {wrapItem}
-                                {index < item.wrap.split(", ").length - 1 &&
+                                {wrapItem.trim()}{" "}
+                                {index < item.wrap.split(", ").length - 3 &&
                                   ", "}
                               </li>
                             ))}
