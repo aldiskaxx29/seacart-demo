@@ -5,6 +5,7 @@ import { formatDate } from "../../../service/utils";
 import { FadeIn, FadeInUp } from "../animations/AnimationTemplate";
 import PopUpComingSoon from "./PopUpComingSoon";
 import { MotionDiv } from "../animations/MotionDiv";
+import { ArticleProps } from "../../../service/type";
 
 interface Article {
   id: number;
@@ -20,7 +21,7 @@ interface Article {
 }
 
 export default function ArticleList() {
-  const [data, setData] = useState<Article[]>([]);
+  const [data, setData] = useState<ArticleProps[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {

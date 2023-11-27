@@ -486,13 +486,15 @@ export const ClientList = [
 export const articleList = [
   {
     id: 1,
-    category: "Health",
+    category: "Food and Cooking",
     title:
-      "Indulging in the Richness of Indonesian Seafood: Exploring the Health Benefits of Salmon",
+      "Savoring the Ocean's Bounty: Indonesian Seafood Delights for Culinary Enthusiasts",
+    short_descriptions:
+      "Embark on a gastronomic journey exploring the rich flavors of Indonesian seafood, from succulent prawns to flavorful fish, and discover the art of crafting exquisite dishes.",
     content:
-      "Indonesia, being an archipelagic nation, boasts an abundance of seafood, including the delectable salmon. Salmon is a powerhouse of high-quality protein and omega-3 fatty acids, essential for heart health. Additionally, it is rich in vitamin D, vital for bone health. Salmon can be found in select upscale restaurants across Indonesia, serving dishes that blend local flavors with international finesse. From grilled to smoked, or even served as sushi, relishing salmon not only tantalizes the taste buds but also delivers invaluable health benefits.",
-    image_url: "/Image-1.png",
-    date: "2020-10-1 00:00:00",
+      "Indonesia, blessed with pristine waters, presents a culinary treasure trove of seafood. Delight your palate with dishes like the iconic 'ikan bakar' (grilled fish) and 'udang goreng mentega' (buttered prawns). These dishes not only showcase the diversity of Indonesian seafood but also emphasize the country's culinary prowess. Indulge in the harmony of flavors, as local chefs masterfully blend traditional techniques with contemporary twists to create memorable dining experiences.",
+    image_url: "/Image.png",
+    date: "2023-11-27 08:15:00",
     writer: {
       name: "Admin",
       role: "Author",
@@ -501,12 +503,15 @@ export const articleList = [
   },
   {
     id: 2,
-    category: "Trivia",
-    title: "Delightful Ocean Treasure Packed with Health Benefits",
+    category: "Food and Sustainability",
+    title:
+      "Balancing Gastronomy and Ecology: Sustainable Seafood Choices in Indonesia",
+    short_descriptions:
+      "Uncover the intersection of gastronomy and environmental responsibility in Indonesia, highlighting sustainable seafood choices and the positive impact on marine ecosystems.",
     content:
-      "Shrimp, one of Indonesia's most beloved seafood options, is a low-fat, high-protein source loaded with minerals like zinc and selenium. These minerals bolster the immune system and maintain healthy skin tissues. Moreover, shrimp contains astaxanthin, a natural antioxidant responsible for its reddish hue, offering anti-aging benefits to humans. Prepared in various ways, from crispy fried to Padang-style sautéed, shrimp is a flavorful dish accessible to all.",
+      "As Indonesia embraces a more eco-conscious approach to gastronomy, sustainable seafood practices take center stage. From 'ikan sarden' (canned fish) to responsibly sourced prawns, local markets and restaurants are making efforts to promote ethical and sustainable choices. Dive into the movement of preserving marine life by making informed seafood selections, ensuring that the flavors of today coexist harmoniously with the biodiversity of tomorrow.",
     image_url: "/Image-2.png",
-    date: "2020-10-1 00:00:00",
+    date: "2023-11-27 10:30:00",
     writer: {
       name: "Admin",
       role: "Author",
@@ -515,12 +520,321 @@ export const articleList = [
   },
   {
     id: 3,
-    category: "Journey",
-    title: "Nutrient-Rich Ocean Delight from the Indonesian Waters",
+    category: "Health and Fitness",
+    title:
+      "Seafood's Role in Fitness: A Nutrient-Rich Path to Enhancing Physical Well-being",
+    short_descriptions:
+      "Delve into the fitness benefits of incorporating seafood into your diet, exploring how the nutrients from the ocean contribute to overall health and vitality.",
     content:
-      "Tuna, globally renowned and abundant in Indonesian waters, is a nutritious powerhouse. It is a high-protein, low-fat fish rich in vitamin B and minerals such as selenium. The omega-3 fatty acids in tuna contribute to heart and brain health. In Indonesia, tuna is often served as sashimi or grilled, providing a unique and delightful culinary experience. With its rich nutritional profile and savory taste, tuna stands as an excellent choice for both health and gastronomic pleasure, making it a favorite seafood option on Indonesian tables.",
+      "For fitness enthusiasts in Indonesia, seafood emerges as a powerhouse of essential nutrients. From muscle-building proteins to omega-3 fatty acids that support joint health, seafood offers a holistic approach to fitness. Discover how incorporating fish, shellfish, and other marine delights into your diet can be a delicious and nutritious way to support your fitness journey. Elevate your workouts with the goodness of the ocean.",
+    image_url: "/Image-3.png",
+    date: "2023-11-27 12:45:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 4,
+    category: "Health and Lifestyle",
+    title:
+      "The Lifestyle Benefits of a Seafood-Rich Diet: Nourishing Your Body and Mind",
+    short_descriptions:
+      "Embark on a lifestyle journey through the lens of a seafood-rich diet, exploring how the ocean's bounty enhances physical well-being and mental clarity.",
+    content:
+      "In the vibrant tapestry of Indonesian lifestyle, seafood plays a pivotal role in promoting holistic well-being. From grilled fish feasts during family gatherings to seafood-rich salads for a quick and nutritious lunch, the choices are as diverse as the benefits. Join us on a journey that explores how embracing a seafood-rich diet contributes to a vibrant and fulfilling lifestyle, nourishing both body and mind.",
+    image_url: "/Image-4.png",
+    date: "2023-11-27 15:00:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 5,
+    category: "Health and Nutrition",
+    title:
+      "Unlocking the Nutritional Secrets of Indonesian Seafood: A Guide to Optimal Health",
+    short_descriptions:
+      "Navigate the nutritional landscape of Indonesian seafood, uncovering the vitamins, minerals, and antioxidants that contribute to optimal health.",
+    content:
+      "Indonesia's seafood offerings extend beyond taste, providing a wealth of essential nutrients crucial for maintaining good health. Dive into the nutritional secrets of local fish, prawns, and other oceanic delights. From omega-3 fatty acids supporting heart health to the abundance of vitamins and minerals promoting overall wellness, this guide unlocks the nutritional potential of Indonesian seafood. Elevate your well-being with the bounties of the sea.",
+    image_url: "/Image-5.png",
+    date: "2023-11-27 17:15:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 6,
+    category: "Nutrition and Seasonal Eating",
+    title:
+      "Seasonal Seafood Delights: Navigating the Culinary Calendar of Indonesian Ocean Offerings",
+    short_descriptions:
+      "Embark on a culinary adventure through the seasons, exploring the seasonal seafood delights that grace the tables of Indonesian homes and restaurants.",
+    content:
+      "In Indonesia, the culinary calendar dances to the rhythm of the seasons, with each offering a unique selection of seafood delights. From the monsoon season's abundance of fresh catches to the summer harvests of prawns and crabs, discover how seasonal eating amplifies the richness of Indonesian cuisine. Join us as we navigate the culinary calendar, exploring the seasonal seafood delights that define each time of the year.",
+    image_url: "/Image-6.png",
+    date: "2023-11-27 19:30:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 7,
+    category: "Sustainability",
+    title:
+      "Preserving the Ocean's Legacy: Sustainable Practices in Indonesian Seafood Production",
+    short_descriptions:
+      "Delve into the efforts and initiatives shaping sustainable seafood production in Indonesia, ensuring the preservation of the ocean's ecological balance.",
+    content:
+      "As awareness grows, Indonesia's seafood industry is embracing sustainable practices to protect the ocean's legacy. From responsible fishing methods to eco-friendly aquaculture, stakeholders are working together to ensure the long-term health of marine ecosystems. Join us in exploring the initiatives that prioritize sustainability, securing a future where the ocean's bounty continues to thrive for generations to come.",
+    image_url: "/Image-7.png",
+    date: "2023-11-27 21:45:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 8,
+    category: "Food and Cooking",
+    title:
+      "Savoring the Ocean's Bounty: Indonesian Seafood Delights for Culinary Enthusiasts",
+    short_descriptions:
+      "Embark on a gastronomic journey exploring the rich flavors of Indonesian seafood, from succulent prawns to flavorful fish, and discover the art of crafting exquisite dishes.",
+    content:
+      "Indonesia, blessed with pristine waters, presents a culinary treasure trove of seafood. Delight your palate with dishes like the iconic 'ikan bakar' (grilled fish) and 'udang goreng mentega' (buttered prawns). These dishes not only showcase the diversity of Indonesian seafood but also emphasize the country's culinary prowess. Indulge in the harmony of flavors, as local chefs masterfully blend traditional techniques with contemporary twists to create memorable dining experiences.",
     image_url: "/Image.png",
-    date: "2020-10-1 00:00:00",
+    date: "2023-11-27 08:15:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 9,
+    category: "Food and Sustainability",
+    title:
+      "Balancing Gastronomy and Ecology: Sustainable Seafood Choices in Indonesia",
+    short_descriptions:
+      "Uncover the intersection of gastronomy and environmental responsibility in Indonesia, highlighting sustainable seafood choices and the positive impact on marine ecosystems.",
+    content:
+      "As Indonesia embraces a more eco-conscious approach to gastronomy, sustainable seafood practices take center stage. From 'ikan sarden' (canned fish) to responsibly sourced prawns, local markets and restaurants are making efforts to promote ethical and sustainable choices. Dive into the movement of preserving marine life by making informed seafood selections, ensuring that the flavors of today coexist harmoniously with the biodiversity of tomorrow.",
+    image_url: "/Image-2.png",
+    date: "2023-11-27 10:30:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 10,
+    category: "Health and Fitness",
+    title:
+      "Seafood's Role in Fitness: A Nutrient-Rich Path to Enhancing Physical Well-being",
+    short_descriptions:
+      "Delve into the fitness benefits of incorporating seafood into your diet, exploring how the nutrients from the ocean contribute to overall health and vitality.",
+    content:
+      "For fitness enthusiasts in Indonesia, seafood emerges as a powerhouse of essential nutrients. From muscle-building proteins to omega-3 fatty acids that support joint health, seafood offers a holistic approach to fitness. Discover how incorporating fish, shellfish, and other marine delights into your diet can be a delicious and nutritious way to support your fitness journey. Elevate your workouts with the goodness of the ocean.",
+    image_url: "/Image-3.png",
+    date: "2023-11-27 12:45:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 11,
+    category: "Health and Lifestyle",
+    title:
+      "The Lifestyle Benefits of a Seafood-Rich Diet: Nourishing Your Body and Mind",
+    short_descriptions:
+      "Embark on a lifestyle journey through the lens of a seafood-rich diet, exploring how the ocean's bounty enhances physical well-being and mental clarity.",
+    content:
+      "In the vibrant tapestry of Indonesian lifestyle, seafood plays a pivotal role in promoting holistic well-being. From grilled fish feasts during family gatherings to seafood-rich salads for a quick and nutritious lunch, the choices are as diverse as the benefits. Join us on a journey that explores how embracing a seafood-rich diet contributes to a vibrant and fulfilling lifestyle, nourishing both body and mind.",
+    image_url: "/Image-4.png",
+    date: "2023-11-27 15:00:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 12,
+    category: "Health and Nutrition",
+    title:
+      "Unlocking the Nutritional Secrets of Indonesian Seafood: A Guide to Optimal Health",
+    short_descriptions:
+      "Navigate the nutritional landscape of Indonesian seafood, uncovering the vitamins, minerals, and antioxidants that contribute to optimal health.",
+    content:
+      "Indonesia's seafood offerings extend beyond taste, providing a wealth of essential nutrients crucial for maintaining good health. Dive into the nutritional secrets of local fish, prawns, and other oceanic delights. From omega-3 fatty acids supporting heart health to the abundance of vitamins and minerals promoting overall wellness, this guide unlocks the nutritional potential of Indonesian seafood. Elevate your well-being with the bounties of the sea.",
+    image_url: "/Image-5.png",
+    date: "2023-11-27 17:15:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 13,
+    category: "Nutrition and Seasonal Eating",
+    title:
+      "Seasonal Seafood Delights: Navigating the Culinary Calendar of Indonesian Ocean Offerings",
+    short_descriptions:
+      "Embark on a culinary adventure through the seasons, exploring the seasonal seafood delights that grace the tables of Indonesian homes and restaurants.",
+    content:
+      "In Indonesia, the culinary calendar dances to the rhythm of the seasons, with each offering a unique selection of seafood delights. From the monsoon season's abundance of fresh catches to the summer harvests of prawns and crabs, discover how seasonal eating amplifies the richness of Indonesian cuisine. Join us as we navigate the culinary calendar, exploring the seasonal seafood delights that define each time of the year.",
+    image_url: "/Image-6.png",
+    date: "2023-11-27 19:30:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 14,
+    category: "Sustainability",
+    title:
+      "Preserving the Ocean's Legacy: Sustainable Practices in Indonesian Seafood Production",
+    short_descriptions:
+      "Delve into the efforts and initiatives shaping sustainable seafood production in Indonesia, ensuring the preservation of the ocean's ecological balance.",
+    content:
+      "As awareness grows, Indonesia's seafood industry is embracing sustainable practices to protect the ocean's legacy. From responsible fishing methods to eco-friendly aquaculture, stakeholders are working together to ensure the long-term health of marine ecosystems. Join us in exploring the initiatives that prioritize sustainability, securing a future where the ocean's bounty continues to thrive for generations to come.",
+    image_url: "/Image-7.png",
+    date: "2023-11-27 21:45:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 15,
+    category: "Food and Cooking",
+    title:
+      "Savoring the Ocean's Bounty: Indonesian Seafood Delights for Culinary Enthusiasts",
+    short_descriptions:
+      "Embark on a gastronomic journey exploring the rich flavors of Indonesian seafood, from succulent prawns to flavorful fish, and discover the art of crafting exquisite dishes.",
+    content:
+      "Indonesia, blessed with pristine waters, presents a culinary treasure trove of seafood. Delight your palate with dishes like the iconic 'ikan bakar' (grilled fish) and 'udang goreng mentega' (buttered prawns). These dishes not only showcase the diversity of Indonesian seafood but also emphasize the country's culinary prowess. Indulge in the harmony of flavors, as local chefs masterfully blend traditional techniques with contemporary twists to create memorable dining experiences.",
+    image_url: "/Image.png",
+    date: "2023-11-27 08:15:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 16,
+    category: "Food and Sustainability",
+    title:
+      "Balancing Gastronomy and Ecology: Sustainable Seafood Choices in Indonesia",
+    short_descriptions:
+      "Uncover the intersection of gastronomy and environmental responsibility in Indonesia, highlighting sustainable seafood choices and the positive impact on marine ecosystems.",
+    content:
+      "As Indonesia embraces a more eco-conscious approach to gastronomy, sustainable seafood practices take center stage. From 'ikan sarden' (canned fish) to responsibly sourced prawns, local markets and restaurants are making efforts to promote ethical and sustainable choices. Dive into the movement of preserving marine life by making informed seafood selections, ensuring that the flavors of today coexist harmoniously with the biodiversity of tomorrow.",
+    image_url: "/Image-2.png",
+    date: "2023-11-27 10:30:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 17,
+    category: "Health and Fitness",
+    title:
+      "Seafood's Role in Fitness: A Nutrient-Rich Path to Enhancing Physical Well-being",
+    short_descriptions:
+      "Delve into the fitness benefits of incorporating seafood into your diet, exploring how the nutrients from the ocean contribute to overall health and vitality.",
+    content:
+      "For fitness enthusiasts in Indonesia, seafood emerges as a powerhouse of essential nutrients. From muscle-building proteins to omega-3 fatty acids that support joint health, seafood offers a holistic approach to fitness. Discover how incorporating fish, shellfish, and other marine delights into your diet can be a delicious and nutritious way to support your fitness journey. Elevate your workouts with the goodness of the ocean.",
+    image_url: "/Image-3.png",
+    date: "2023-11-27 12:45:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 18,
+    category: "Health and Lifestyle",
+    title:
+      "The Lifestyle Benefits of a Seafood-Rich Diet: Nourishing Your Body and Mind",
+    short_descriptions:
+      "Embark on a lifestyle journey through the lens of a seafood-rich diet, exploring how the ocean's bounty enhances physical well-being and mental clarity.",
+    content:
+      "In the vibrant tapestry of Indonesian lifestyle, seafood plays a pivotal role in promoting holistic well-being. From grilled fish feasts during family gatherings to seafood-rich salads for a quick and nutritious lunch, the choices are as diverse as the benefits. Join us on a journey that explores how embracing a seafood-rich diet contributes to a vibrant and fulfilling lifestyle, nourishing both body and mind.",
+    image_url: "/Image-4.png",
+    date: "2023-11-27 15:00:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 19,
+    category: "Health and Nutrition",
+    title:
+      "Unlocking the Nutritional Secrets of Indonesian Seafood: A Guide to Optimal Health",
+    short_descriptions:
+      "Navigate the nutritional landscape of Indonesian seafood, uncovering the vitamins, minerals, and antioxidants that contribute to optimal health.",
+    content:
+      "Indonesia's seafood offerings extend beyond taste, providing a wealth of essential nutrients crucial for maintaining good health. Dive into the nutritional secrets of local fish, prawns, and other oceanic delights. From omega-3 fatty acids supporting heart health to the abundance of vitamins and minerals promoting overall wellness, this guide unlocks the nutritional potential of Indonesian seafood. Elevate your well-being with the bounties of the sea.",
+    image_url: "/Image-5.png",
+    date: "2023-11-27 17:15:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 20,
+    category: "Nutrition and Seasonal Eating",
+    title:
+      "Seasonal Seafood Delights: Navigating the Culinary Calendar of Indonesian Ocean Offerings",
+    short_descriptions:
+      "Embark on a culinary adventure through the seasons, exploring the seasonal seafood delights that grace the tables of Indonesian homes and restaurants.",
+    content:
+      "In Indonesia, the culinary calendar dances to the rhythm of the seasons, with each offering a unique selection of seafood delights. From the monsoon season's abundance of fresh catches to the summer harvests of prawns and crabs, discover how seasonal eating amplifies the richness of Indonesian cuisine. Join us as we navigate the culinary calendar, exploring the seasonal seafood delights that define each time of the year.",
+    image_url: "/Image-6.png",
+    date: "2023-11-27 19:30:00",
+    writer: {
+      name: "Admin",
+      role: "Author",
+      url: "Main Logo.png",
+    },
+  },
+  {
+    id: 21,
+    category: "Sustainability",
+    title:
+      "Preserving the Ocean's Legacy: Sustainable Practices in Indonesian Seafood Production",
+    short_descriptions:
+      "Delve into the efforts and initiatives shaping sustainable seafood production in Indonesia, ensuring the preservation of the ocean's ecological balance.",
+    content:
+      "As awareness grows, Indonesia's seafood industry is embracing sustainable practices to protect the ocean's legacy. From responsible fishing methods to eco-friendly aquaculture, stakeholders are working together to ensure the long-term health of marine ecosystems. Join us in exploring the initiatives that prioritize sustainability, securing a future where the ocean's bounty continues to thrive for generations to come.",
+    image_url: "/Image-7.png",
+    date: "2023-11-27 21:45:00",
     writer: {
       name: "Admin",
       role: "Author",
@@ -528,6 +842,7 @@ export const articleList = [
     },
   },
 ];
+
 
 export const ProductDetailData = [
   {

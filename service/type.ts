@@ -17,3 +17,28 @@ export interface GalleryProps {
   id: number;
   filename: string;
 }
+
+export interface ArticlePropsMaps {
+  key: number;
+  id: any;
+  image_url: string;
+  category: string;
+  title: string;
+  content: string;
+  writer_url: string;
+  writer_name: string;
+  date: string;
+}
+
+export interface ArticleProps {
+  id: any;
+  image_url: string;
+  category: string;
+  title: string;
+  content: string;
+  writer: {
+    url: string,
+    name: string,
+  }
+  date: string;
+}

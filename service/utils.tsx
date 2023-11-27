@@ -9,7 +9,7 @@ export const formatDate = (dateString: string): string => {
   };
 
   // Parsing string tanggal ke objek Date
-  const dateObject = new Date(dateString.replace(/-/g, "/"));
+  const dateObject = new Date(dateString?.replace(/-/g, "/"));
 
   // Format tanggal menggunakan objek Date
   return dateObject.toLocaleDateString("en-US", options);
