@@ -18,7 +18,7 @@ const ArticleItem: React.FC<ArticlePropsMaps> = ({
   return (
     <div>
       <div
-        className="p-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid mt-10 hover:shadow-lg duration-500"
+        className="lg:p-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid mt-10 hover:shadow-lg duration-500"
         key={key}
         onClick={() => {
           window.location.href = `/article/detail-article/${id}`;
@@ -30,7 +30,7 @@ const ArticleItem: React.FC<ArticlePropsMaps> = ({
               alt={"article"}
               width={700}
               height={100}
-              className="rounded hover:scale-110 duration-700 object-cover h-[256px]"
+              className="rounded hover:scale-110 duration-700 object-cover h-[256px] lg:m-0 mb-4"
             />
           </div>
 

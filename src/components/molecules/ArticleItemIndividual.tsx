@@ -18,20 +18,20 @@ const ArticleItemIndiVidual: React.FC<ArticleProps> = ({
     <div>
       <FadeIn>
         <div
-          className="px-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-8 flex hover:shadow-lg duration-500 justify-center items-center"
+          className="lg:px-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-8 lg:flex hover:shadow-lg duration-500 justify-center items-center w-full"
           onClick={() => {
             window.location.href = `/article/detail-article/${id}`;
           }}>
-          <div className=" overflow-hidden w-3/5">
+          <div className=" overflow-hidden lg:w-3/5">
             <Image
               src={`/assets/article-list${image_url}`}
               alt={"article"}
               width={700}
               height={100}
-              className="rounded hover:scale-110 duration-700"
+              className="rounded hover:scale-110 duration-700 lg:m-0 mb-4 "
             />
           </div>
-          <div className="w-2/5 grid items-center h-fit gap-5">
+          <div className="lg:w-2/5 grid items-center h-fit lg:gap-5 gap-3">
             <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight">
               {category}
             </span>
@@ -46,7 +46,7 @@ const ArticleItemIndiVidual: React.FC<ArticleProps> = ({
                 height={30}
               />
             </div>
-            <div className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal line-clamp-4">
+            <div className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal line-clamp-2 lg:line-clamp-4">
               {content}
             </div>
             <div className="flex gap-2 items-center">

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Tab } from "@headlessui/react";
+import React, { Fragment, useEffect, useState } from "react";
+import { Listbox, Tab, Transition } from "@headlessui/react";
 import ArticleItem from "../molecules/ArticleItem";
 import ArticleItemIndiVidual from "../molecules/ArticleItemIndividual";
 import { ArticleProps } from "../../../service/type";
@@ -63,8 +63,9 @@ export default function ArticleListFull() {
     setSelectedCategory("All");
   };
 
+
   return (
-    <div className="grid gap-10 px-40 pt-[100px]">
+    <div className="grid gap-10 lg:px-40 lg:pt-[100px] p-4">
       <div className="grid gap-3 pt-[100px]">
         <span className="text-teal-400 text-base font-extrabold leading-normal">
           Article & News
@@ -77,8 +78,8 @@ export default function ArticleListFull() {
         </span>
       </div>
 
-      <div className="flex items-start justify-start">
-        <div className="w-1/4 pe-5">
+      <div className="lg:flex items-start justify-start ">
+        <div className="lg:w-1/4 lg:pe-5">
           <div className="w-full flex border rounded-md px-3 py-1 text-gray-500 text-base font-normal font-['Sen'] leading-normal mb-5 focus:border-gray-300  focus:outline-slate-900">
             <Image
               src={"/assets/general/search-lg.svg"}
@@ -95,28 +96,93 @@ export default function ArticleListFull() {
             />
           </div>
 
-          <Tab.Group>
-            <Tab.List className="grid rounded-xl p-1">
-              {categories.map((category) => (
-                <Tab
-                  key={category}
-                  className={({ selected }) =>
-                    classNames(
-                      "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-start px-4",
-                      "ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
-                      selected
-                        ? "bg-indigo-900 text-slate-100 text-base font-extrabold font-['Sen'] leading-normal"
-                        : "text-gray-500 text-base font-bold font-['Sen'] leading-normal hover:bg-indigo-800 hover:text-white"
-                    )
-                  }
-                  onClick={() => setSelectedCategory(category)}>
-                  {category}
-                </Tab>
-              ))}
-            </Tab.List>
-          </Tab.Group>
+          <div className="hidden lg:block">
+            <Tab.Group>
+              <Tab.List className="grid rounded-xl p-1">
+                {categories.map((category) => (
+                  <Tab
+                    key={category}
+                    className={({ selected }) =>
+                      classNames(
+                        "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-start px-4",
+                        "ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
+                        selected
+                          ? "bg-indigo-900 text-slate-100 text-base font-extrabold font-['Sen'] leading-normal"
+                          : "text-gray-500 text-base font-bold font-['Sen'] leading-normal hover:bg-indigo-800 hover:text-white"
+                      )
+                    }
+                    onClick={() => setSelectedCategory(category)}>
+                    {category}
+                  </Tab>
+                ))}
+              </Tab.List>
+            </Tab.Group>
+          </div>
+
+          <div>
+            <div className="lg:hidden block">
+              <Listbox
+                value={selectedCategory}
+                onChange={(value) => setSelectedCategory(value)}>
+                <div className="relative mt-1">
+                  <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                    <span className="block truncate">{selectedCategory}</span>
+                    <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                      <Image
+                        src={"/assets/general/chevron-down.svg"}
+                        alt={""}
+                        width={20}
+                        height={20}
+                      />
+                    </span>
+                  </Listbox.Button>
+                  <Transition
+                    as={Fragment}
+                    leave="transition ease-in duration-100"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0">
+                    <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                      {categories.map((category) => (
+                        <Listbox.Option
+                          key={category}
+                          className={({ active }) =>
+                            `relative cursor-default select-none py-2 pl-10 pr-4 hover:bg-indigo-900 hover:text-white ${
+                              active
+                                ? "bg-indigo-100 text-indigo-900"
+                                : "text-gray-900"
+                            }`
+                          }
+                          value={category}>
+                          {({ selected }) => (
+                            <>
+                              <span
+                                className={`block truncate ${
+                                  selected ? "font-medium" : "font-normal"
+                                }`}>
+                                {category}
+                              </span>
+                              {selected ? (
+                                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-indigo-900">
+                                  <Image
+                                    src={"/assets/general/check.svg"}
+                                    alt={""}
+                                    width={20}
+                                    height={20}
+                                  />
+                                </span>
+                              ) : null}
+                            </>
+                          )}
+                        </Listbox.Option>
+                      ))}
+                    </Listbox.Options>
+                  </Transition>
+                </div>
+              </Listbox>
+            </div>
+          </div>
         </div>
-        <div className=" w-3/4 m-0 p-0">
+        <div className=" lg:w-3/4 lg:m-0 mt-4 w-full">
           <ArticleItemIndiVidual
             id={currentItems[0]?.id}
             image_url={currentItems[0]?.image_url}
@@ -130,7 +196,7 @@ export default function ArticleListFull() {
             }}
             date={currentItems[0]?.date}
           />
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid lg:grid-cols-2 gap-2">
             {currentItems
               .filter((_, index) => index !== 0)
               .map((item, index) => (
