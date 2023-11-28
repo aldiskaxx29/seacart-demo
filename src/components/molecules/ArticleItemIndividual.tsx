@@ -7,6 +7,7 @@ import { ArticleProps } from "../../../service/type";
 const ArticleItemIndiVidual: React.FC<ArticleProps> = ({
   id,
   image_url,
+  short_descriptions,
   category,
   title,
   content,

@@ -34,6 +34,7 @@ export interface ArticleProps {
   id: any;
   image_url: string;
   category: string;
+  short_descriptions: string;
   title: string;
   content: string;
   writer: {

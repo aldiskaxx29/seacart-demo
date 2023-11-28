@@ -4,6 +4,7 @@ import ArticleItem from "../molecules/ArticleItem";
 import ArticleItemIndiVidual from "../molecules/ArticleItemIndividual";
 import { ArticleProps } from "../../../service/type";
 import { articleList } from "../../../service/DummyData";
+import Image from "next/image";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -13,6 +14,7 @@ export default function ArticleListFull() {
   const [data, setData] = useState<ArticleProps[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [searchInput, setSearchInput] = useState<string>("");
   const itemsPerPage = 8;
 
   useEffect(() => {
@@ -38,8 +40,14 @@ export default function ArticleListFull() {
 
   const filteredData =
     selectedCategory === "All"
-      ? data
-      : data.filter((item) => item.category === selectedCategory);
+      ? data.filter((item) =>
+          item.title.toLowerCase().includes(searchInput.toLowerCase())
+        )
+      : data.filter(
+          (item) =>
+            item.category === selectedCategory &&
+            item.title.toLowerCase().includes(searchInput.toLowerCase())
+        );
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -49,22 +57,44 @@ export default function ArticleListFull() {
     setCurrentPage(pageNumber);
   };
 
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchInput(event.target.value);
+    // Reset selected category when searching
+    setSelectedCategory("All");
+  };
+
   return (
-    <div className="grid gap-10 px-40">
-      <div className="flex-col flex gap-5 pt-[100px]">
+    <div className="grid gap-10 px-40 pt-[100px]">
+      <div className="grid gap-3 pt-[100px]">
         <span className="text-teal-400 text-base font-extrabold leading-normal">
-          Contact Us
+          Article & News
         </span>
         <span className="text-indigo-900 lg:text-4xl text-3xl font-extrabold leading-[44px]">
-          Get In Touch
+          Resources and insights
         </span>
         <span className=" text-gray-500 text-xl font-normal font-['Sen'] leading-[30px]">
-          Our friendly team would love to hear from you.
+          Stay updated on the sea and seafood industries with the latest news.
         </span>
       </div>
 
       <div className="flex items-start justify-start">
-        <div className="w-1/4">
+        <div className="w-1/4 pe-5">
+          <div className="w-full flex border rounded-md px-3 py-1 text-gray-500 text-base font-normal font-['Sen'] leading-normal mb-5 focus:border-gray-300  focus:outline-slate-900">
+            <Image
+              src={"/assets/general/search-lg.svg"}
+              alt={""}
+              width={20}
+              height={20}
+            />
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchInput}
+              onChange={handleSearchChange}
+              className="w-full px-2 py-1 rounded-md focus:outline-none"
+            />
+          </div>
+
           <Tab.Group>
             <Tab.List className="grid rounded-xl p-1">
               {categories.map((category) => (
@@ -90,6 +120,7 @@ export default function ArticleListFull() {
           <ArticleItemIndiVidual
             id={currentItems[0]?.id}
             image_url={currentItems[0]?.image_url}
+            short_descriptions={currentItems[0]?.short_descriptions}
             category={currentItems[0]?.category}
             title={currentItems[0]?.title}
             content={currentItems[0]?.content}
@@ -116,28 +147,54 @@ export default function ArticleListFull() {
                 />
               ))}
           </div>
-          <div className="flex justify-center my-4">
-            <ul className="flex list-none">
-              {Array.from(
-                { length: Math.ceil(filteredData.length / itemsPerPage) },
-                (_, index) => (
-                  <li key={index}>
-                    <button
-                      onClick={() => paginate(index + 1)}
-                      className={classNames(
-                        "px-3 py-2 mx-1 font-semibold text-sm rounded-md focus:outline-none",
-                        currentPage === index + 1
-                          ? "bg-indigo-900 text-white"
-                          : "bg-white text-indigo-900 hover:bg-blue-300"
-                      )}>
-                      {index + 1}
-                    </button>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
         </div>
+      </div>
+      <div className="flex justify-between my-4">
+        <button
+          onClick={() => paginate(currentPage - 1)}
+          className="flex gap-4"
+          disabled={currentPage === 1}>
+          <Image
+            src={"/assets/general/arrow-left.png"}
+            alt={""}
+            width={24}
+            height={24}
+          />{" "}
+          Previous
+        </button>
+        <ul className="flex list-none">
+          {Array.from(
+            { length: Math.ceil(filteredData.length / itemsPerPage) },
+            (_, index) => (
+              <li key={index}>
+                <button
+                  onClick={() => paginate(index + 1)}
+                  className={classNames(
+                    "px-3 py-2 mx-1 font-semibold text-sm rounded-md focus:outline-none",
+                    currentPage === index + 1
+                      ? "bg-indigo-900 text-white"
+                      : "bg-white text-indigo-900 hover:bg-blue-300"
+                  )}>
+                  {index + 1}
+                </button>
+              </li>
+            )
+          )}
+        </ul>
+        <button
+          onClick={() => paginate(currentPage + 1)}
+          className="flex gap-4"
+          disabled={
+            currentPage === Math.ceil(filteredData.length / itemsPerPage)
+          }>
+          Next{" "}
+          <Image
+            src={"/assets/general/arrow-right.png"}
+            alt={""}
+            width={24}
+            height={24}
+          />{" "}
+        </button>
       </div>
     </div>
   );
