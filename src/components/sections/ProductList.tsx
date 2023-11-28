@@ -10,7 +10,25 @@ export default function ProductList() {
     <main className={`lg:flex items-star justify-center py-24  px-4  relative`}>
       <MotionDiv>
         <div className="lg:flex grid">
-          <div className="lg:flex-1 w-full lg:w-[500px] lg:px-10 grid justify-start items-start gap-4 h-fit mt-10 px-0  lg:order-first  order-last">
+
+          <div className="lg:flex-1 lg:w-[500px] w-full lg:px-10 grid justify-start items-start gap-6 lg:mb-0 mb-8">
+            <FadeInDown>
+              <h2 className=" text-indigo-900 text-[40px] font-bold font-['Sen'] leading-[50px] ">
+                Serving Fresh Seafood Everyday
+              </h2>
+            </FadeInDown>
+            <FadeInDown>
+              <Image
+                src={"/assets/product-page/unsplash_mWGA_F6ckeo.png"}
+                width={500}
+                height={100}
+                alt={""}
+                className="w-full"
+              />
+            </FadeInDown>
+          </div>
+          
+          <div className="lg:flex-1 w-full lg:w-[500px] lg:px-10 grid justify-start items-start gap-4 h-fit mt-10 px-0  ">
             <div>
               <FadeInUp>
                 <Image
@@ -45,23 +63,6 @@ export default function ProductList() {
                 />
               </FadeInUp>
             </div>
-          </div>
-
-          <div className="lg:flex-1 lg:w-[500px] w-full lg:px-10 grid justify-start items-start gap-6 lg:mb-0 mb-8">
-            <FadeInDown>
-              <h2 className=" text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px] ">
-                Serving Fresh Seafood Everyday
-              </h2>
-            </FadeInDown>
-            <FadeInDown>
-              <Image
-                src={"/assets/product-page/unsplash_mWGA_F6ckeo.png"}
-                width={500}
-                height={100}
-                alt={""}
-                className="w-full"
-              />
-            </FadeInDown>
           </div>
         </div>
       </MotionDiv>

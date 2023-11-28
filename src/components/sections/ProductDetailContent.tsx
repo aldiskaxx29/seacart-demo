@@ -165,8 +165,8 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                 {product.sub_products.map((item, index) => (
                   <div className=" w-full" key={index}>
                     <FadeInDown>
-                      <div className="flex w-full lg:py-1 border-b border-gray-200">
-                        <div className="lg:w-1/3 w-[120px] lg:flex grid items-center  justify-center lg:justify-start lg:gap-0  lg:text-base bg-indigo-900 text-white text-base font-bold font-['Sen'] lg:leading-[30px] lg:h-[100px] h-full  rounded lg:text-start text-center py-2">
+                      <div className="flex w-full lg:py-1 ">
+                        <div className="lg:w-1/3 w-[120px] lg:flex grid items-center  justify-center lg:justify-start lg:gap-0  lg:text-base bg-indigo-900 text-white text-base font-bold font-['Sen'] lg:leading-[30px] lg:h-[100px] h-full rounded-tl-md rounded-bl-md lg:text-start text-center py-2">
                           <div className=" lg:w-[130px] w-full flex lg:items-start lg:justify-start items-center justify-center my-2">
                             <Image
                               src={`${item.image_url}`}
@@ -181,7 +181,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                             {item.name}
                           </div>
                         </div>
-                        <div className="lg:w-1/3  w-1/3  grid gap-0 lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-center justify-center">
+                        <div className="lg:w-1/3  w-1/3  grid gap-0 lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-center justify-start px-5  bg-gray-100">
                           {Array.isArray(item.weight) ? (
                             item.weight.map((weight, index) => (
                               <li
@@ -199,7 +199,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                             </div>
                           )}
                         </div>
-                        <div className="lg:w-1/3  w-1/3  items-center lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] justify-center text-center grid">
+                        <div className="lg:w-1/3  w-1/3  items-center lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] justify-center text-start grid   bg-gray-50 rounded-tr-md rounded-br-md">
                           <div>
                             {item.wrap.split(", ").map((wrapItem, index) => (
                               <li key={index}>

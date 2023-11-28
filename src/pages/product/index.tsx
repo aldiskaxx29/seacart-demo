@@ -26,7 +26,6 @@ export default function product() {
       <ProductHero />
 
       <ProductList />
-      {/* <DocumentasiMakanan /> */}
       <Image src={'/assets/general/image 53.png'} width={1500} height={1500} alt="Food"/>
       <ProductCatalogue />
 

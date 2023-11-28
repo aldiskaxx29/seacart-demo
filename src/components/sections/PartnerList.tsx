@@ -124,26 +124,24 @@ export default function PartnerList() {
                 Trusted
               </span>
             </div>
-            <div className="py-2">
-              <Slider {...(isMobile ? mobileSettings : settings)} className="flex items-center justify-center">
-                {data.map((item, index) => (
-                  <div
-                    key={index}
-                    className={
-                      isMobile
-                        ? "px-4 flex justify-center items-center"
-                        : "flex justify-center items-center"
-                    }>
-                    <Image
-                      src={`/assets/partner-logo/${item.url}`}
-                      alt={"icon"}
-                      width={100}
-                      height={100}
-                      className=" lg:w-[100px] w-[100px] flex items-center justify-center"
-                    />
-                  </div>
-                ))}
-              </Slider>
+            <div className="py-2 grid grid-cols-3 lg:grid-cols-6 gap-20 px-20">
+              {data.map((item, index) => (
+                <div
+                  key={index}
+                  className={
+                    isMobile
+                      ? "px-4 flex justify-center items-center"
+                      : "flex justify-center items-center"
+                  }>
+                  <Image
+                    src={`/assets/partner-logo/${item.url}`}
+                    alt={item.client}
+                    width={100}
+                    height={100}
+                    className=" lg:w-[100px] w-[100px] flex items-center justify-center"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </FadeInDown>
