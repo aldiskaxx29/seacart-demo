@@ -100,7 +100,7 @@ export default function ArticleList() {
                       alt={"article"}
                       width={700}
                       height={100}
-                      className="rounded hover:scale-110 duration-700"
+                      className="rounded hover:scale-110 duration-700 object-cover h-60"
                     />
                   </div>
 
