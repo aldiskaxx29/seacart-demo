@@ -59,12 +59,12 @@ const Header = () => {
                   Contact Us
                 </Link>
               </FadeIn>
-              {/* <FadeIn>
+              <FadeIn>
 
             <Link href="/aboutus" className={`hover:text-gray-300 rounded-lg px-4 py-2  ${isActiveLink("/aboutus")? "font-bold bg-white shadow-sm":""}`}>
               About Us
             </Link>
-              </FadeIn> */}
+              </FadeIn>
               <FadeIn>
 
             <Link href="/article" className={`hover:text-gray-300 rounded-lg px-4 py-2  ${isActiveLink("/article")? "font-bold bg-white shadow-sm":""}`}>

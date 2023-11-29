@@ -43,3 +43,10 @@ export interface ArticleProps {
   }
   date: string;
 }
+
+export interface EmployeeProps {
+  id: any;
+  url: string;
+  name: string;
+  position: string;
+}

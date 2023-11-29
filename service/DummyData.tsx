@@ -1197,3 +1197,67 @@ export const ProductDetailData = [
     ],
   },
 ];
+
+
+export const EmployeeList = [
+  {
+    id: 1,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+  {
+    id: 2,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+  {
+    id: 3,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+  {
+    id: 4,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+  {
+    id: 5,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+  {
+    id: 6,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+  {
+    id: 7,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+  {
+    id: 8,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+  {
+    id: 9,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+  {
+    id: 10,
+    name: "Team Member Name",
+    position: "Position",
+    url: "Dummy Employee.png",
+  },
+];
