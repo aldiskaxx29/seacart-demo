@@ -104,7 +104,7 @@ export default function ArticleList() {
                     />
                   </div>
 
-                  <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight">
+                  <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight mt-4">
                     {item.category}
                   </span>
                   <div className="justify-start items-center gap-4 flex">
@@ -121,7 +121,7 @@ export default function ArticleList() {
                   <div className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal line-clamp-2">
                     {item.content}
                   </div>
-                  <div className="flex gap-2 items-center">
+                  <div className="flex gap-2 items-center mt-4">
                     <Image
                       src={`/assets/article-list/${item.writer.url}`}
                       alt={""}

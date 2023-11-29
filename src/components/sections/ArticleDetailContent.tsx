@@ -29,6 +29,40 @@ export default function ArticleDetailContent() {
     }
   }, [id]);
 
+  
+  const handleCopyLink = () => {
+    const articleUrl = window.location.href;
+    navigator.clipboard.writeText(articleUrl);
+    alert("Link copied to clipboard!");
+  };
+
+  const handleSocialMediaShare = (socialMedia:any) => {
+    const articleUrl = window.location.href;
+    const title = encodeURIComponent(article?.title || "");
+
+    switch (socialMedia) {
+      case "facebook":
+        window.open(
+          `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}`
+        );
+        break;
+      case "twitter":
+        window.open(
+          `https://twitter.com/intent/tweet?url=${articleUrl}&text=${title}`
+        );
+        break;
+      case "linkedin":
+        window.open(
+          `https://www.linkedin.com/shareArticle?url=${articleUrl}&mini=true&title=${title}`
+        );
+        break;
+      default:
+        break;
+    }
+  };
+
+
+
   if (!article) {
     return <p>Loading Your Data ... </p>;
   }
@@ -95,7 +129,7 @@ export default function ArticleDetailContent() {
           {article.category}
         </div>
 
-        <div className=" text-center text-indigo-900 text-5xl font-extrabold font-['Sen'] leading-[60px]">
+        <div className=" text-center text-indigo-900  text-4xl lg:text-5xl font-extrabold font-['Sen'] leading-[60px]">
           {article.title}
         </div>
 
@@ -126,11 +160,60 @@ export default function ArticleDetailContent() {
           alt={"article"}
           width={1000}
           height={100}
-          className="rounded hover:scale-105 duration-700 w-full h-[400px] object-cover"
+          className="rounded hover:scale-105 duration-700 w-full lg:h-[400px] object-cover px-4"
         />
 
-        <div className="w-full text-neutral-800 text-lg font-normal font-['Sen'] leading-7 p-10 pb-20 border-b-slate-700 mb-5">
-         {article.content}
+        <div className="w-full text-neutral-800 text-lg font-normal font-['Sen'] leading-7 p-4 lg:p-10 pb-20 border-b-slate-700 mb-5">
+          {article.content}
+        </div>
+
+        <div className="lg:flex p-4 grid gap-10 lg:items-center justify-between border-t pt-10 border-t-gray-200">
+          <div className=" text-teal-400 text-base font-extrabold font-['Sen'] leading-normal">
+            {article.category}
+          </div>
+          <div className="flex gap-2">
+            <button
+              className=" hover:bg-gray-100 text-slate-700 text-sm font-normal font-['Sen'] leading-tight p-3 flex gap-2 border-gray-400 border rounded-md items-center justify-center"
+              onClick={handleCopyLink}>
+              <Image
+                src={"/assets/social-icons-gray/copy-01.svg"}
+                width={20}
+                height={20}
+                alt={"next"}
+              />
+              Copy Link
+            </button>
+            <button
+              className=" hover:bg-gray-100 text-slate-700 text-sm font-normal font-['Sen'] leading-tight p-3 flex gap-2 border-gray-400 border rounded-md items-center justify-center"
+              onClick={() => handleSocialMediaShare("twitter")}>
+              <Image
+                src={"/assets/social-icons-gray/Social icon.svg"}
+                width={20}
+                height={20}
+                alt={"next"}
+              />
+            </button>
+            <button
+              className=" hover:bg-gray-100 text-slate-700 text-sm font-normal font-['Sen'] leading-tight p-3 flex gap-2 border-gray-400 border rounded-md items-center justify-center"
+              onClick={() => handleSocialMediaShare("facebook")}>
+              <Image
+                src={"/assets/social-icons-gray/Social icon-1.svg"}
+                width={20}
+                height={20}
+                alt={"next"}
+              />
+            </button>
+            <button
+              className=" hover:bg-gray-100 text-slate-700 text-sm font-normal font-['Sen'] leading-tight p-3 flex gap-2 border-gray-400 border rounded-md items-center justify-center"
+              onClick={() => handleSocialMediaShare("linkedin")}>
+              <Image
+                src={"/assets/social-icons-gray/Social icon-2.svg"}
+                width={20}
+                height={20}
+                alt={"next"}
+              />
+            </button>
+          </div>
         </div>
       </div>
     </main>
