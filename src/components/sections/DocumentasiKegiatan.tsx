@@ -20,7 +20,7 @@ export default function DocumentasiKegiatan() {
     getGalleryHome()
       .then((res) => {
         console.log(res);
-        setData(ImageGallery);
+        setData(res);
         setLoading(false); 
       })
       .catch((err) => {

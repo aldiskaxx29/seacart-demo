@@ -1,10 +1,15 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { articleList } from "../../../service/DummyData";
 import { ArticleProps } from "../../../service/type";
 import Image from "next/image";
 import { formatDate } from "../../../service/utils";
+import { getArticleDetail } from "../../../service/API";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
+
+
 
 export default function ArticleDetailContent() {
   
@@ -12,22 +17,40 @@ export default function ArticleDetailContent() {
   const id: string | undefined = router.query?.id as string | undefined;
   const [article, setArticle] = useState<ArticleProps | null>(null);
 
+  // useEffect(() => {
+  //   const fetchDataDummy = async () => {
+  //     if (id) {
+  //       setTimeout(() => {
+  //         const articleData = articleList.find(
+  //           (item) => item.id === Number(id)
+  //         );
+  //         setArticle(articleData || null);
+  //       }, 1000);
+  //     }
+  //   };
+
+  //   if (id) {
+  //     fetchDataDummy();
+  //   }
+  // }, [id]);
+
+  
   useEffect(() => {
-    const fetchDataDummy = async () => {
-      if (id) {
-        setTimeout(() => {
-          const articleData = articleList.find(
-            (item) => item.id === Number(id)
-          );
-          setArticle(articleData || null);
-        }, 1000);
+    const fetchData = async (id: any) => {
+      try {
+        if (id) {
+          const res = await getArticleDetail(id);
+          setArticle(res);
+          console.log(res);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
     };
 
-    if (id) {
-      fetchDataDummy();
-    }
-  }, [id]);
+    fetchData(id);
+  }, [id]); 
+
 
   
   const handleCopyLink = () => {
@@ -71,7 +94,7 @@ export default function ArticleDetailContent() {
     <main className={`flex min-h-screen flex-col items-center pt-[64px]`}>
       <Head>
         <title>{article.title} - Seacart</title>
-        <meta name={article.title} content={article.short_descriptions} />
+        <meta name={article.title} content={article.short_description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
@@ -134,12 +157,12 @@ export default function ArticleDetailContent() {
         </div>
 
         <div className=" text-center text-neutral-800 text-xl font-normal font-['Sen'] leading-[30px]">
-          {article.short_descriptions}
+          {article.short_description}
         </div>
 
         <div className="flex gap-2 items-center w-full justify-center">
           <Image
-            src={`/assets/article-list/${article.writer.url}`}
+            src={`/assets/article-list/Main Logo.png`}
             alt={""}
             width={100}
             height={100}
@@ -147,16 +170,16 @@ export default function ArticleDetailContent() {
           />
           <div className="grid">
             <span className="text-sm font-extrabold font-['Sen'] leading-tight">
-              {article.writer.name}
+              Admin
             </span>
             <span className="text-sm font-normal font-['Sen'] leading-tight mt-2">
-              {formatDate(article.date)}
+              {formatDate(article.updated_at)}
             </span>
           </div>
         </div>
 
         <Image
-          src={`/assets/article-list${article.image_url}`}
+          src={`${article.image_url}`}
           alt={"article"}
           width={1000}
           height={100}
@@ -164,7 +187,9 @@ export default function ArticleDetailContent() {
         />
 
         <div className="w-full text-neutral-800 text-lg font-normal font-['Sen'] leading-7 p-4 lg:p-10 pb-20 border-b-slate-700 mb-5">
-          {article.content}
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {article.content}
+            </ReactMarkdown>
         </div>
 
         <div className="lg:flex p-4 grid gap-10 lg:items-center justify-between border-t pt-10 border-t-gray-200">

@@ -15,43 +15,26 @@ export default function ProductDetail() {
   const id: string | undefined = router.query?.id as string | undefined;
   const [product, setProduct] = useState<ProductProps | null>(null);
 
+
   useEffect(() => {
-    const fetchDataDummy = async () => {
-      if (id) {
-        setTimeout(() => {
-          const productData = ProductSlider.find(
-            (item) => item.id === Number(id)
-          );
-          setProduct(productData || null);
-        }, 1000);
+    const fetchData = async (id: any) => {
+      try {
+        if (id) {
+          const res = await getProductDetail(id);
+          setProduct(res);
+          console.log(res);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
     };
 
-    if (id) {
-      fetchDataDummy();
-    }
-  }, [id]);
+    fetchData(id);
+  }, [id]); 
 
   if (!product) {
     return <p>Loading Your Data ... </p>;
   }
-
-//   const [data, setData] = useState<ProductProps>();
-// const [dataDummy, setDataDummy] = useState<ProductProps>();
-
-//   useEffect(() => {
-//     const fetchData = async (id: any) => {
-//       try {
-//         const res = await getProductDetail(id);
-//         setData(res);
-//         console.log(res);
-//       } catch (error) {
-//         console.error("Error fetching data:", error);
-//       }
-//     };
-
-//     fetchData(id);
-//   }, []);
 
   return (
     <>

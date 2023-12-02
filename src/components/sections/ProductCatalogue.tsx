@@ -17,7 +17,7 @@ useEffect(() => {
     try {
       const res = await getProductHome();
       setData(res);
-      setDataDummy(ProductSlider);
+      setDataDummy(res);
       console.log(res);
     } catch (error) {
       console.error("Error fetching data:", error);

@@ -25,16 +25,16 @@ const ArticleItem: React.FC<ArticlePropsMaps> = ({
         }}>
         <FadeIn>
           <div className=" overflow-hidden">
-            <Image
-              src={`/assets/article-list${image_url}`}
+            {image_url && (<Image
+              src={`${image_url}`}
               alt={"article"}
               width={700}
               height={100}
-              className="rounded hover:scale-110 duration-700 object-cover h-[256px] lg:m-0 mb-4"
-            />
+              className="rounded hover:scale-110 duration-700 object-cover h-[256px] lg:m-0 lg:mb-4 mb-4 "
+            />)}
           </div>
 
-          <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight">
+          <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight mt-4">
             {category}
           </span>
           <div className="justify-start items-center gap-4 flex">

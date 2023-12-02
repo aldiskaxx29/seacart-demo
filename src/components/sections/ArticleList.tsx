@@ -7,6 +7,7 @@ import PopUpComingSoon from "./PopUpComingSoon";
 import { MotionDiv } from "../animations/MotionDiv";
 import { ArticleProps } from "../../../service/type";
 import { useRouter } from "next/router";
+import { getArticles } from "../../../service/API";
 
 
 export default function ArticleList() {
@@ -17,9 +18,13 @@ export default function ArticleList() {
 
   useEffect(() => {
     const fetchData = async () => {
-      setTimeout(() => {
-        setData(articleList);
-      }, 1000);
+      try {
+        const res = await getArticles();
+        setData(res);
+        console.log(res);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
     fetchData();
@@ -95,13 +100,13 @@ export default function ArticleList() {
                 }}>
                 <FadeIn>
                   <div className=" overflow-hidden">
-                    <Image
-                      src={`/assets/article-list${item.image_url}`}
-                      alt={"article"}
+                    {item.image_url && (<Image
+                      src={item.image_url}
+                      alt={item.title}
                       width={700}
                       height={100}
                       className="rounded hover:scale-110 duration-700 object-cover h-60"
-                    />
+                    />)}
                   </div>
 
                   <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight mt-4">
@@ -119,11 +124,11 @@ export default function ArticleList() {
                     />
                   </div>
                   <div className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal line-clamp-2">
-                    {item.content}
+                    {item.short_description}
                   </div>
                   <div className="flex gap-2 items-center mt-4">
                     <Image
-                      src={`/assets/article-list/${item.writer.url}`}
+                      src={`/assets/article-list/Main Logo.png`}
                       alt={""}
                       width={100}
                       height={100}
@@ -131,10 +136,10 @@ export default function ArticleList() {
                     />
                     <div className="grid">
                       <span className="text-sm font-extrabold font-['Sen'] leading-tight">
-                        {item.writer.name}
+                        Admin
                       </span>
                       <span className="text-sm font-normal font-['Sen'] leading-tight mt-2">
-                        {formatDate(item.date)}
+                        {formatDate(item.updated_at)}
                       </span>
                     </div>
                   </div>

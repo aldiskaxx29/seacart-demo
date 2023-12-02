@@ -5,6 +5,7 @@ import ArticleItemIndiVidual from "../molecules/ArticleItemIndividual";
 import { ArticleProps } from "../../../service/type";
 import { articleList } from "../../../service/DummyData";
 import Image from "next/image";
+import { getArticleCategories, getArticles } from "../../../service/API";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -17,11 +18,38 @@ export default function ArticleListFull() {
   const [searchInput, setSearchInput] = useState<string>("");
   const itemsPerPage = 8;
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setTimeout(() => {
+  //       setData(articleList);
+  //     }, 1000);
+  //   };
+
+  //   fetchData();
+  // }, []);
+
   useEffect(() => {
     const fetchData = async () => {
-      setTimeout(() => {
-        setData(articleList);
-      }, 1000);
+      try {
+        const res = await getArticles();
+        console.log(res);
+        setData(res);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getArticleCategories();
+        console.log(res);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
     fetchData();
@@ -186,15 +214,13 @@ export default function ArticleListFull() {
           <ArticleItemIndiVidual
             id={currentItems[0]?.id}
             image_url={currentItems[0]?.image_url}
-            short_descriptions={currentItems[0]?.short_descriptions}
+            short_description={currentItems[0]?.short_description}
             category={currentItems[0]?.category}
             title={currentItems[0]?.title}
             content={currentItems[0]?.content}
-            writer={{
-              url: currentItems[0]?.writer.url,
-              name: currentItems[0]?.writer.name,
-            }}
-            date={currentItems[0]?.date}
+            writer_url={"Main Logo.png"}
+            writer_name={"Admin"}
+            updated_at={currentItems[0]?.updated_at}
           />
           <div className="grid lg:grid-cols-2 gap-2">
             {currentItems
@@ -206,10 +232,10 @@ export default function ArticleListFull() {
                   image_url={item.image_url}
                   category={item.category}
                   title={item.title}
-                  content={item.content}
-                  writer_url={item.writer.url}
-                  writer_name={item.writer.name}
-                  date={item.date}
+                  content={item.short_description}
+                  writer_url={"Main Logo.png"}
+                  writer_name={"Admin"}
+                  date={item.updated_at}
                 />
               ))}
           </div>

@@ -44,7 +44,6 @@ const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
       try {
         const res = await getProductHome();
         setData(res);
-        setDataDummy(ProductSlider)
         console.log(res);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -59,7 +58,7 @@ const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
       <div className=" bg-indigo-900 ">
         <Slider ref={sliderRef} {...settings}>
           {Array.isArray(data) && data.length > 0 ? (
-            dataDummy.map((item, index) => (
+            data.map((item, index) => (
               <div key={index} className="">
                 <div className="lg:flex flex-wrap-reverse min-h-screen pt-[100px]">
                   <div className="flex-1 lg:flex lg:items-end  lg:justify-end items-center justify-center  overflow-hidden">
@@ -70,7 +69,7 @@ const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
                           alt={item.name}
                           width={500}
                           height={500}
-                          className=" object-cover w-full lg:rounded-ss-xl lg:h-[600px] h-[300px]"
+                          className=" object-cover w-full lg:rounded-ss-xl lg:h-[700px] h-[300px]"
                         />
                       </FadeInRight>
                     </div>

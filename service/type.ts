@@ -34,19 +34,32 @@ export interface ArticleProps {
   id: any;
   image_url: string;
   category: string;
-  short_descriptions: string;
+  short_description: string;
   title: string;
   content: string;
-  writer: {
-    url: string,
-    name: string,
-  }
-  date: string;
+  updated_at: string;
 }
+
+export interface ArticlePropsOne {
+  id: any;
+  image_url: string;
+  category: string;
+  short_description: string;
+  title: string;
+  content: string;
+  updated_at: string;
+  writer_name: string;
+  writer_url: string;
+}
+
 
 export interface EmployeeProps {
   id: any;
   url: string;
   name: string;
   position: string;
+}
+
+export interface CategoriesProps {
+  categories: string[];
 }

@@ -106,3 +106,66 @@ blockquote {
 .blur-background{
   backdrop-filter: blur(5px);
 }
+
+/* ArticleDetailContent.module.css */
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph */
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Underline */
+u {
+  text-decoration: underline;
+}
+
+/* Italic */
+em {
+  font-style: italic;
+}
+
+/* Bold */
+strong {
+  font-weight: bold;
+}
+
+/* Line break */
+br {
+  content: " ";
+  display: block;
+  margin: 1rem 0;
+}
+/* Add more styles as needed for other HTML tags */
+
