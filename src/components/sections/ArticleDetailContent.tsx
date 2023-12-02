@@ -17,22 +17,6 @@ export default function ArticleDetailContent() {
   const id: string | undefined = router.query?.id as string | undefined;
   const [article, setArticle] = useState<ArticleProps | null>(null);
 
-  // useEffect(() => {
-  //   const fetchDataDummy = async () => {
-  //     if (id) {
-  //       setTimeout(() => {
-  //         const articleData = articleList.find(
-  //           (item) => item.id === Number(id)
-  //         );
-  //         setArticle(articleData || null);
-  //       }, 1000);
-  //     }
-  //   };
-
-  //   if (id) {
-  //     fetchDataDummy();
-  //   }
-  // }, [id]);
 
   
   useEffect(() => {
