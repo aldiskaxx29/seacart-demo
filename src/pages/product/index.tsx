@@ -26,7 +26,7 @@ export default function product() {
       <ProductHero />
 
       <ProductList />
-      <Image src={'/assets/general/image 53.png'} width={1500} height={1500} alt="Food"/>
+      <Image src={'/assets/general/image 53.png'} width={1500} height={1500} className="w-full px-1" alt="Food"/>
       <ProductCatalogue />
 
       <Footers />

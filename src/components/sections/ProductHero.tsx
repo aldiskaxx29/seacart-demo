@@ -28,10 +28,8 @@ export default function ProductHero() {
 
           <div className="flex-1 items-center justify-center relative flex">
             {" "}
-            <div className="text-indigo-900 lg:text-8xl text-3xl font-bold font-['Sen'] leading-[48px] absolute lg:w-[500px] w-[160px] ms-5">
-          <FadeInRight>
-              FRESH FROM THE OCEAN TO YOUR PLATE
-          </FadeInRight>
+            <div className="text-indigo-900 lg:text-7xl text-3xl font-bold font-['Sen'] leading-[48px] absolute lg:w-[420px] w-[160px]   lg:leading-[90px]">
+              <FadeInRight>FRESH FROM THE OCEAN TO YOUR PLATE</FadeInRight>
             </div>
           </div>
         </div>
