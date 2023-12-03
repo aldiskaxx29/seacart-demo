@@ -78,92 +78,92 @@ export default function ShowCaseProduct() {
                       className="w-12 h-12 p-2 bg-slate-300 rounded-full border-zinc-200 justify-center items-center"
                     />
                     <div className="grid gap-4">
-                    <h3 className="text-slate-100 text-3xl font-extrabold leading-[38px]">
-                      {data[currentSlide]?.name}
-                    </h3>
+                      <h3 className="text-slate-100 text-3xl font-extrabold leading-[38px]">
+                        {data[currentSlide]?.name}
+                      </h3>
 
-                    <span className="text-slate-300 text-lg font-normal lg:w-[560px] ">
-                      {data[currentSlide]?.short_description}
-                    </span>
-                    <button
-                      className="text-teal-400 text-sm font-normal leading-tight flex gap-2 items-center  hover:bg-teal-400/10 rounded-lg w-fit"
-                      onClick={() => {
-                        window.location.href = `/product/detail-product/${data[currentSlide]?.id}`;
-                      }}>
-                      See Detail
-                      <Image
-                        src={
-                          "/assets/product-icons/arrow-circle-broken-right.svg"
-                        }
-                        alt={"icon"}
-                        width={20}
-                        height={20}
-                      />
-                    </button>                      
+                      <span className="text-slate-300 text-lg font-normal lg:w-[560px] ">
+                        {data[currentSlide]?.short_description}
+                      </span>
+                      <button
+                        className="text-teal-400 text-sm font-normal leading-tight flex gap-2 items-center  hover:bg-teal-400/10 rounded-lg w-fit"
+                        onClick={() => {
+                          window.location.href = `/product/detail-product/${data[currentSlide]?.id}`;
+                        }}>
+                        See Detail
+                        <Image
+                          src={
+                            "/assets/product-icons/arrow-circle-broken-right.svg"
+                          }
+                          alt={"icon"}
+                          width={20}
+                          height={20}
+                        />
+                      </button>
                     </div>
-
                   </div>
                 </FadeInUp>
 
-                <div className="flex gap-4 lg:gap-5 items-start">
-                  {data[currentSlide]?.sub_products
-                    .slice(0, 3)
-                    .map((subItem, subIndex) => (
-                      <FadeIn key={subIndex}>
-                        <div className="grid gap-5">
-                          <Image
-                            src={`${subItem.image_url}`}
-                            alt={"icon"}
-                            width={100}
-                            height={100}
-                            className="rounded-full lg:w-[100px] w-[64px] aspect-square object-cover"
-                          />
-                          <span className="text-center w-[64px] lg:w-[100px] text-slate-300 lg:text-lg text-sm lg:font-normal ">
-                            {subItem.name}
-                          </span>
-                        </div>
-                      </FadeIn>
-                    ))}
+                <div className="flex items-center justify-start gap-5 px-4">
+                  <div className="flex gap-4 lg:gap-5 items-start">
+                    {data[currentSlide]?.sub_products
+                      .slice(0, 3)
+                      .map((subItem, subIndex) => (
+                        <FadeIn key={subIndex}>
+                          <div className="grid gap-4">
+                            <Image
+                              src={`${subItem.image_url}`}
+                              alt={"icon"}
+                              width={100}
+                              height={100}
+                              className="rounded-full lg:w-[100px] w-[64px] aspect-square object-cover"
+                            />
+                            <span className="text-center w-[64px] lg:w-[100px] text-slate-300 lg:text-lg text-sm lg:font-normal   font-normal font-['Sen'] leading-7">
+                              {subItem.name}
+                            </span>
+                          </div>
+                        </FadeIn>
+                      ))}
+                  </div>
                   {data[currentSlide]?.images_url.length > 3 && (
                     <FadeIn>
-                      <div>
-                        <span className="text-start text-slate-400 text-lg font-normal leading-7">
-                          and <br /> more ...
-                        </span>
+                      <div className=" items-start justify-center flex flex-col text-start text-slate-400 text-lg font-normal leading-7 px-6]">
+                        <div>and</div>
+                        <div>more ...</div>
                       </div>
                     </FadeIn>
                   )}
                 </div>
               </div>
 
-                <FadeIn>
-                  <div className="flex gap-6 w-fit justify-between mb-16">
-                    <button
-                      className=""
-                      onClick={() => sliderRef?.current?.slickPrev()}>
-                      {" "}
-                      <Image
-                        src={"/assets/product-icons/arrow-left.svg"}
-                        alt={"icon"}
-                        width={20}
-                        height={20}
-                        className="w-14 h-14 hover:bg-slate-300 bg-white bg-opacity-90 rounded-[28px] p-4"
-                      />
-                    </button>
-                    <button
-                      className=""
-                      onClick={() => sliderRef?.current?.slickNext()}>
-                      {" "}
-                      <Image
-                        src={"/assets/product-icons/arrow-right.svg"}
-                        alt={"icon"}
-                        width={20}
-                        height={20}
-                        className="w-14 h-14 hover:bg-slate-300 bg-white bg-opacity-90 rounded-[28px] p-4"
-                      />
-                    </button>
-                  </div>
-                </FadeIn>
+              <FadeIn>
+                <div className="flex gap-8 w-fit justify-between mb-16">
+                  <button
+                    className=""
+                    onClick={() => sliderRef?.current?.slickPrev()}>
+                    {" "}
+                    <Image
+                      src={"/assets/product-icons/arrow-left.svg"}
+                      alt={"icon"}
+                      width={20}
+                      height={20}
+                      className="w-14 h-14 hover:bg-slate-300 bg-white bg-opacity-90 rounded-[28px] p-4"
+                    />
+                  </button>
+                  <button
+                    className=""
+                    onClick={() => sliderRef?.current?.slickNext()}>
+                    {" "}
+                    <Image
+                      src={"/assets/product-icons/arrow-right.svg"}
+                      alt={"icon"}
+                      width={20}
+                      height={20}
+                      className="w-14 h-14 hover:bg-slate-300 bg-white bg-opacity-90 rounded-[28px] p-4"
+                    />
+                  </button>
+                </div>
+              </FadeIn>
             </div>
           </div>
         )}
