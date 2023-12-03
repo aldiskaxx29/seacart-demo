@@ -48,10 +48,10 @@ export default function ArticleList() {
 
   return (
     <MotionDiv>
-      <div className="lg:py-32 py-12 grid  items-start  lg:px-32 px-2">
+      <div className="lg:py-32 pt-[128px] pb-12 grid  items-start  lg:px-32 px-2 ">
         <FadeInUp>
           <div className="flex items-center justify-between w-full">
-            <div className="p-4 grid gap-5">
+            <div className="p-2 grid gap-5">
               <div className="grid gap-3">
                 <span className="text-teal-400 text-base font-extrabold  leading-normal">
                   Article & News
@@ -78,12 +78,12 @@ export default function ArticleList() {
         </FadeInUp>
 
         {/* Article */}
-        <div className="justify-start items-start gap-8 lg:inline-flex">
+        <div className="justify-start items-start gap-8 lg:inline-flex px-2">
           {/* article Item */}
           {renderedData.map((item, index) =>
             id && item.id.toString() === id.toString() ? null : (
               <div
-                className="p-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid mt-10 hover:shadow-lg duration-500"
+                className="lg:p-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid mt-10 hover:shadow-lg duration-500"
                 key={index}
                 onClick={() => {
                   window.location.href = `/article/detail-article/${item.id}`;
