@@ -8,10 +8,10 @@ export default function Footers() {
       <div className="px-2 lg:px-8 flex-col justify-start items-start gap-8 flex">
         <div className="self-stretch pb-16 flex-col justify-start items-center gap-10 flex">
           <div className=" flex-col justify-start items-center gap-4 flex">
-            <div className="self-stretch text-center text-slate-100 text-3xl font-extrabold leading-[38px]">
+            <div className="self-stretch text-center text-slate-100 lg:text-3xl font-extrabold lg:leading-[38px] text-2xl font-['Sen'] leading-loose">
               Explore Our Fresh Catch of the Day!
             </div>
-            <div className="self-stretch text-center text-slate-300 text-xl font-normal leading-[30px]">
+            <div className="self-stretch text-center text-slate-300 lg:text-xl font-normal lg:leading-[30px] text-base  font-['Sen'] leading-normal">
               Dive into a world of fresh, premium seafood at your fingertips.
             </div>
           </div>
@@ -115,14 +115,14 @@ export default function Footers() {
         </div>
 
         <div className="w-full pt-8 border-t border-slate-400 justify-between items-center gap-8 lg:flex lg:flex-row-reverse flex-col space-y-5">
-          <div className="flex gap-5">
+          <div className="flex gap-5 items-center">
             <Link href="https://www.instagram.com/seacart.id/">
               <Image
                 src={"/assets/social-icons-white/Social icon-1.svg"}
                 alt={"icon"}
                 width={24}
                 height={23}
-                className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1"
+                className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1 w-6 h-6"
               />
             </Link>
             <Link href="https://www.facebook.com/seacart.id?_rdc=1&_rdr">
@@ -131,7 +131,7 @@ export default function Footers() {
                 alt={"icon"}
                 width={24}
                 height={23}
-                className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1"
+                className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1 w-6 h-6"
               />
             </Link>
             <Link href="https://www.linkedin.com/company/seacart/about/">
@@ -140,7 +140,7 @@ export default function Footers() {
                 alt={"icon"}
                 width={27}
                 height={23}
-                className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1"
+                className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1 w-[28px] h-7"
               />
             </Link>
           </div>

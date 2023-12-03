@@ -9,7 +9,7 @@ export default function  DropMenu() {
     <div className="">
       <Menu as="div" className=" inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md py-2 text-sm font-medium text-primary  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+          <Menu.Button className="inline-flex w-fit justify-center rounded-md py-2 text-sm font-medium text-primary  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 px-0">
             <Image
               src={"/assets/general/_Nav menu button.svg"}
               alt={""}
@@ -59,8 +59,8 @@ export default function  DropMenu() {
                 </p>
               </Link>
               <Link
-                href="#"
-                className=" text-primary py-2  mb-1 hover:text-gray-300 hidden px-5">
+                href="/about"
+                className=" text-primary py-2  mb-1 hover:text-gray-300 px-5">
                 <p className="text-indigo-900  mb-2 text-base font-bold font-['Sen'] leading-normal">
                   About Us
                 </p>
@@ -69,8 +69,8 @@ export default function  DropMenu() {
                 </p>
               </Link>
               <Link
-                href="#"
-                className=" text-primary py-2 hover:text-gray-300 hidden px-8">
+                href="/article"
+                className=" text-primary hover:text-gray-300 px-5">
                 <p className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal">
                   Article & News
                 </p>
