@@ -26,7 +26,7 @@ export default function WhatWeServe() {
           </div>
 
           <FadeIn>
-            <span className="text-neutral-800 text-xl font-normal font-['Sen'] leading-[30px]">
+            <span className="text-[#212121] text-xl font-normal font-['Sen'] leading-[30px]">
               As the worlds top fishery producer, Indonesia faces industry
               challenges, but <b>Seacart</b> offers 24/7 support as your
               complete solution!
@@ -51,7 +51,7 @@ export default function WhatWeServe() {
                 <span className="text-indigo-900 text-xl font-extrabold font-['Sen'] leading-[30px]">
                   Same-Day Delivery and Price Stability
                 </span>
-                <span className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal">
+                <span className="text-[#212121] text-base font-normal font-['Sen'] leading-normal">
                   As the worlds top fishery producer, Indonesia faces industry
                   challenges, but Seacart offers 24/7 support as your complete
                   solution!
@@ -73,7 +73,7 @@ export default function WhatWeServe() {
                 <span className="text-indigo-900 text-xl font-extrabold font-['Sen'] leading-[30px]">
                   Quality Assurance and Stock Management
                 </span>
-                <span className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal">
+                <span className="text-[#212121] text-base font-normal font-['Sen'] leading-normal">
                   We guarantee high-quality products, secure transactions, and
                   offer stock management and kitchen stock analysis services for
                   efficient control.
