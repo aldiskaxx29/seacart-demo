@@ -14,7 +14,6 @@ interface Props {
 export default function DocumentasiKegiatan() {
   const [data, setData] = useState<Props[]>([]);
   const [loading, setLoading] = useState(true); 
-  const [dataDummy, setDataDummy] = useState<Props[]>([]);
 
   const GetGalleryHomeData = () => {
     getGalleryHome()

@@ -61,8 +61,6 @@ export default function PartnerList() {
     slidesToShow: 3, // Adjust the number of slides for mobile view
   };
 
-
-
   return (
     <MotionDiv>
       <div className="py-32 flex-col justify-center items-center gap-16 min-h-screen">
@@ -78,50 +76,18 @@ export default function PartnerList() {
             </span>
           </FadeInUp>
           <FadeInUp>
-            <span className=" text-center flex  text-neutral-800 text-xl font-normal lg:w-[500px]">
+            <span className=" text-center flex  text-[#212121] text-xl font-normal lg:w-[500px]">
               We&rsquo;re proud to showcase our performance data and the growing
               list of companies who have chosen to partner with us.
             </span>
           </FadeInUp>
         </div>
 
-        <div className="lg:flex gap-10 w-full items-center justify-center mt-20">
-          <FadeIn>
-            <div className="flex-col justify-start items-center gap-3 inline-flex lg:mt-0 mt-10 lg:w-fit w-full">
-              <h1 className="text-center text-indigo-900 text-6xl font-extrabold leading-[72px]">
-                1000+
-              </h1>
-              <span className="text-center text-neutral-800 text-lg font-normal leading-7">
-                Items Sold
-              </span>
-            </div>
-          </FadeIn>
-          <FadeIn>
-            <div className="flex-col justify-start items-center gap-3 inline-flex lg:mt-0 mt-10 lg:w-fit w-full">
-              <h1 className="text-center text-indigo-900 text-6xl font-extrabold leading-[72px]">
-                15 Min
-              </h1>
-              <span className="text-center text-neutral-800 text-lg font-normal leading-7">
-                Avg. Delivery Time
-              </span>
-            </div>
-          </FadeIn>
-          <FadeIn>
-            <div className="flex-col justify-start items-center gap-3 inline-flex lg:mt-0 mt-10 lg:w-fit w-full">
-              <h1 className="text-center text-indigo-900 text-6xl font-extrabold leading-[72px]">
-                98%
-              </h1>
-              <span className="text-center text-neutral-800 text-lg font-normal leading-7">
-                Customer Satisfactions
-              </span>
-            </div>
-          </FadeIn>
-        </div>
         <FadeInDown>
           <div className="flex-col mt-20 w-full items-center justify-center">
             <div className="mb-5 flex items-center justify-center">
               <span className="text-indigo-900 text-lg font-extrabold">
-                Trusted
+                Trusted By
               </span>
             </div>
             <div className="py-2 grid grid-cols-3 lg:grid-cols-6 gap-20 px-20">
@@ -136,9 +102,9 @@ export default function PartnerList() {
                   <Image
                     src={`/assets/partner-logo/${item.url}`}
                     alt={item.client}
-                    width={100}
-                    height={100}
-                    className=" lg:w-[100px] w-[100px] flex items-center justify-center"
+                    width={300}
+                    height={300}
+                    className=" lg:w-44 w-[120px] flex items-center justify-center"
                   />
                 </div>
               ))}

@@ -16,11 +16,11 @@ export default function WhoAreWe() {
         <div className=" text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px]">
           Welcome to Seacart
         </div>
-        <div className=" text-neutral-800 text-xl font-bold font-['Sen'] leading-[30px]">
+        <div className=" text-[#212121] text-xl font-bold font-['Sen'] leading-[30px]">
           where passion for the ocean meets a commitment to excellence in
           seafood sourcing and supply.
         </div>
-        <div className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal">
+        <div className="text-[#212121] text-base font-normal font-['Sen'] leading-normal">
           <span className="">
             Established in ... , Seacart was born out of a shared love for the
             sea and its treasures. We envisioned a company that not only

@@ -4,13 +4,10 @@ import { FadeInDown, FadeInUp } from "../animations/AnimationTemplate";
 import { MotionDiv } from "../animations/MotionDiv";
 
 export default function ProductList() {
-
-  
   return (
     <main className={`lg:flex items-star justify-center py-24  px-4  relative`}>
       <MotionDiv>
         <div className="lg:flex grid">
-
           <div className="lg:flex-1 lg:w-[500px] w-full lg:px-10 grid justify-start items-start gap-6 lg:mb-0 mb-8">
             <FadeInDown>
               <h2 className=" text-indigo-900 text-[40px] font-bold font-['Sen'] leading-[50px] ">
@@ -27,7 +24,7 @@ export default function ProductList() {
               />
             </FadeInDown>
           </div>
-          
+
           <div className="lg:flex-1 w-full lg:w-[500px] lg:px-10 grid justify-start items-start gap-4 h-fit mt-10 px-0  ">
             <div>
               <FadeInUp>
@@ -42,7 +39,7 @@ export default function ProductList() {
             </div>
             <div>
               <FadeInUp>
-                <p className="text-neutral-800 text-lg font-normal font-['Sen'] leading-7">
+                <p className="text-[#212121] text-lg font-normal font-['Sen'] leading-7">
                   Immerse yourself in a culinary journey with our premium
                   selection of fresh seafood products, a testament to the
                   ocean`s bounty delivered straight to your table. Handpicked

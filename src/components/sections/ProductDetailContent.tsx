@@ -4,7 +4,7 @@ import { MotionDiv } from "../animations/MotionDiv";
 import { ProductProps } from "../../../service/type";
 import { ProductSlider } from "../../../service/DummyData";
 import { getProductHome } from "../../../service/API";
-import React, { useEffect,  useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface ProductDetailContentProps {
   product: {
@@ -157,7 +157,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                 <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px]">
                   {product.name}
                 </h2>
-                <p className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal">
+                <p className="text-[#212121] text-base font-normal font-['Sen'] leading-normal">
                   {product.short_description}
                 </p>
               </FadeIn>

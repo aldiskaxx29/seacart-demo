@@ -18,10 +18,10 @@ export default function VisiMisi() {
             <div className=" text-indigo-900 text-3xl lg:text-6xl font-bold font-['Sen'] ">
               Our Vision
             </div>
-            <div className=" text-neutral-800 lg:text-xl font-bold font-['Sen'] leading-[30px]">
+            <div className=" text-[#212121] lg:text-xl font-bold font-['Sen'] leading-[30px]">
               Empowering a Sustainable Ocean Legacy
             </div>
-            <div className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal">
+            <div className="text-[#212121] text-base font-normal font-['Sen'] leading-normal">
               <span className="">
                 Pioneering Excellence in Seafood Sourcing and Supply Chain
                 Solutions. At Seacart, we envision a future where our commitment
@@ -68,7 +68,7 @@ export default function VisiMisi() {
             <div className=" text-indigo-900 text-6xl font-bold font-['Sen'] leading-[72px]">
               Our Mission
             </div>
-            <div className=" text-neutral-800 text-xl font-bold font-['Sen'] leading-[30px]">
+            <div className=" text-[#212121] text-xl font-bold font-['Sen'] leading-[30px]">
               At Seacart, our mission is to deliver an unparalleled seafood
               experience by:
             </div>

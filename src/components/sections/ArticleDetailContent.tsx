@@ -8,17 +8,11 @@ import { getArticleDetail } from "../../../service/API";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-
-
-
 export default function ArticleDetailContent() {
-  
   const router = useRouter();
   const id: string | undefined = router.query?.id as string | undefined;
   const [article, setArticle] = useState<ArticleProps | null>(null);
 
-
-  
   useEffect(() => {
     const fetchData = async (id: any) => {
       try {
@@ -33,17 +27,15 @@ export default function ArticleDetailContent() {
     };
 
     fetchData(id);
-  }, [id]); 
+  }, [id]);
 
-
-  
   const handleCopyLink = () => {
     const articleUrl = window.location.href;
     navigator.clipboard.writeText(articleUrl);
     alert("Link copied to clipboard!");
   };
 
-  const handleSocialMediaShare = (socialMedia:any) => {
+  const handleSocialMediaShare = (socialMedia: any) => {
     const articleUrl = window.location.href;
     const title = encodeURIComponent(article?.title || "");
 
@@ -67,8 +59,6 @@ export default function ArticleDetailContent() {
         break;
     }
   };
-
-
 
   if (!article) {
     return <p>Loading Your Data ... </p>;
@@ -140,13 +130,13 @@ export default function ArticleDetailContent() {
           {article.title}
         </div>
 
-        <div className=" text-center text-neutral-800 text-xl font-normal font-['Sen'] leading-[30px]">
+        <div className=" text-center text-[#212121] text-xl font-normal font-['Sen'] leading-[30px]">
           {article.short_description}
         </div>
 
         <div className="flex gap-2 items-center w-full justify-center">
           <Image
-            src={`/assets/article-list/Main Logo.png`}
+            src={`/assets/article-list/Main Logo White.png`}
             alt={""}
             width={100}
             height={100}
@@ -170,10 +160,10 @@ export default function ArticleDetailContent() {
           className="rounded hover:scale-105 duration-700 w-full lg:h-[400px] object-cover px-4"
         />
 
-        <div className="w-full text-neutral-800 text-lg font-normal font-['Sen'] leading-7 p-4 lg:p-10 pb-20 border-b-slate-700 mb-5">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {article.content}
-            </ReactMarkdown>
+        <div className="w-full text-[#212121] text-lg font-normal font-['Sen'] leading-7 p-4 lg:p-10 pb-20 border-b-slate-700 mb-5">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {article.content}
+          </ReactMarkdown>
         </div>
 
         <div className="lg:flex p-4 grid gap-10 lg:items-center justify-between border-t pt-10 border-t-gray-200">

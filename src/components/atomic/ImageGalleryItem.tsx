@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ImagePopUp from "../molecules/ImagePopUp";
 import { ImageGallery } from "../../../service/DummyData";
+import { getGalleryHome } from "../../../service/API";
 
 interface ImageGalleryItemProps {
   id: any; 
@@ -11,6 +12,12 @@ interface ImageGalleryItemProps {
   height?: number;
   width?: number;
 }
+
+interface Props {
+  id: any;
+  filename: string;
+}
+[];
 
 const ImageGalleryItem: React.FC<ImageGalleryItemProps> = ({
   id,
@@ -25,6 +32,26 @@ const ImageGalleryItem: React.FC<ImageGalleryItemProps> = ({
 
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
   const [initialSlideId, setInitialSlideId] = useState(1);
+
+    const [data, setData] = useState<Props[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    const GetGalleryHomeData = () => {
+      getGalleryHome()
+        .then((res) => {
+          console.log(res);
+          setData(res);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+        });
+    };
+
+    useEffect(() => {
+      GetGalleryHomeData();
+    }, []);
 
   const openPopUp = (id: number) => {
     setIsPopUpOpen(true);
@@ -43,7 +70,7 @@ const ImageGalleryItem: React.FC<ImageGalleryItemProps> = ({
       <ImagePopUp
         isOpen={isPopUpOpen}
         onClose={closePopUp}
-        images={ImageGallery}
+        images={data}
         initialSlideId={initialSlideId}
       />
       <div onClick={handleClick}>

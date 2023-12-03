@@ -5,8 +5,8 @@ import { formatDate } from "../../../service/utils";
 import { ArticleProps, ArticlePropsMaps } from "../../../service/type";
 
 const ArticleItem: React.FC<ArticlePropsMaps> = ({
-    key,
-    id,
+  key,
+  id,
   image_url,
   category,
   title,
@@ -25,13 +25,15 @@ const ArticleItem: React.FC<ArticlePropsMaps> = ({
         }}>
         <FadeIn>
           <div className=" overflow-hidden">
-            {image_url && (<Image
-              src={`${image_url}`}
-              alt={"article"}
-              width={700}
-              height={100}
-              className="rounded hover:scale-110 duration-700 object-cover h-[256px] lg:m-0 lg:mb-4 mb-4 "
-            />)}
+            {image_url && (
+              <Image
+                src={`${image_url}`}
+                alt={"article"}
+                width={700}
+                height={100}
+                className="rounded hover:scale-110 duration-700 object-cover h-[256px] lg:m-0 lg:mb-4 mb-4 "
+              />
+            )}
           </div>
 
           <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight mt-4">
@@ -48,7 +50,7 @@ const ArticleItem: React.FC<ArticlePropsMaps> = ({
               height={30}
             />
           </div>
-          <div className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal line-clamp-2">
+          <div className="text-[#212121] text-base font-normal font-['Sen'] leading-normal line-clamp-2">
             {content}
           </div>
           <div className="flex gap-2 items-center mt-5">

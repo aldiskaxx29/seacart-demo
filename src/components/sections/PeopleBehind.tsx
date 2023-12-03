@@ -4,7 +4,6 @@ import { EmployeeList } from "../../../service/DummyData";
 import { EmployeeProps } from "../../../service/type";
 
 export default function PeopleBehind() {
-  
   const [data, setData] = useState<EmployeeProps[]>([]);
 
   useEffect(() => {
@@ -33,7 +32,7 @@ export default function PeopleBehind() {
         <div className=" text-indigo-900 lg:text-6xl text-4xl font-bold font-['Sen'] leading-[72px]">
           Meet Our Team
         </div>
-        <div className=" text-neutral-800 text-xl font-bold font-['Sen'] leading-[30px]">
+        <div className=" text-[#212121] text-xl font-bold font-['Sen'] leading-[30px]">
           Seacart wouldn`t be what it is today without the extraordinary people
           behind it.
         </div>
@@ -51,7 +50,7 @@ export default function PeopleBehind() {
             <div className="text-center text-indigo-900 text-3xl font-bold font-['Sen'] leading-[38px]">
               {item.name}
             </div>
-            <div className="text-center text-neutral-800 text-lg font-normal font-['Sen'] leading-7">
+            <div className="text-center text-[#212121] text-lg font-normal font-['Sen'] leading-7">
               {item.position}
             </div>
           </div>

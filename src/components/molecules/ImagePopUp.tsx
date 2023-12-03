@@ -27,7 +27,6 @@ export default function ImagePopUp({
   };
 
 
-  let [isOpenDialogue, setIsOpenDialogue] = useState(true);
   
 
   return (
@@ -58,7 +57,7 @@ export default function ImagePopUp({
                 <Dialog.Panel className=" transform  transition-all flex items-center justify-center object-center">
                   <button
                     onClick={onClose}
-                    className="fixed lg:top-[180px] lg:right-[-50px] top-[50px] right-[-40px] z-50">
+                    className="fixed lg:top-[-20px] lg:right-[-50px] top-[50px] right-[-40px] z-50">
                     <Image
                       src={`/assets/general/Button close X.svg`}
                       alt={"icon"}

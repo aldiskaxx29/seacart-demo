@@ -7,27 +7,24 @@ import { MotionDiv } from "../animations/MotionDiv";
 import { getProductHome } from "../../../service/API";
 import { ProductProps } from "../../../service/type";
 
-
 export default function ProductCatalogue() {
-const [data, setData] = useState<ProductProps[]>([]);
-const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
+  const [data, setData] = useState<ProductProps[]>([]);
+  const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
 
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await getProductHome();
-      setData(res);
-      setDataDummy(res);
-      console.log(res);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getProductHome();
+        setData(res);
+        setDataDummy(res);
+        console.log(res);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-  fetchData();
-}, []);
-
-
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -71,10 +68,8 @@ useEffect(() => {
                     </h2>
                   </FadeIn>
                   <FadeIn>
-                    <p className="text-neutral-800 text-base font-normal font-['Sen'] leading-normal">
-                      <ApiDescriptionComponent
-                        description={item.description}
-                      />
+                    <p className="text-[#212121] text-base font-normal font-['Sen'] leading-normal">
+                      <ApiDescriptionComponent description={item.description} />
                     </p>
                   </FadeIn>
                   <FadeIn>
