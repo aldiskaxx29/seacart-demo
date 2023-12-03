@@ -29,7 +29,7 @@ export default function Home() {
         <div className=" snap-child">
           <WhatWeServe />
         </div>
-        <div className=" snap-child">
+        <div className=" snap-child lg:block hidden">
           <VideoPlaceholder />
         </div>
         <div className=" snap-child">

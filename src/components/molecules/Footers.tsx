@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footers() {
   return (
-    <div className="w-full pt-[280px] pb-10 bg-indigo-900 flex-col justify-between items-center inline-flex">
+    <div className="w-full pt-[280px] pb-10 bg-[#2F306A] flex-col justify-between items-center inline-flex">
       <div className="px-2 lg:px-8 flex-col justify-start items-start gap-8 flex">
         <div className="self-stretch pb-16 flex-col justify-start items-center gap-10 flex">
           <div className=" flex-col justify-start items-center gap-4 flex">
@@ -16,18 +16,27 @@ export default function Footers() {
             </div>
           </div>
           <div className="justify-center items-center gap-3 inline-flex w-full">
-            <div className="w-50 px-3 py-3 hover:bg-white/10 rounded-lg justify-center items-center gap-2 flex">
-              <div className=" h-5 relative" />
+            <div className="w-50 hover:bg-white/10 rounded-lg justify-center items-center gap-2 flex">
+              <div className=" relative" />
               <button
                 onClick={() => {
                   window.location.href = `/product`;
                 }}
-                className="text-zinc-200 text-base font-normal leading-normal">
+                className="text-zinc-200 text-base flex gap-2 font-normal leading-normal px-5 py-3 items-center justify-center">
+                <Image
+                  src={"/assets/general/box.png"}
+                  alt={"icon"}
+                  width={30}
+                  height={23}
+                  className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1 "
+                />
                 View product
               </button>
             </div>
             <div className="w-50 px-3 py-3 hover:bg-gray-300 bg-white rounded-lg shadow border  justify-center items-center gap-2 flex">
-              <button className="text-indigo-900 text-base font-normal leading-normal" onClick={() => {
+              <button
+                className="text-indigo-900 text-base font-normal leading-normal"
+                onClick={() => {
                   window.location.href = `/contact`;
                 }}>
                 Contact us
@@ -54,7 +63,7 @@ export default function Footers() {
                 <div className=" text-slate-100 text-base font-bold leading-normal">
                   Solutee Head Office
                 </div>
-                <div className=" text-slate-100 text-base font-normal leading-normal w-full lg:w-[500px]">
+                <div className=" text-slate-100 text-base font-normal leading-normal w-full lg:w-[600px]">
                   Kawasan Pelabuhan Perikanan Samudera Nizam Zachman, Jalan Tuna
                   Raya No.2, Muara Baru, Kec. Penjaringan, Jakarta Utara, DKI
                   Jakarta, 14440
@@ -86,20 +95,20 @@ export default function Footers() {
                 </div>
               </div>
               <div className=" lg:space-y-0 gap-5 lg:flex mobile:inline-flex justify-start items-start">
-                {/* <div className="justify-start items-start gap-2 flex">
+                <div className="justify-start items-start gap-2 flex">
                   <Link
                     className="text-slate-100 mb-5 text-base font-normal leading-normal"
-                    href={"/"}>
+                    href={"/about"}>
                     About us
                   </Link>
-                </div> */}
-                {/* <div className="justify-start items-center gap-2 flex">
+                </div>
+                <div className="justify-start items-center gap-2 flex">
                   <Link
                     className="text-slate-100 mb-5 text-base font-normal leading-normal"
-                    href={"/"}>
+                    href={"/article"}>
                     Article & News
                   </Link>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

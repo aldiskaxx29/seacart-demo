@@ -39,8 +39,8 @@ export default function ShowCaseProduct() {
 
   return (
     <MotionDiv>
-      <div className="bg-[#2F306A] lg:flex h-[100vh] pt-[72px] overflow-hidden">
-        <div className="flex-1 w-2/5 overflow-hidden">
+      <div className="bg-[#2F306A] lg:flex lg:h-[100vh] pt-[72px] overflow-hidden">
+        <div className="flex-1 lg:w-2/5 overflow-hidden ">
           {Array.isArray(data) && data.length > 0 && (
             <Slider
               ref={sliderRef}
@@ -65,22 +65,24 @@ export default function ShowCaseProduct() {
 
         {/* Component Content */}
         {Array.isArray(data) && data.length > 0 && (
-          <div className="grid gap-2 lg:order-first items-stretch lg:w-3/5 pt-[72px]">
+          <div className="grid gap-2 lg:order-first items-stretch lg:w-3/5 lg:pt-[72px] pt-6">
             <div className="flex-1 px-4 lg:px-[100px] flex flex-col justify-between h-full">
               <div className="grid gap-8 h-fit items-center">
                 <FadeInUp>
-                  <div className="grid gap-6">
-                    <Image
-                      src={"/assets/product-icons/box.svg"}
-                      alt={"icon"}
-                      width={24}
-                      height={24}
-                      className="w-12 h-12 p-2 bg-slate-300 rounded-full border-zinc-200 justify-center items-center"
-                    />
+                  <div>
                     <div className="grid gap-4">
-                      <h3 className="text-slate-100 text-3xl font-extrabold leading-[38px]">
-                        {data[currentSlide]?.name}
-                      </h3>
+                      <div className="lg:grid lg:gap-6 gap-4 flex items-start">
+                        <Image
+                          src={"/assets/general/Featured icon.svg"}
+                          alt={"icon"}
+                          width={24}
+                          height={24}
+                          className="lg:w-12 lg:h-12 w-8 h-8"
+                        />
+                        <h3 className="text-slate-100 text-2xl lg:text-3xl font-extrabold lg:leading-[38px]">
+                          {data[currentSlide]?.name}
+                        </h3>
+                      </div>
 
                       <span className="text-slate-300 text-lg font-normal lg:w-[560px] ">
                         {data[currentSlide]?.short_description}
@@ -104,7 +106,7 @@ export default function ShowCaseProduct() {
                   </div>
                 </FadeInUp>
 
-                <div className="flex items-center justify-start gap-5 px-4">
+                <div className="flex items-center justify-start gap-5 lg:px-4">
                   <div className="flex gap-4 lg:gap-5 items-start">
                     {data[currentSlide]?.sub_products
                       .slice(0, 3)
@@ -137,7 +139,7 @@ export default function ShowCaseProduct() {
               </div>
 
               <FadeIn>
-                <div className="flex gap-8 w-fit justify-between mb-16">
+                <div className="flex gap-8 lg:w-fit justify-between lg:mb-16 mb-8 lg:mt-0 mt-6 lg:px-0 px-16">
                   <button
                     className=""
                     onClick={() => sliderRef?.current?.slickPrev()}>
