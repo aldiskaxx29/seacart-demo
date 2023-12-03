@@ -2,7 +2,7 @@ export default function Videos() {
   return (
     <div>
       {" "}
-      <div className="rounded-xl h-[500px] object-cover shadow-2xl lg:w-[1000px] overflow-hidden flex items-center justify-center ">
+      <div className="rounded-xl  object-cover shadow-2xl lg:w-[768px] h-[432px] overflow-hidden flex items-center justify-center">
         <iframe
           width="100%"
           height="700" // You can adjust the height based on your preference

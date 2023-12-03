@@ -37,7 +37,6 @@ export default function ShowCaseProduct() {
   };
   
 const [data, setData] = useState<ProductProps[]>([]);
-const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,7 +59,7 @@ const [dataDummy, setDataDummy] = useState<ProductProps[]>([]);
           {Array.isArray(data) && data.length > 0 ? (
             data.map((item, index) => (
               <div key={index} className="">
-                <div className="lg:flex flex-wrap-reverse min-h-screen pt-[100px]">
+                <div className="lg:flex flex-wrap-reverse min-h-screen pt-[72px]">
                   <div className="flex-1 lg:flex lg:items-end  lg:justify-end items-center justify-center  overflow-hidden">
                     <div className=" w-full">
                       <FadeInRight>
