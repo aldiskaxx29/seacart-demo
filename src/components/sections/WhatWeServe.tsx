@@ -14,19 +14,19 @@ export default function WhatWeServe() {
         <div className="flex-col flex gap-5">
           <div className="grid gap-3 h-full items-center justify-start">
             <FadeIn>
-              <span className="text-teal-400 text-base font-extrabold font-['Sen'] leading-normal">
+              <span className="text-center text-teal-400 lg:text-base font-extrabold lg:leading-normal  text-sm font-['Sen'] leading-tight">
                 What We Serve
               </span>
             </FadeIn>
             <FadeIn>
-              <span className="text-indigo-900 lg:text-4xl text-3xl font-extrabold  leading-[44px]">
+              <span className=" lg:text-4xl  lg:leading-[44px]  text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px]">
                 Introducing to Seacart
               </span>
             </FadeIn>
           </div>
 
           <FadeIn>
-            <span className="text-[#212121] text-xl font-normal font-['Sen'] leading-[30px]">
+            <span className="text-[#212121] lg:text-xl font-normal font-['Sen'] lg:leading-[30px] text-lg leading-7">
               As the worlds top fishery producer, Indonesia faces industry
               challenges, but <b>Seacart</b> offers 24/7 support as your
               complete solution!
@@ -48,10 +48,10 @@ export default function WhatWeServe() {
                 className="w-12 h-12 bg-slate-300 rounded-full border-zinc-200 justify-center items-center"
               />
               <div className="flex-col flex justify-start items-start gap-2">
-                <span className="text-indigo-900 text-xl font-extrabold font-['Sen'] leading-[30px]">
+                <span className="text-indigo-900 text-xl font-extrabold font-['Sen'] leading-[30px] ">
                   Same-Day Delivery and Price Stability
                 </span>
-                <span className="text-[#212121] text-base font-normal font-['Sen'] leading-normal">
+                <span className="text-[#212121] text-base font-normal font-['Sen'] leading-normal ">
                   As the worlds top fishery producer, Indonesia faces industry
                   challenges, but Seacart offers 24/7 support as your complete
                   solution!
