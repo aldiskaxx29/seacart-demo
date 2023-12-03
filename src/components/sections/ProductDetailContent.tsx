@@ -182,22 +182,12 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                           </div>
                         </div>
                         <div className="lg:w-1/3  w-1/3  grid gap-0 lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-center justify-start px-5  bg-gray-100">
-                          {Array.isArray(item.weight) ? (
-                            item.weight.map((weight, index) => (
-                              <li
-                                key={index}
-                                className="mt-[-10px] p-0 text-center grid justify-center items-center w-full">
-                                {weight}
-                              </li>
-                            ))
-                          ) : (
-                            <div className="text-center grid justify-center items-center w-full">
-                              <li>{item.weight}</li>
-                              {item.type == "" && "" ? (
-                                <li> {item.type}</li>
-                              ) : null}
-                            </div>
-                          )}
+                          <div className="text-start grid justify-center items-start w-full">
+                            <li>{item.weight}</li>
+                            {item.type !== "" && " " ? (
+                              <li> {item.type}</li>
+                            ) : null}
+                          </div>
                         </div>
                         <div className="lg:w-1/3  w-1/3  items-center lg:text-base text-sm text-indigo-900 font-normal font-['Sen'] justify-center text-start grid   bg-gray-50 rounded-tr-md rounded-br-md">
                           <div>

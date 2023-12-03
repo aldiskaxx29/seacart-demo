@@ -63,7 +63,7 @@ export default function ProductCatalogue() {
                     />
                   </FadeIn>
                   <FadeIn>
-                    <h2 className="text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px]">
+                    <h2 className="text-[#2F306A] text-5xl font-bold font-['Sen'] leading-[60px]">
                       {item.name}
                     </h2>
                   </FadeIn>
@@ -74,18 +74,19 @@ export default function ProductCatalogue() {
                   </FadeIn>
                   <FadeIn>
                     <button
-                      className="text-teal-400 text-sm font-normal  leading-tight flex gap-2 items-center p-2 hover:bg-teal-400/10 rounded-lg w-fit"
+                      className="text-[#2F306A] text-sm font-normal  leading-tight flex gap-2 items-center p-2 hover:bg-teal-400/10 rounded-lg w-fit "
                       onClick={() => {
                         window.location.href = `/product/detail-product/${item.id}`;
                       }}>
                       See Detail
                       <Image
                         src={
-                          "/assets/product-icons/arrow-circle-broken-right.svg"
+                          "/assets/general/arrow-circle-broken-right.png"
                         }
                         alt={"icon"}
                         width={20}
                         height={20}
+                        color="#2F306A"
                       />
                     </button>
                   </FadeIn>
