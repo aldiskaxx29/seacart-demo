@@ -39,7 +39,7 @@ export default function ShowCaseProduct() {
 
   return (
     <MotionDiv>
-      <div className="bg-[#2F306A] lg:flex lg:h-[100vh] pt-[72px] overflow-hidden">
+      <div className="bg-[#2F306A] lg:flex h-[130vh] lg:h-[100vh] pt-[72px] overflow-hidden">
         <div className="flex-1 lg:w-2/5 overflow-hidden ">
           {Array.isArray(data) && data.length > 0 && (
             <Slider
@@ -67,7 +67,7 @@ export default function ShowCaseProduct() {
         {Array.isArray(data) && data.length > 0 && (
           <div className="grid gap-2 lg:order-first items-stretch lg:w-3/5 lg:pt-[72px] pt-6">
             <div className="flex-1 px-4 lg:px-[100px] flex flex-col justify-between h-full">
-              <div className="grid gap-8 h-fit items-center">
+              <div className="grid gap-8  items-start lg:h-full h-[400px]">
                 <FadeInUp>
                   <div>
                     <div className="grid lg:gap-4">
