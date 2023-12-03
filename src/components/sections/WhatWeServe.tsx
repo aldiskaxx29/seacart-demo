@@ -12,20 +12,23 @@ export default function WhatWeServe() {
       <MotionDiv>
         {/* First Column */}
         <div className="flex-col flex gap-5">
-          <FadeIn>
-            <span className="text-teal-400 text-base font-extrabold  leading-normal">
-              What We Serve
-            </span>
-          </FadeIn>
-          <FadeIn>
-            <span className="text-indigo-900 lg:text-4xl text-3xl font-extrabold  leading-[44px]">
-              Introducing to Seacart
-            </span>
-          </FadeIn>
+          <div className="grid gap-3">
+            <FadeIn>
+              <span className="text-teal-400 text-base font-extrabold font-['Sen'] leading-normal">
+                What We Serve
+              </span>
+            </FadeIn>
+            <FadeIn>
+              <span className="text-indigo-900 lg:text-4xl text-3xl font-extrabold  leading-[44px]">
+                Introducing to Seacart
+              </span>
+            </FadeIn>
+          </div>
+
           <FadeIn>
             <span className="text-neutral-800 lg:text-xl text-lg font-normal  leading-[30px]">
               As the worlds top fishery producer, Indonesia faces industry
-              challenges, but Seacart offers 24/7 support as your complete
+              challenges, but <b>Seacart</b> offers 24/7 support as your complete
               solution!
             </span>
           </FadeIn>

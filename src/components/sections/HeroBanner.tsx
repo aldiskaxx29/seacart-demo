@@ -6,21 +6,29 @@ import { FadeIn, FadeInUp } from "../animations/AnimationTemplate";
 import { MotionDiv } from "../animations/MotionDiv";
 
 export default function HeroBanner() {
+  const openLinkInNewTab = (url:string) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <MotionDiv>
       <div
         className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4 relative pt-[100px]`}>
-        <div className="text-center mb-10 space-y-4 ">
+        <div className="text-center mb-10 space-y-4 lg:w-[694px] w-full">
           <FadeInUp>
-            <span>Seafood Supplier</span>
+            <span className="text-indigo-900 text-lg font-normal font-['Sen'] leading-7">
+              Seafood Supplier
+            </span>
           </FadeInUp>
           <FadeInUp>
-            <h1 className="text-6xl lg:text-8xl font-bold text-center bg-accent-secondary text-primary  font-['Sen'] lg:w-[800px] md:w-full">
+            <h1 className="text-center text-indigo-900 lg:text-[88px] font-bold font-['Sen'] lg:leading-[88px]  text-6xl leading-[72px]">
               Bring The Sea to Your Kitchen!
             </h1>
           </FadeInUp>
           <FadeInUp>
-            <span>Downstreaming Commodity Through Technology</span>
+            <span className="text-indigo-900 text-lg font-normal font-['Sen'] leading-7">
+              Downstreaming Commodity Through Technology
+            </span>
           </FadeInUp>
         </div>
 
@@ -44,7 +52,7 @@ export default function HeroBanner() {
                 width={30}
                 height={30}
                 onClick={() =>
-                  Router.push("https://www.instagram.com/seacart.id/")
+                  openLinkInNewTab("https://www.instagram.com/seacart.id/")
                 }
                 className="w-[52px] h-[52px] px-4 py-3 bg-white rounded-[40px] gap-1 cursor-pointer hover:bg-gray-100"
               />
@@ -56,7 +64,9 @@ export default function HeroBanner() {
                 width={30}
                 height={30}
                 onClick={() =>
-                  Router.push("https://www.facebook.com/seacart.id?_rdc=1&_rdr")
+                  openLinkInNewTab(
+                    "https://www.facebook.com/seacart.id?_rdc=1&_rdr"
+                  )
                 }
                 className="w-[52px] h-[52px] px-4 py-3 bg-white rounded-[40px] gap-1 cursor-pointer hover:bg-gray-100"
               />
@@ -68,7 +78,9 @@ export default function HeroBanner() {
                 width={33}
                 height={30}
                 onClick={() =>
-                  Router.push("https://www.linkedin.com/company/seacart/about/")
+                  openLinkInNewTab(
+                    "https://www.linkedin.com/company/seacart/about/"
+                  )
                 }
                 className="w-[56px] h-[52px] px-4 py-3 bg-white rounded-[40px] gap-1 cursor-pointer hover:bg-gray-100"
               />

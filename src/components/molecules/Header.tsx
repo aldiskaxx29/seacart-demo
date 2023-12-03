@@ -15,8 +15,8 @@ const Header = () => {
   return (
     <MotionDiv>
       <div>
-        <header className="header-comp lg:px-20 ps-1  py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[100px] z-50 border-b lg:border-b-0 border-primary shadow-sm">
-          <div className="flex gap-6 items-center lg:border-b w-full h-[100px] border-primary">
+        <header className="header-comp lg:px-20 ps-1  py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[72px] z-50 border-b lg:border-b-0 border-primary shadow-sm">
+          <div className="flex gap-6 items-center lg:border-b w-full h-[72px] border-primary">
             <FadeIn>
               <Image
                 src="/assets/general/Seacart__Logo Long_Color.png"
@@ -60,29 +60,37 @@ const Header = () => {
                 </Link>
               </FadeIn>
               <FadeIn>
-
-            <Link href="/about" className={`hover:text-gray-300 rounded-lg px-4 py-2  ${isActiveLink("/aboutus")? "font-bold bg-white shadow-sm":""}`}>
-              About Us
-            </Link>
+                <Link
+                  href="/about"
+                  className={`hover:text-gray-300 rounded-lg px-4 py-2  ${
+                    isActiveLink("/about") ? "font-bold bg-white shadow-sm" : ""
+                  }`}>
+                  About Us
+                </Link>
               </FadeIn>
               <FadeIn>
-
-            <Link href="/article" className={`hover:text-gray-300 rounded-lg px-4 py-2  ${isActiveLink("/article")? "font-bold bg-white shadow-sm":""}`}>
-              Article
-            </Link>
-                </FadeIn>
+                <Link
+                  href="/article"
+                  className={`hover:text-gray-300 rounded-lg px-4 py-2  ${
+                    isActiveLink("/article")
+                      ? "font-bold bg-white shadow-sm"
+                      : ""
+                  }`}>
+                  Article
+                </Link>
+              </FadeIn>
             </nav>
           </div>
 
-          <div className="lg:hidden flex items-center  h-[100px] border-primary">
+          <div className="lg:hidden flex items-center  h-[72px] border-primary">
             <DropMenu />
           </div>
           <FadeIn>
-            <div className="hidden lg:flex w-[300px] items-center justify-center lg:border-b h-[100px] border-primary">
+            <div className="hidden lg:flex w-[300px] items-center justify-center lg:border-b h-[72px] border-primary">
               <button
                 className="bg-primary text-white hover:bg-gray-700 py-2 px-8 font-regular rounded flex items-center justify-center gap-2 "
                 onClick={() => {
-                  window.location.href = `https://wa.me/+6282280002797`;
+                  window.open("https://wa.me/+6282280002797", "_blank");
                 }}>
                 Let`s Talk{" "}
                 <Image

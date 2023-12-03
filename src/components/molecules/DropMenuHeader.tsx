@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "../atomic/Button";
 import Image from "next/image";
 
-export default function DropMenu() {
+export default function  DropMenu() {
   return (
     <div className="">
       <Menu as="div" className=" inline-block text-left">
@@ -79,7 +79,11 @@ export default function DropMenu() {
                 </p>
               </Link>
               <div className="w-full items-center justify-center lg:border-b border-primary px-5 pb-3 pt-4 border-t">
-                <button className="bg-primary text-white hover:bg-gray-700 py-2 px-5 font-regular rounded flex items-center justify-center gap-2 w-full">
+                <button
+                  className="bg-primary text-white hover:bg-gray-700 py-2 px-5 font-regular rounded flex items-center justify-center gap-2 w-full"
+                  onClick={() => {
+                    window.open("https://wa.me/+6282280002797", "_blank");
+                  }}>
                   Let`s Talk{" "}
                   <Image
                     src={"/assets/general/whatsapp.svg"}

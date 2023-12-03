@@ -14,7 +14,7 @@ const fadeInUpVariant: Variants = {
     y: 0,
     transition: {
       type: "tween",
-      duration: 0.5,
+      duration: 0.3,
     },
   },
 };
@@ -36,7 +36,7 @@ const fadeInVariant: Variants = {
     y: 0,
     transition: {
       type: "tween",
-      duration: 0.5,
+      duration: 0.3,
     },
   },
 };
@@ -54,7 +54,7 @@ const fadeRightVariant: Variants = {
     x: 0,
     transition: {
       type: "tween",
-      duration: 0.5,
+      duration: 0.3,
     },
   },
 };
@@ -72,7 +72,7 @@ const fadeDownVariant: Variants = {
     y: 0,
     transition: {
       type: "tween",
-      duration: 0.5,
+      duration: 0.3,
     },
   },
 };
@@ -91,7 +91,7 @@ const Rotate: Variants = {
     rotate: 0,
     transition: {
       type: "spring",
-      duration: 0.5,
+      duration: 0.3,
     },
   },
   exit: {
@@ -100,7 +100,7 @@ const Rotate: Variants = {
     rotate: 180, // Rotate in the opposite direction when exiting
     transition: {
       type: "tween",
-      duration: 0.5,
+      duration: 0.3,
     },
   },
 };
