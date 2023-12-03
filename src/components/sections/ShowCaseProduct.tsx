@@ -70,7 +70,7 @@ export default function ShowCaseProduct() {
               <div className="grid gap-8 h-fit items-center">
                 <FadeInUp>
                   <div>
-                    <div className="grid gap-4">
+                    <div className="grid lg:gap-4">
                       <div className="lg:grid lg:gap-6 gap-4 flex items-start">
                         <Image
                           src={"/assets/general/Featured icon.svg"}
@@ -88,7 +88,7 @@ export default function ShowCaseProduct() {
                         {data[currentSlide]?.short_description}
                       </span>
                       <button
-                        className="text-teal-400 text-sm font-normal leading-tight flex gap-2 items-center  hover:bg-teal-400/10 rounded-lg w-fit"
+                        className="text-teal-400 text-sm font-normal leading-tight flex gap-2 items-center  hover:bg-teal-400/10 rounded-lg w-fit mt-3"
                         onClick={() => {
                           window.location.href = `/product/detail-product/${data[currentSlide]?.id}`;
                         }}>
@@ -139,7 +139,7 @@ export default function ShowCaseProduct() {
               </div>
 
               <FadeIn>
-                <div className="flex gap-8 lg:w-fit justify-between lg:mb-16 mb-8 lg:mt-0 mt-6 lg:px-0 px-16">
+                <div className="flex gap-8 lg:w-fit justify-between lg:mb-16 mb-8 lg:mt-0 mt-6 lg:px-0 px-20">
                   <button
                     className=""
                     onClick={() => sliderRef?.current?.slickPrev()}>
