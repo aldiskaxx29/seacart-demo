@@ -1,6 +1,6 @@
 // ImagePopUp.tsx
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 
@@ -17,14 +17,26 @@ export default function ImagePopUp({
   images,
   initialSlideId = 0,
 }: ImagePopUpProps) {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: images.findIndex((img) => img.id === initialSlideId), 
-  };
+
+    const [currentSlide, setCurrentSlide] = useState(
+      images.findIndex((img) => img.id === initialSlideId)
+    );
+  
+    const sliderSettings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: currentSlide,
+    };
+
+    const sliderRef = useRef<Slider>(null);
+
+    const handleSlideChange = (index: number) => {
+      setCurrentSlide(index);
+    };
+
 
 
   
@@ -57,7 +69,7 @@ export default function ImagePopUp({
                 <Dialog.Panel className=" transform  transition-all flex items-center justify-center object-center">
                   <button
                     onClick={onClose}
-                    className="fixed lg:top-[-20px] lg:right-[-50px] top-[50px] right-[-40px] z-50">
+                    className="fixed lg:top-[-20px] lg:right-[-50px] top-[-40px] right-[0px] z-50">
                     <Image
                       src={`/assets/general/Button close X.svg`}
                       alt={"icon"}
@@ -66,7 +78,11 @@ export default function ImagePopUp({
                       className="object-cover shadow-xl w-full h-full "
                     />
                   </button>
-                  <Slider {...settings} className="lg:w-[900px] w-[350px]">
+                  <div className="grid">
+                  <Slider
+                    {...sliderSettings}
+                    ref={sliderRef}
+                    className="lg:w-[900px] w-[350px]">
                     {images.map((item, index) => (
                       <div
                         key={index}
@@ -81,6 +97,34 @@ export default function ImagePopUp({
                       </div>
                     ))}
                   </Slider>
+                  <div className="flex gap-8 lg:w-fit justify-between lg:mb-16   lg:px-0 px-20 h-fit">
+                    <button
+                      className=""
+                      onClick={() => sliderRef?.current?.slickPrev()}>
+                      {" "}
+                      <Image
+                        src={"/assets/product-icons/arrow-left.svg"}
+                        alt={"icon"}
+                        width={20}
+                        height={20}
+                        className="w-14 h-14 hover:bg-slate-300 bg-white bg-opacity-90 rounded-[28px] p-4"
+                      />
+                    </button>
+                    <button
+                      className=""
+                      onClick={() => sliderRef?.current?.slickNext()}>
+                      {" "}
+                      <Image
+                        src={"/assets/product-icons/arrow-right.svg"}
+                        alt={"icon"}
+                        width={20}
+                        height={20}
+                        className="w-14 h-14 hover:bg-slate-300 bg-white bg-opacity-90 rounded-[28px] p-4"
+                      />
+                    </button>
+                  </div>                    
+                  </div>
+
                 </Dialog.Panel>
               </Transition.Child>
             </div>

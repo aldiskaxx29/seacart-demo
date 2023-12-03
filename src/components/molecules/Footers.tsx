@@ -15,8 +15,17 @@ export default function Footers() {
               Dive into a world of fresh, premium seafood at your fingertips.
             </div>
           </div>
-          <div className="justify-center items-center gap-3 inline-flex w-full">
-            <div className="w-50 hover:bg-white/10 rounded-lg justify-center items-center gap-2 flex">
+          <div className="justify-center items-center gap-3 lg:inline-flex w-full ">
+            <div className="lg:order-last w-50 px-3 py-3 hover:bg-gray-300 bg-white rounded-lg shadow border  justify-center items-center gap-2 flex">
+              <button
+                className="text-indigo-900 text-base font-normal leading-normal"
+                onClick={() => {
+                  window.location.href = `/contact`;
+                }}>
+                Contact us
+              </button>
+            </div>
+            <div className="lg:mt-0 mt-3 w-50 hover:bg-white/10 rounded-lg justify-center items-center gap-2 flex">
               <div className=" relative" />
               <button
                 onClick={() => {
@@ -31,15 +40,6 @@ export default function Footers() {
                   className=" cursor-pointer hover:bg-blue-900 rounded-lg p-1 "
                 />
                 View product
-              </button>
-            </div>
-            <div className="w-50 px-3 py-3 hover:bg-gray-300 bg-white rounded-lg shadow border  justify-center items-center gap-2 flex">
-              <button
-                className="text-indigo-900 text-base font-normal leading-normal"
-                onClick={() => {
-                  window.location.href = `/contact`;
-                }}>
-                Contact us
               </button>
             </div>
           </div>

@@ -8,6 +8,7 @@ import { MotionDiv } from "../animations/MotionDiv";
 import { ArticleProps } from "../../../service/type";
 import { useRouter } from "next/router";
 import { getArticles } from "../../../service/API";
+import Button from "../atomic/Button";
 
 export default function ArticleList() {
   const router = useRouter();
@@ -47,22 +48,32 @@ export default function ArticleList() {
 
   return (
     <MotionDiv>
-      <div className="py-32 grid  items-start  lg:px-32 px-2">
+      <div className="lg:py-32 py-12 grid  items-start  lg:px-32 px-2">
         <FadeInUp>
-          <div className="p-4 grid gap-5">
-            <div className="grid gap-3">
-              <span className="text-teal-400 text-base font-extrabold  leading-normal">
-                Article & News
-              </span>
-              <h2 className="text-indigo-900 text-4xl font-extrabold ">
-                Lastest article posts
-              </h2>
-            </div>
+          <div className="flex items-center justify-between w-full">
+            <div className="p-4 grid gap-5">
+              <div className="grid gap-3">
+                <span className="text-teal-400 text-base font-extrabold  leading-normal">
+                  Article & News
+                </span>
+                <h2 className=" lg:text-4xl lg:leading-[44px] text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px] ">
+                  Lastest article posts
+                </h2>
+              </div>
 
-            <span className=" text-[#212121] text-xl font-normal">
-              Tool and strategies modern teams need to help their companies
-              grow.
-            </span>
+              <span className=" text-[#212121]  lg:text-xl lg:leading-[30px] text-lg font-normal font-['Sen'] leading-7">
+                Tool and strategies modern teams need to help their companies
+                grow.
+              </span>
+            </div>
+            <div className="w-fit lg:block hidden">
+              <Button
+                link={"/article"}
+                text={"View All Post"}
+                variant={"Primary"}
+                classNames=""
+              />
+            </div>
           </div>
         </FadeInUp>
 
@@ -89,7 +100,6 @@ export default function ArticleList() {
                       />
                     )}
                   </div>
-
                   <div className="grid gap-3">
                     <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight mt-4">
                       {item.category}
@@ -105,6 +115,7 @@ export default function ArticleList() {
                           alt={""}
                           width={30}
                           height={30}
+                          className="lg:w-12 w-20"
                         />
                       </div>
                       <div className="text-[#212121] text-base font-normal font-['Sen'] leading-normal line-clamp-2 mt-2">
@@ -131,9 +142,17 @@ export default function ArticleList() {
                     </div>
                   </div>
                 </FadeIn>
+
               </div>
             )
-          )}
+          )}                <div className="w-full lg:hidden block mt-12">
+                  <Button
+                    link={"/article"}
+                    text={"View All Post"}
+                    variant={"Primary"}
+                    classNames="rounded-lg"
+                  />
+                </div>
         </div>
       </div>
     </MotionDiv>

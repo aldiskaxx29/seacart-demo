@@ -84,13 +84,13 @@ export default function PartnerList() {
         </div>
 
         <FadeInDown>
-          <div className="flex-col mt-20 w-full items-center justify-center">
+          <div className="flex-col lg:mt-20 mt-12 w-full items-center justify-center">
             <div className="mb-5 flex items-center justify-center">
               <span className="text-indigo-900 text-lg font-extrabold">
                 Trusted By
               </span>
             </div>
-            <div className="py-2 grid grid-cols-3 lg:grid-cols-6 gap-20 px-20">
+            <div className="py-2 grid grid-cols-3 lg:grid-cols-6 lg:gap-20 lg:px-20 gap-6">
               {data.map((item, index) => (
                 <div
                   key={index}
