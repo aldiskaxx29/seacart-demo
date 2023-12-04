@@ -97,7 +97,7 @@ export default function ImagePopUp({
                       </div>
                     ))}
                   </Slider>
-                  <div className="flex gap-8 lg:w-fit justify-between lg:mb-16   lg:px-0 px-20 h-fit">
+                  <div className="flex gap-8 lg:w-fit justify-between lg:mb-16   lg:px-0 px-20 h-fit lg:hidden block">
                     <button
                       className=""
                       onClick={() => sliderRef?.current?.slickPrev()}>

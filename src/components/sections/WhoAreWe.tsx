@@ -4,8 +4,9 @@ import React from "react";
 export default function WhoAreWe() {
   return (
     <main
-      className={`lg:flex lg:px-20 mt-[128px] lg:mt-[164px] gap-10 items-center justify-center`}>
-      <div className="lg:w-2/5 h-full grid items-center justify-center gap-5 p-4 lg:px-10">
+      className={`lg:flex lg:px-20 mt-[128px] lg:mt-[164px] gap-8 items-center justify-center`}>
+      <div className="lg:w-2/5 h-full grid items-center justify-center gap-8 p-4 lg:px-10">
+        <div className="flex flex-col gap-3">
         <Image
           src={"/assets/product-page/Ornament.svg"}
           width={100}
@@ -13,16 +14,18 @@ export default function WhoAreWe() {
           alt={""}
           className="w-20"
         />
-        <div className=" text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px]">
+        <div className=" text-indigo-900 text-6xl font-bold font-['Sen'] leading-[72px]">
           Welcome to Seacart
         </div>
-        <div className=" text-[#212121] text-xl font-bold font-['Sen'] leading-[30px]">
+        <div className=" text-xl font-bold font-['Sen'] leading-[30px]">
           where passion for the ocean meets a commitment to excellence in
           seafood sourcing and supply.
+        </div>          
         </div>
+
         <div className="text-[#212121] text-base font-normal font-['Sen'] leading-normal">
           <span className="">
-            Established in ... , Seacart was born out of a shared love for the
+            Seacart was born out of a shared love for the
             sea and its treasures. We envisioned a company that not only
             provides premium seafood but also champions sustainability and
             ethical practices in the industry. Our journey began with a mission
