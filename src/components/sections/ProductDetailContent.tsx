@@ -91,12 +91,15 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
           </div>
         </div>
 
-        <div className={`flex w-full  items-start justify-center h-fit pt-5 lg:pt-10`}>
+        <div
+          className={`flex w-full  items-start justify-center h-fit pt-10 lg:pt-10`}>
           <div className=" lg:w-[1200px] lg:flex w-full grid gap-8 px-4 pb-10 lg:pb-[172px]">
             <div className="lg:w-2/5 griditems-start justify-start">
               <FadeIn>
                 <h2 className="text-indigo-900  font-bold font-['Sen'] lg:w-80 mb-6 text-center text-3xl  leading-[38px]  lg:text-left lg:text-[44px]  lg:leading-[53px]">
-                  Try out Our Fresh {product.name}
+                  {product.name !== "Others Favorite"
+                    ? `Try out Our Fresh ${product.name}`
+                    : `Try out Our ${product.name}`}
                 </h2>
               </FadeIn>
               <div className="grid gap-4 h-fit">
