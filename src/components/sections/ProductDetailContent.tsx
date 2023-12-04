@@ -91,11 +91,11 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
           </div>
         </div>
 
-        <div className={`flex w-full  items-start justify-center h-fit pt-5`}>
-          <div className=" lg:w-[1200px] lg:flex w-full grid gap-8 px-4 pb-64">
+        <div className={`flex w-full  items-start justify-center h-fit pt-5 lg:pt-10`}>
+          <div className=" lg:w-[1200px] lg:flex w-full grid gap-8 px-4 pb-10 lg:pb-[172px]">
             <div className="lg:w-2/5 griditems-start justify-start">
               <FadeIn>
-                <h2 className="text-indigo-900 lg:text-5xl font-bold font-['Sen'] lg:leading-[60px] lg:w-3/4 mb-6 text-center text-3xl  leading-[38px]  lg:text-left">
+                <h2 className="text-indigo-900  font-bold font-['Sen'] lg:w-80 mb-6 text-center text-3xl  leading-[38px]  lg:text-left lg:text-[44px]  lg:leading-[53px]">
                   Try out Our Fresh {product.name}
                 </h2>
               </FadeIn>
@@ -187,7 +187,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                           </div>
                         </div>
                         <div className="lg:w-1/3  w-1/3  grid gap-0 text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-center justify-start lg:px-4 px-2  bg-gray-100 lg:text-lg   lg:leading-7">
-                          <div className="text-start grid justify-center items-start w-full  text-xs font-normal font-['Sen'] leading-[18px] ms-1 text-indigo-900 lg:text-lg lg:leading-7">
+                          <div className="text-start grid justify-start items-start w-full  text-xs font-normal font-['Sen'] leading-[18px] ms-1 text-indigo-900 lg:text-lg lg:leading-7">
                             <div className="flex items-start justify-start">
                               <li className="me-[-8px]"></li>
                               {item.weight}
@@ -195,30 +195,31 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
 
                             {item.type !== "" && " " ? (
                               <div className="grid items-start justify-start">
-                                      
-                                  {item.type.split("$$").map((group, index) => (
-                                    <div key={index} className="flex"><li className="me-[-8px]"></li>
-                                      <div className="grid">
+                                {item.type.split("$$").map((group, index) => (
+                                  <div key={index} className="flex">
+                                    <li className="me-[-8px]"></li>
+                                    <div className="grid">
                                       {group
                                         .split("%%")
                                         .map((size, sizeIndex) => (
-                                          <div key={sizeIndex} className="grid">{size.trim()}</div>
-                                        ))}                                        
-                                      </div>
-
+                                          <div key={sizeIndex} className="grid">
+                                            {size.trim()}
+                                          </div>
+                                        ))}
                                     </div>
-                                  ))}
+                                  </div>
+                                ))}
                               </div>
                             ) : null}
                           </div>
                         </div>
-                        <div className="lg:w-1/3  w-1/3  items-center lg:text-lg  text-indigo-900 font-normal font-['Sen'] justify-center text-start grid   bg-gray-50 rounded-tr-md rounded-br-md text-xs  leading-[18px]   lg:leading-7">
-                          <div>
+                        <div className="lg:w-1/3  w-1/3  items-center lg:text-lg  text-indigo-900 font-normal font-['Sen'] justify-start text-start grid   bg-gray-50 rounded-tr-md rounded-br-md text-xs  leading-[18px]   lg:leading-7">
+                          <div className=" items-start justify-start">
                             {item.wrap.split(", ").map((wrapItem, index) => (
                               <div
                                 key={index}
-                                className="flex items-start justify-star">
-                                <li className="me-[-8px] ms-2"></li>
+                                className="flex items-start justify-start lg:px-4 px-2">
+                                <li className="me-[-8px]"></li>
                                 {wrapItem.trim()}{" "}
                                 {index < item.wrap.split(", ").length - 3 &&
                                   ", "}
