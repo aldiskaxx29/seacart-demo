@@ -5,12 +5,13 @@ import { MotionDiv } from "../animations/MotionDiv";
 
 export default function ProductList() {
   return (
-    <main className={`lg:flex items-star justify-center py-24  px-4  relative`}>
+    <main
+      className={`lg:flex items-star justify-center pt-10 lg:py-[140px]  px-4  relative`}>
       <MotionDiv>
         <div className="lg:flex grid">
-          <div className="lg:flex-1 lg:w-[500px] w-full lg:px-10 grid justify-start items-start gap-6 lg:mb-0 mb-8">
+          <div className="lg:flex-1 lg:w-[500px] w-full lg:px-10 grid justify-start items-start gap-6 lg:mb-0 mb-5">
             <FadeInDown>
-              <h2 className=" text-indigo-900 text-[40px] font-bold font-['Sen'] leading-[50px] ">
+              <h2 className=" text-indigo-900 lg:text-[40px] font-bold font-['Sen'] lg:leading-[50px] text-center text-3xl  leading-[38px] lg:text-start">
                 Serving Fresh Seafood Everyday
               </h2>
             </FadeInDown>
@@ -25,21 +26,21 @@ export default function ProductList() {
             </FadeInDown>
           </div>
 
-          <div className="lg:flex-1 w-full lg:w-[500px] lg:px-10 grid justify-start items-start gap-4 h-fit mt-10 px-0  ">
-            <div>
+          <div className="lg:flex-1 w-full lg:w-[500px] lg:px-10 grid justify-start items-start gap-5 lg:h-fit lg:mt-10 px-0 mt-0  rounded-lg">
+            <div className="h-fit">
               <FadeInUp>
                 <Image
                   src={"/assets/product-page/unsplash_bpPTlXWTOvg.png"}
                   width={600}
                   height={100}
                   alt={"Salmon Dish"}
-                  className=""
+                  className="h-fit"
                 />
               </FadeInUp>
             </div>
             <div>
               <FadeInUp>
-                <p className="text-[#212121] text-lg font-normal font-['Sen'] leading-7">
+                <p className="text-[#212121] lg:text-lg lg:font-normal font-['Sen'] lg:leading-7 800 text-sm font-normal  leading-tight m-0 p-0 mb-10 ">
                   Immerse yourself in a culinary journey with our premium
                   selection of fresh seafood products, a testament to the
                   ocean`s bounty delivered straight to your table. Handpicked
@@ -49,7 +50,7 @@ export default function ProductList() {
               </FadeInUp>
             </div>
 
-            <div>
+            <div className="lg:block hidden">
               <FadeInUp>
                 <Image
                   src={"/assets/product-page/Ornament.svg"}

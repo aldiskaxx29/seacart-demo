@@ -50,7 +50,7 @@ export default function ProductCatalogue() {
                   </div>
                 </div>
                 <div
-                  className={`lg:w-3/5  flex-col justify-start items-start gap-4 lg:gap-8 inline-flex ${
+                  className={`lg:w-3/5  flex-col justify-start items-start gap-3 lg:gap-8 inline-flex ${
                     index % 2 === 0 ? `` : `lg:order-first  lg:pr-20`
                   } `}>
                   <FadeIn>
@@ -63,12 +63,12 @@ export default function ProductCatalogue() {
                     />
                   </FadeIn>
                   <FadeIn>
-                    <h2 className="text-[#2F306A] text-5xl font-bold font-['Sen'] leading-[60px]">
+                    <h2 className="text-[#2F306A] lg:text-5xl font-bold font-['Sen'] lg:leading-[60px] text-3xl  leading-[38px] m-0 p-0">
                       {item.name}
                     </h2>
                   </FadeIn>
                   <FadeIn>
-                    <p className="text-[#212121] text-base font-normal font-['Sen'] leading-normal">
+                    <p className="text-[#212121] lg:text-base ] lg:leading-normal p-0 m-0 text-sm font-normal font-['Sen'] leading-tight ">
                       <ApiDescriptionComponent description={item.description} />
                     </p>
                   </FadeIn>
@@ -80,9 +80,7 @@ export default function ProductCatalogue() {
                       }}>
                       See Detail
                       <Image
-                        src={
-                          "/assets/general/arrow-circle-broken-right.png"
-                        }
+                        src={"/assets/general/arrow-circle-broken-right.png"}
                         alt={"icon"}
                         width={20}
                         height={20}

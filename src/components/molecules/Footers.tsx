@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footers() {
   return (
-    <div className="w-full pt-[280px] pb-10 bg-[#2F306A] flex-col justify-between items-center inline-flex">
+    <div className="w-full pt-12 lg:pt-[280px] pb-10 bg-[#2F306A] flex-col justify-between items-center inline-flex">
       <div className="px-2 lg:px-8 flex-col justify-start items-start gap-8 flex">
         <div className="self-stretch pb-16 flex-col justify-start items-center gap-10 flex">
           <div className=" flex-col justify-start items-center gap-4 flex">
@@ -55,8 +55,8 @@ export default function Footers() {
                   className="w-full h-full"
                   src="/assets/general/Seacart__Logo Long_White.png"
                   alt={""}
-                  width={100}
-                  height={100}
+                  width={150}
+                  height={150}
                 />
               </div>
               <div className="w-full flex-col justify-start items-start gap-1 flex">
