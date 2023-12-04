@@ -4,9 +4,10 @@ import React from "react";
 export default function VisiMisi() {
   return (
     <div className="lg:p-0">
-      <div className={` flex min-h-screen flex-col items-center lg:px-40 px-4`}>
+      <div
+        className={` flex min-h-screen flex-col items-center lg:px-40 px-4 py-6`}>
         <main
-          className={`lg:flex p-4 lg:px-20 mt-[164px] lg:gap-8 items-center justify-center bg-slate-100 rounded-lg lg:py-20`}>
+          className={`lg:flex px-4 py-6 lg:px-20 lg:mt-[164px] lg:gap-8 items-center justify-center bg-slate-100 rounded-lg lg:py-20`}>
           <div className="lg:w-1/2 h-full grid items-center justify-center gap-3 lg:gap-8 lg:ps-10">
             <div className="flex flex-col gap-3">
               <Image
@@ -16,10 +17,10 @@ export default function VisiMisi() {
                 alt={""}
                 className="w-20"
               />
-              <div className=" text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px]">
+              <div className="text-indigo-900 lg:text-6xl lg:leading-[72px] text-3xl font-extrabold font-['Sen'] leading-[38px]">
                 Our Vision
               </div>
-              <div className=" text-[#212121] lg:text-xl font-bold font-['Sen'] leading-[30px] ">
+              <div className=" text-[#212121] lg:text-xl font-bold font-['Sen'] lg:leading-[30px] text-sm leading-tight">
                 Empowering a Sustainable Ocean Legacy
               </div>
             </div>
@@ -43,15 +44,15 @@ export default function VisiMisi() {
               width={1500}
               height={1500}
               alt="Food"
-              className="w-[768px] object-cover rounded-md lg:me-[-100px] mt-4 lg:shadow-lg"
+              className="w-[768px] object-cover rounded-md lg:me-[-100px] mt-4 lg:shadow-lg lg:h-full h-[400px] mb-[-100px] object-left-top lg:mb-0"
             />
           </div>
         </main>
       </div>
-      <div className={`lg:flex min-h-screen grid items-center`}>
+      <div className={`lg:flex h-fit lg:min-h-screen grid items-center`}>
         <main
-          className={`lg:flex lg:mt-[164px] gap-10 items-center justify-center  rounded-lg py-20`}>
-          <div className="lg:w-2/3 flex items-start justify-start lg:p-0 p-4">
+          className={`lg:flex lg:mt-[164px] gap-10 items-center justify-center  rounded-lg lg:py-20 pt-20`}>
+          <div className="lg:w-2/3 flex items-start justify-start lg:p-0 p-4 ">
             <Image
               src={"/assets/about/2.png"}
               width={1500}
@@ -60,64 +61,64 @@ export default function VisiMisi() {
               className="w-[768px] object-cover rounded-md "
             />
           </div>
-          <div className="lg:w-1/3 ms-[180px] h-full grid items-center justify-center gap-8 lg:pe-10 p-4">
+          <div className="lg:w-1/3 lg:ms-[180px] h-fit grid items-center justify-center gap-4 lg:gap-8 lg:pe-10 px-4">
             <div className="flex flex-col gap-3">
-            <Image
-              src={"/assets/product-page/Ornament.svg"}
-              width={100}
-              height={100}
-              alt={""}
-              className="w-20"
-            />
-            <div className=" text-indigo-900 text-5xl font-bold font-['Sen'] leading-[60px]">
-              Our Mission
-            </div>
-            <div className=" text-[#212121] text-xl font-bold font-['Sen'] leading-[30px] lg:w-[379px]">
-              At Seacart, our mission is to deliver an unparalleled seafood
-              experience by:
-            </div>              
+              <Image
+                src={"/assets/product-page/Ornament.svg"}
+                width={100}
+                height={100}
+                alt={""}
+                className="w-20"
+              />
+              <div className="text-indigo-900 lg:text-6xl lg:leading-[72px] text-3xl font-extrabold font-['Sen'] leading-[38px]">
+                Our Mission
+              </div>
+              <div className=" text-[#212121] lg:text-xl font-bold font-['Sen'] lg:leading-[30px] text-sm leading-tight">
+                At Seacart, our mission is to deliver an unparalleled seafood
+                experience by:
+              </div>
             </div>
 
             <div className=" text-base font-normal font-['Sen'] leading-normal grid lg:gap-5 gap-3">
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-2 lg:gap-5 items-center">
                 <div className="w-2 h-2 rounded-full bg-indigo-900"></div>
-                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal">
+                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal ">
                   Sourcing Excellence
                 </span>
               </div>
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-2 lg:gap-5 items-center">
                 <div className="w-2 h-2 rounded-full bg-indigo-900"></div>
-                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal">
+                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal ">
                   Customer Satisfaction
                 </span>
               </div>
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-2 lg:gap-5 items-center">
                 <div className="w-2 h-2 rounded-full bg-indigo-900"></div>
-                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal">
+                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal ">
                   Sustainability and Responsibility
                 </span>
               </div>
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-2 lg:gap-5 items-center">
                 <div className="w-2 h-2 rounded-full bg-indigo-900"></div>
-                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal">
+                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal ">
                   Transparency and Traceability
                 </span>
               </div>
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-2 lg:gap-5 items-center">
                 <div className="w-2 h-2 rounded-full bg-indigo-900"></div>
-                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal">
+                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal ">
                   Innovation in Distribution
                 </span>
               </div>
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-2 lg:gap-5 items-center">
                 <div className="w-2 h-2 rounded-full bg-indigo-900"></div>
-                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal">
+                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal ">
                   Employee Empowerment
                 </span>
               </div>
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-2 lg:gap-5 items-center">
                 <div className="w-2 h-2 rounded-full bg-indigo-900"></div>
-                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal">
+                <span className="text-indigo-900 text-base font-bold font-['Sen'] leading-normal ">
                   Sourcing Excellence
                 </span>
               </div>

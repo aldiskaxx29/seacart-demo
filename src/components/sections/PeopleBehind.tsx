@@ -17,8 +17,8 @@ export default function PeopleBehind() {
   }, []);
   return (
     <main
-      className={`grid lg:px-20 mt-[164px] gap-10 items-center justify-center bg-slate-100 rounded-lg py-20`}>
-      <div className="w-full h-full grid items-center justify-center gap-0 lg:gap-5 lg:ps-10 text-center p-4">
+      className={`grid lg:px-20 mt-6 lg:mt-[164px] gap-10 items-center justify-center bg-slate-100 rounded-lg py-6`}>
+      <div className="w-full h-full grid items-center justify-center gap-3  lg:gap-5 lg:ps-10 text-center p-4">
         <div className="w-full flex items-center justify-center">
           <Image
             src={"/assets/product-page/Ornament.svg"}
@@ -29,10 +29,10 @@ export default function PeopleBehind() {
           />
         </div>
 
-        <div className=" text-indigo-900 lg:text-6xl text-4xl font-bold font-['Sen'] leading-[72px]">
+        <div className=" text-indigo-900 lg:text-6xl lg:text-4xl lg:leading-[72px] text-center text-3xl font-bold font-['Sen'] leading-[38px]">
           Meet Our Team
         </div>
-        <div className=" text-[#212121] text-xl font-bold font-['Sen'] leading-[30px]">
+        <div className=" lg:text-[#212121] lg:text-xl lg:leading-[30px] text-center text-gray-500 text-sm font-normal font-['Sen'] leading-tight">
           Seacart wouldn`t be what it is today without the extraordinary people
           behind it.
         </div>
