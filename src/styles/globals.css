@@ -91,6 +91,7 @@ blockquote {
 
 .snap-child {
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 @media screen and (min-width: 768px) {
