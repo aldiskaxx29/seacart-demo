@@ -7,6 +7,7 @@ import {  ProductSlider } from "../../../../service/DummyData";
 import Head from "next/head";
 import { ProductProps } from "../../../../service/type";
 import { getProductDetail } from "../../../../service/API";
+import OurProducts from "@/components/sections/OurProducts";
 
 
 
@@ -58,7 +59,7 @@ export default function ProductDetail() {
         ) : (
           <p>Loading...</p>
         )}
-
+        <OurProducts />
         <Footers />
       </main>
     </>

@@ -20,7 +20,7 @@ export const getGalleryHome = async (limit?: 100): Promise<GalleryProps[]> => {
 };
 
 export const getArticles = async (limit?: number): Promise<ArticleProps[]> => {
-  const res = await axios.get("https://api.seacart.id/api/articles");
+  const res = await axios.get(`https://api.seacart.id/api/articles?limit=100`);
   return res.data.data.articles as ArticleProps[];
 };
 

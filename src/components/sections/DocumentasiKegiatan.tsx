@@ -40,7 +40,7 @@ export default function DocumentasiKegiatan() {
           <p>Loading ... </p>
           </div>) : (
 
-        <div className="flex min-h-screen pt-[100px]">
+        <div className="flex h-[100vh] pt-[72px]">
           <div className="sm:flex-1 lg:block w-full pt-1">
             <div className="relative overflow-hidden h-1/2 aspect-square w-full">
               <FadeIn>

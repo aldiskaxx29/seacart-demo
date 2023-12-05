@@ -16,7 +16,7 @@ export default function ArticleListFull() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [searchInput, setSearchInput] = useState<string>("");
-  const itemsPerPage = 8;
+  const itemsPerPage = 9;
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -91,16 +91,18 @@ export default function ArticleListFull() {
     setSelectedCategory("All");
   };
 
-
   return (
-    <div className="grid gap-10 lg:px-40 lg:pt-[100px] p-4">
-      <div className="grid gap-3 pt-[100px]">
-        <span className="text-teal-400 text-base font-extrabold leading-normal">
-          Article & News
-        </span>
-        <span className="text-indigo-900 lg:text-4xl text-3xl font-extrabold leading-[44px]">
-          Resources and insights
-        </span>
+    <div className="grid gap-10 lg:px-40 lg:pt-[112px] p-4">
+      <div className="grid gap-5">
+        <div className="grid gap-3">
+          <span className="text-teal-400 text-base font-extrabold leading-normal">
+            Article & News
+          </span>
+          <span className="text-indigo-900 lg:text-4xl text-3xl font-extrabold leading-[44px]">
+            Resources and insights
+          </span>
+        </div>
+
         <span className=" text-gray-500 text-xl font-normal font-['Sen'] leading-[30px]">
           Stay updated on the sea and seafood industries with the latest news.
         </span>
@@ -117,7 +119,7 @@ export default function ArticleListFull() {
             />
             <input
               type="text"
-              placeholder="Search"
+              placeholder="Search Categories"
               value={searchInput}
               onChange={handleSearchChange}
               className="w-full px-2 py-1 rounded-md focus:outline-none"
@@ -211,17 +213,18 @@ export default function ArticleListFull() {
           </div>
         </div>
         <div className=" lg:w-3/4 lg:m-0 mt-4 w-full">
-          <ArticleItemIndiVidual
-            id={currentItems[0]?.id}
-            image_url={currentItems[0]?.image_url}
-            short_description={currentItems[0]?.short_description}
-            category={currentItems[0]?.category}
-            title={currentItems[0]?.title}
-            content={currentItems[0]?.content}
-            writer_url={"Main Logo.png"}
-            writer_name={"Admin"}
-            updated_at={currentItems[0]?.updated_at}
-          />
+            <ArticleItemIndiVidual
+              id={currentItems[0]?.id}
+              image_url={currentItems[0]?.image_url}
+              short_description={currentItems[0]?.short_description}
+              category={currentItems[0]?.category}
+              title={currentItems[0]?.title}
+              content={currentItems[0]?.content}
+              writer_url={"Main Logo.png"}
+              writer_name={"Admin"}
+              updated_at={currentItems[0]?.updated_at}
+            />
+
           <div className="grid lg:grid-cols-2 gap-2">
             {currentItems
               .filter((_, index) => index !== 0)

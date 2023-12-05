@@ -63,7 +63,7 @@ export default function PartnerList() {
 
   return (
     <MotionDiv>
-      <div className="py-32 flex-col justify-center items-center gap-16 min-h-screen">
+      <div className="py-[112px] flex-col justify-center items-center gap-16 h-[100vh]">
         <div className="flex-col lg:justify-start items-center lg:gap-5 gap-4 inline-flex lg:px-[200px] px-4 w-full justify-center">
           
           <div className="flex flex-col items-center justify-center gap-3"><FadeInUp>

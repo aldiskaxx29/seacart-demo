@@ -8,7 +8,7 @@ export default function WhatWeServe() {
 
 
   return (
-    <div className="lg:flex bg-gray-100 lg:px-20 lg:gap-24 gap:12 px-4 space-y-12 lg:space-y-0 lg:h-[500px] items-start justify-center pt-[128px]">
+    <div className="lg:flex bg-gray-100 lg:px-20 lg:gap-24 gap:12 px-4 space-y-12 lg:space-y-0 lg:h-[500px] items-start justify-center pt-[112px]">
       <MotionDiv>
         {/* First Column */}
         <div className="flex-col flex gap-5">

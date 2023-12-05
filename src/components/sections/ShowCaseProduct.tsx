@@ -54,7 +54,7 @@ export default function ShowCaseProduct() {
                       alt={item?.name}
                       width={500}
                       height={500}
-                      className="object-cover w-full lg:rounded-ss-xl lg:h-[700px] h-[228px]"
+                      className="object-cover w-full lg:rounded-ss-xl lg:h-[800px] h-[228px]"
                     />
                   </FadeInRight>
                 </div>

@@ -48,15 +48,15 @@ export default function ArticleList() {
 
   return (
     <MotionDiv>
-      <div className="lg:py-32 pt-[128px] pb-12 grid  items-start  lg:px-32 px-2 ">
+      <div className="lg:py-[100px]  pb-24 grid  items-start  lg:px-32 px-2 lg:h-[120vh]">
         <FadeInUp>
           <div className="flex items-center justify-between w-full">
-            <div className="p-2 grid gap-5">
+            <div className=" grid gap-5">
               <div className="grid gap-3">
                 <span className="text-teal-400 text-base font-extrabold  leading-normal">
                   Article & News
                 </span>
-                <h2 className=" lg:text-4xl lg:leading-[44px] text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px] ">
+                <h2 className=" lg:text-4xl lg:leading-[44px] text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px] m-0 p-0">
                   Lastest article posts
                 </h2>
               </div>
@@ -78,12 +78,12 @@ export default function ArticleList() {
         </FadeInUp>
 
         {/* Article */}
-        <div className="justify-start items-start gap-8 lg:inline-flex px-2">
+        <div className="justify-start items-start gap-6 lg:inline-flex px-2">
           {/* article Item */}
           {renderedData.map((item, index) =>
             id && item.id.toString() === id.toString() ? null : (
               <div
-                className="lg:p-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid mt-10 hover:shadow-lg duration-500"
+                className="lg:p-2 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid  hover:shadow-lg duration-500"
                 key={index}
                 onClick={() => {
                   window.location.href = `/article/detail-article/${item.id}`;
@@ -101,11 +101,11 @@ export default function ArticleList() {
                     )}
                   </div>
                   <div className="grid gap-3">
-                    <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight mt-4">
+                    <span className="text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight ">
                       {item.category}
                     </span>
 
-                    <div className="">
+                    <div className="grid gap-0">
                       <div className="justify-between items-center flex">
                         <span className="text-indigo-900 text-2xl font-extrabold leading-loose line-clamp-1">
                           {item.title}
@@ -118,7 +118,7 @@ export default function ArticleList() {
                           className="lg:w-12 w-20"
                         />
                       </div>
-                      <div className="text-[#212121] text-base font-normal font-['Sen'] leading-normal line-clamp-2 mt-2">
+                      <div className="text-[#212121] text-base font-normal font-['Sen'] leading-normal line-clamp-2">
                         {item.short_description}
                       </div>
                     </div>

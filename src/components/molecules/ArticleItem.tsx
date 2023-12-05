@@ -53,19 +53,19 @@ const ArticleItem: React.FC<ArticlePropsMaps> = ({
           <div className="text-[#212121] text-base font-normal font-['Sen'] leading-normal line-clamp-2">
             {content}
           </div>
-          <div className="flex gap-2 items-center mt-5">
+          <div className="flex gap-2 items-center mt-6">
             <Image
-              src={`/assets/article-list/${writer_url}`}
+              src={`/assets/article-list/Main Logo White.png`}
               alt={""}
               width={100}
               height={100}
               className="w-10 h-10"
             />
             <div className="grid">
-              <span className="text-sm font-extrabold font-['Sen'] leading-tight">
-                {writer_name}
+              <span className="text-indigo-900 text-sm font-extrabold font-['Sen'] leading-tight">
+                Seacart Admin
               </span>
-              <span className="text-sm font-normal font-['Sen'] leading-tight mt-2">
+              <span className="text-sm font-normal font-['Sen'] leading-tight">
                 {formatDate(date)}
               </span>
             </div>

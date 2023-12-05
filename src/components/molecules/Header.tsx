@@ -76,7 +76,7 @@ const Header = () => {
                       ? "font-bold bg-white shadow-sm"
                       : ""
                   }`}>
-                  Article
+                  Article & News
                 </Link>
               </FadeIn>
             </nav>
@@ -99,7 +99,7 @@ const Header = () => {
               </button>
             </div>
           </FadeIn>
-          <div className="lg:hidden flex items-center w-fit h-[72px] border-primary mx-0">
+          <div className="lg:hidden flex items-center w-fit h-[72px] border-primary mx-0 me-4">
             <DropMenu />
           </div>
         </header>

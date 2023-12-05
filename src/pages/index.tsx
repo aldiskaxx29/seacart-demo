@@ -3,6 +3,7 @@ import Header from '@/components/molecules/Header';
 import ArticleList from '@/components/sections/ArticleList';
 import DocumentasiKegiatan from '@/components/sections/DocumentasiKegiatan';
 import HeroBanner from '@/components/sections/HeroBanner';
+import HomeVideo from '@/components/sections/HomeVideo';
 import PartnerList from '@/components/sections/PartnerList';
 import ShowCaseProduct from '@/components/sections/ShowCaseProduct';
 import VideoPlaceholder from '@/components/sections/VideoPlaceholder';
@@ -27,10 +28,7 @@ export default function Home() {
           <HeroBanner />
         </div>
         <div className=" snap-child">
-          <WhatWeServe />
-        </div>
-        <div className=" snap-child lg:block hidden">
-          <VideoPlaceholder />
+          <HomeVideo />
         </div>
         <div className=" snap-child">
           <ShowCaseProduct />
