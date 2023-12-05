@@ -16,7 +16,7 @@ export default function ArticleListFull() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [searchInput, setSearchInput] = useState<string>("");
-  const itemsPerPage = 9;
+  const itemsPerPage = currentPage == 1 ? 9 : 8;
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -212,23 +212,44 @@ export default function ArticleListFull() {
             </div>
           </div>
         </div>
-        <div className=" lg:w-3/4 lg:m-0 mt-4 w-full">
-            <ArticleItemIndiVidual
-              id={currentItems[0]?.id}
-              image_url={currentItems[0]?.image_url}
-              short_description={currentItems[0]?.short_description}
-              category={currentItems[0]?.category}
-              title={currentItems[0]?.title}
-              content={currentItems[0]?.content}
-              writer_url={"Main Logo.png"}
-              writer_name={"Admin"}
-              updated_at={currentItems[0]?.updated_at}
-            />
+        {searchInput == "" ? (
+          <div className=" lg:w-3/4 lg:m-0 mt-4 w-full">
+            {currentPage === 1 && (
+              <ArticleItemIndiVidual
+                id={currentItems[0]?.id}
+                image_url={currentItems[0]?.image_url}
+                short_description={currentItems[0]?.short_description}
+                category={currentItems[0]?.category}
+                title={currentItems[0]?.title}
+                content={currentItems[0]?.content}
+                writer_url={"Main Logo.png"}
+                writer_name={"Admin"}
+                updated_at={currentItems[0]?.updated_at}
+              />
+            )}
 
-          <div className="grid lg:grid-cols-2 gap-2">
-            {currentItems
-              .filter((_, index) => index !== 0)
-              .map((item, index) => (
+            <div className="grid lg:grid-cols-2 gap-2">
+              {currentItems
+                .filter((_, index) => (currentPage === 1 ? index !== 0 : true))
+                .map((item, index) => (
+                  <ArticleItem
+                    key={index}
+                    id={item.id}
+                    image_url={item.image_url}
+                    category={item.category}
+                    title={item.title}
+                    content={item.short_description}
+                    writer_url={"Main Logo.png"}
+                    writer_name={"Admin"}
+                    date={item.updated_at}
+                  />
+                ))}
+            </div>
+          </div>
+        ) : (
+          <div className="lg:w-3/4 lg:m-0 mt-4 w-full">
+            <div className="grid lg:grid-cols-2 gap-2">
+              {currentItems.map((item, index) => (
                 <ArticleItem
                   key={index}
                   id={item.id}
@@ -241,10 +262,16 @@ export default function ArticleListFull() {
                   date={item.updated_at}
                 />
               ))}
+              </div>
+              {filteredData.length === 0 ?            <div className="w-full h-[300px] flex items-center justify-center ] text-gray-500 text-md font-normal font-['Sen'] leading-[30px] ">
+              {" "}
+              Article Not Found
+            </div> : null}
+
           </div>
-        </div>
+        )}
       </div>
-      <div className="flex justify-between my-4">
+      <div className="flex justify-between py-5 border-t ">
         <button
           onClick={() => paginate(currentPage - 1)}
           className="flex gap-4"
