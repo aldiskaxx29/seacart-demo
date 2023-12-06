@@ -18,7 +18,7 @@ const ArticleItemIndiVidual: React.FC<ArticlePropsOne> = ({
     <div>
       <FadeIn>
         <div
-          className="lg:px-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-8 lg:flex hover:shadow-lg duration-500 justify-center items-center w-full"
+          className="lg:px-4 lg:py-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-8 lg:flex hover:shadow-lg duration-500 justify-center items-center w-full"
           onClick={() => {
             window.location.href = `/article/detail-article/${id}`;
           }}>
@@ -29,7 +29,7 @@ const ArticleItemIndiVidual: React.FC<ArticlePropsOne> = ({
                 alt={"article"}
                 width={700}
                 height={100}
-                className="rounded hover:scale-110 duration-700 lg:m-0 mb-4 "
+                className="rounded hover:scale-110 duration-700 lg:m-0 mb-4 object-cover h-80 "
               />
             )}
           </div>
@@ -41,12 +41,6 @@ const ArticleItemIndiVidual: React.FC<ArticlePropsOne> = ({
               <span className="text-indigo-900 text-2xl font-extrabold line-clamp-2">
                 {title}
               </span>
-              <Image
-                src={"/assets/article-list/Icon wrap.png"}
-                alt={""}
-                width={20}
-                height={30}
-              />
             </div>
             <div className="text-[#212121] text-base font-normal font-['Sen'] leading-normal line-clamp-2 lg:line-clamp-4">
               {short_description}

@@ -52,7 +52,7 @@ export default function VisiMisi() {
       <div className={`lg:flex h-fit lg:min-h-screen grid items-center`}>
         <main
           className={`lg:flex lg:mt-[164px] gap-10 items-center justify-center  rounded-lg lg:py-20 pt-20`}>
-          <div className="lg:w-2/3 flex items-start justify-start lg:p-0 p-4 ">
+          <div className="lg:w-1/2 flex items-start justify-start lg:p-0 p-4 ">
             <Image
               src={"/assets/about/2.png"}
               width={1500}
@@ -61,7 +61,7 @@ export default function VisiMisi() {
               className="w-[768px] object-cover rounded-md "
             />
           </div>
-          <div className="lg:w-1/3 lg:ms-[180px] h-fit grid items-center justify-center gap-4 lg:gap-8 lg:pe-10 px-4">
+          <div className="lg:w-1/2 lg:px-[150px] h-fit grid items-center justify-center gap-4 lg:gap-8 lg:pe-10 px-4">
             <div className="flex flex-col gap-3">
               <Image
                 src={"/assets/product-page/Ornament.svg"}
@@ -73,7 +73,7 @@ export default function VisiMisi() {
               <div className="text-indigo-900 lg:text-6xl lg:leading-[72px] text-3xl font-extrabold font-['Sen'] leading-[38px]">
                 Our Mission
               </div>
-              <div className=" text-[#212121] lg:text-xl font-bold font-['Sen'] lg:leading-[30px] text-sm leading-tight">
+              <div className=" text-[#212121] lg:text-xl font-bold font-['Sen'] lg:leading-[30px] text-sm leading-tight lg:w-3/4">
                 At Seacart, our mission is to deliver an unparalleled seafood
                 experience by:
               </div>

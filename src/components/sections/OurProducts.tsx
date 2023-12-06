@@ -76,7 +76,7 @@ useEffect(() => {
 
   return (
     <MotionDiv>
-      <div className="lg:py-[128px] py-[64px]  bg-slate-100 grid  items-start  lg:h-fit  lg:w-full w-[100vw] ">
+      <div className="lg:py-[128px] py-[64px]  bg-slate-100 grid  items-start  lg:h-fit  lg:w-full w-[100vw] overflow-hidden ">
         <FadeInUp>
           <div className="flex items-center justify-between  lg:px-32 px-4 lg:w-full w-[100vw] ">
             <div className=" grid gap-5">
@@ -162,7 +162,7 @@ useEffect(() => {
         </div>
 
         <FadeIn>
-          <div className="flex gap-8  justify-between   lg:px-0 px-20 h-fit mt-12 lg:ms-32  lg:w-full w-[100vw] ">
+          <div className="flex gap-8 lg:justify-start  justify-between   lg:px-0 px-20 h-fit mt-12 lg:ms-32  lg:w-full w-[100vw] ">
             <button
               className=""
               onClick={() => sliderRef?.current?.slickPrev()}>

@@ -92,7 +92,7 @@ export default function ArticleListFull() {
   };
 
   return (
-    <div className="grid gap-10 lg:px-40 lg:pt-[112px] p-4">
+    <div className="grid gap-10 lg:px-20 lg:pt-[112px] p-4">
       <div className="grid gap-5">
         <div className="grid gap-3">
           <span className="text-teal-400 text-base font-extrabold leading-normal">
@@ -213,7 +213,7 @@ export default function ArticleListFull() {
           </div>
         </div>
         {searchInput == "" ? (
-          <div className=" lg:w-3/4 lg:m-0 mt-4 w-full">
+          <div className=" lg:w-3/4 lg:m-0  w-full grid">
             {currentPage === 1 && (
               <ArticleItemIndiVidual
                 id={currentItems[0]?.id}
@@ -247,7 +247,7 @@ export default function ArticleListFull() {
             </div>
           </div>
         ) : (
-          <div className="lg:w-3/4 lg:m-0 mt-4 w-full">
+          <div className="lg:w-3/4 lg:m-0  w-full">
             <div className="grid lg:grid-cols-2 gap-2">
               {currentItems.map((item, index) => (
                 <ArticleItem

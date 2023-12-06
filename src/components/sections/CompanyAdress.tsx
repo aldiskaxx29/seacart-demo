@@ -39,7 +39,7 @@ export default function CompanyAdress() {
 
         <div className="lg:flex grid gap-5 w-full">
           {/* Second Column */}
-          <div className="flex-col flex gap-12 lg:w-3/5 lg:pe-15">
+          <div className="flex-col flex gap-12 lg:w-3/5 lg:pe-10">
             <FadeInDown>
               <div className="lg:flex lg:gap-4 grid gap-2">
                 <Image
@@ -51,7 +51,7 @@ export default function CompanyAdress() {
                 />
                 <div className="flex-col flex justify-start items-start gap-2">
                   <div className="lg:pt-[10px] flex flex-col">
-                    <span className="text-indigo-900 font-extraboldlg:text-xl text-lg f font-['Sen'] leading-7">
+                    <span className="text-indigo-900 font-extrabold lg:text-xl text-lg  font-['Sen'] leading-7">
                       Email
                     </span>
                     <span className="text-gray-500 text-base font-normal font-['Sen'] leading-normal  font-['Sen'">
@@ -131,7 +131,7 @@ export default function CompanyAdress() {
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg lg:w-[900px] w-full lg:h-full h-60"></iframe>
+                className="rounded-lg lg:w-[900px] w-full lg:h-[500px] h-60"></iframe>
             </div>
           </FadeIn>
         </div>
