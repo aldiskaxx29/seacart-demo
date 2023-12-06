@@ -6,6 +6,8 @@ import { ArticleProps } from "../../../service/type";
 import { articleList } from "../../../service/DummyData";
 import Image from "next/image";
 import { getArticleCategories, getArticles } from "../../../service/API";
+import { MotionDiv } from "../animations/MotionDiv";
+import { FadeInUp } from "../animations/AnimationTemplate";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -92,7 +94,10 @@ export default function ArticleListFull() {
   };
 
   return (
-    <div className="grid gap-10 lg:px-20 lg:pt-[112px] p-4">
+    <MotionDiv>
+      <div className="grid gap-10 lg:px-20 lg:pt-[112px] p-4">
+        <FadeInUp>
+          
       <div className="grid gap-5">
         <div className="grid gap-3">
           <span className="text-teal-400 text-base font-extrabold leading-normal">
@@ -107,6 +112,7 @@ export default function ArticleListFull() {
           Stay updated on the sea and seafood industries with the latest news.
         </span>
       </div>
+        </FadeInUp>
 
       <div className="lg:flex items-start justify-start ">
         <div className="lg:w-1/4 lg:pe-5">
@@ -128,8 +134,8 @@ export default function ArticleListFull() {
 
           <div className="hidden lg:block">
             <Tab.Group>
-              <Tab.List className="grid rounded-xl p-1">
-                {categories.map((category) => (
+                <Tab.List className="grid rounded-xl p-1">
+               {categories.map((category) => (
                   <Tab
                     key={category}
                     className={({ selected }) =>
@@ -142,9 +148,12 @@ export default function ArticleListFull() {
                       )
                     }
                     onClick={() => setSelectedCategory(category)}>
-                    {category}
+                  <FadeInUp>
+                    {category}        
+                  </FadeInUp>
                   </Tab>
-                ))}
+                ))}            
+ 
               </Tab.List>
             </Tab.Group>
           </div>
@@ -319,5 +328,7 @@ export default function ArticleListFull() {
         </button>
       </div>
     </div>
+
+    </MotionDiv>
   );
 }

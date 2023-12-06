@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <MotionDiv>
       <div>
-        <header className="header-comp lg:px-20 px-4 py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[72px] z-50 border-b lg:border-b-0 border-primary shadow-sm">
+        <header className="header-comp lg:px-20 px-4 py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[72px] z-50 border-b lg:border-b-0 lg:border-primary shadow-sm lg:rounded-none rounded-md">
           <div className="flex gap-6 items-center lg:border-b w-full h-[72px] border-primary">
             <FadeIn>
               <Image
@@ -99,7 +99,7 @@ const Header = () => {
               </button>
             </div>
           </FadeIn>
-          <div className="lg:hidden flex items-center w-fit h-[72px] border-primary mx-0 me-4">
+          <div className="lg:hidden flex items-center w-fit h-[72px] border-primary  ">
             <DropMenu />
           </div>
         </header>
