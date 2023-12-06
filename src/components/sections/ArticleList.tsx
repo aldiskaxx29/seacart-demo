@@ -48,9 +48,9 @@ export default function ArticleList() {
 
   return (
     <MotionDiv>
-      <div className="lg:py-[100px]  pb-24 grid  items-start  lg:px-32 px-2 lg:h-[120vh]">
+      <div className="py-[100px]  pb-24 grid  items-start  lg:px-32 px-2 lg:h-[120vh]">
         <FadeInUp>
-          <div className="flex items-center justify-between w-full">
+          <div className="flex items-center justify-between w-full lg:px-0 px-2">
             <div className=" grid gap-5">
               <div className="grid gap-3">
                 <span className="text-teal-400 text-base font-extrabold  leading-normal">
@@ -61,7 +61,7 @@ export default function ArticleList() {
                 </h2>
               </div>
 
-              <span className=" text-[#212121]  lg:text-xl lg:leading-[30px] text-lg font-normal font-['Sen'] leading-7">
+              <span className=" text-[#212121]  lg:text-xl lg:leading-[30px] lg:mb-0 mb-12 text-lg font-normal font-['Sen'] leading-7">
                 Tool and strategies modern teams need to help their companies
                 grow.
               </span>
@@ -83,7 +83,7 @@ export default function ArticleList() {
           {renderedData.map((item, index) =>
             id && item.id.toString() === id.toString() ? null : (
               <div
-                className="lg:p-2 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid  hover:shadow-lg duration-500"
+                className="lg:p-2 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid  hover:shadow-lg duration-500 lg:mb-0 mb-12"
                 key={index}
                 onClick={() => {
                   window.location.href = `/article/detail-article/${item.id}`;

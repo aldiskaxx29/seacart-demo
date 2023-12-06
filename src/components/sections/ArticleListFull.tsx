@@ -223,7 +223,7 @@ export default function ArticleListFull() {
                 title={currentItems[0]?.title}
                 content={currentItems[0]?.content}
                 writer_url={"Main Logo.png"}
-                writer_name={"Admin"}
+                writer_name={"Seacart Admin"}
                 updated_at={currentItems[0]?.updated_at}
               />
             )}
@@ -240,7 +240,7 @@ export default function ArticleListFull() {
                     title={item.title}
                     content={item.short_description}
                     writer_url={"Main Logo.png"}
-                    writer_name={"Admin"}
+                    writer_name={"Seacart Admin"}
                     date={item.updated_at}
                   />
                 ))}

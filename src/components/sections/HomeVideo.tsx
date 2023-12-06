@@ -4,7 +4,7 @@ import VideoPlaceholder from "./VideoPlaceholder";
 
 export default function HomeVideo() {
   return (
-    <div className="h-[120vh]">
+    <div className="lg:h-[120vh]">
       {" "}
       <div className="">
         <WhatWeServe />

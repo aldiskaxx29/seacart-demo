@@ -19,7 +19,7 @@ export default function WhatWeServe() {
               </span>
             </FadeIn>
             <FadeIn>
-              <span className=" lg:text-4xl  lg:leading-[44px]  text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px]">
+              <span className=" lg:text-4xl  lg:leading-[44px]  text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px] ">
                 Introducing to Seacart
               </span>
             </FadeIn>
@@ -39,22 +39,21 @@ export default function WhatWeServe() {
         {/* Second Column */}
         <div className="flex-col flex lg:gap-12 gap-8 lg:mt-0 mt-8">
           <FadeIn>
-            <div className="flex gap-4 mt-4">
+            <div className="flex gap-4 lg:mt-4">
               <Image
                 src={"/assets/featured-icons/Featured icon.svg"}
                 alt={"icon"}
                 width={30}
                 height={30}
-                className="w-12 h-12 bg-slate-300 rounded-full border-zinc-200 justify-center items-center"
+                className="lg:w-12 lg:h-12 w-10 h-10 bg-slate-300 rounded-full border-zinc-200 justify-center items-center"
               />
               <div className="flex-col flex justify-start items-start gap-2">
                 <span className="text-indigo-900 text-xl font-extrabold font-['Sen'] leading-[30px] ">
                   Same-Day Delivery and Price Stability
                 </span>
                 <span className="text-[#212121] text-base font-normal font-['Sen'] leading-normal ">
-                  As the worlds top fishery producer, Indonesia faces industry
-                  challenges, but Seacart offers 24/7 support as your complete
-                  solution!
+                  Our 24/7 support ensures same-day delivery and price
+                  stability, providing convenience and cost predictability.
                 </span>
               </div>
             </div>
@@ -67,7 +66,7 @@ export default function WhatWeServe() {
                 alt={"icon"}
                 width={30}
                 height={30}
-                className="w-12 h-12 bg-slate-300 rounded-full border-zinc-200 justify-center items-center"
+                className="lg:w-12 lg:h-12 w-10 h-10 bg-slate-300 rounded-full border-zinc-200 justify-center items-center"
               />
               <div className="flex-col flex justify-start items-start gap-2">
                 <span className="text-indigo-900 text-xl font-extrabold font-['Sen'] leading-[30px]">

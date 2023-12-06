@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Footers() {
   return (
-    <div className="w-full pt-12 lg:pt-[280px] pb-10 bg-[#2F306A] flex-col justify-between items-center inline-flex">
-      <div className="px-2 lg:px-8 flex-col justify-start items-start gap-8 flex">
+    <div className="w-full lg:pt-[280px] pt-[112px] pb-10 bg-[#2F306A] flex-col justify-between items-center inline-flex">
+      <div className="px-4 lg:px-8 flex-col justify-start items-start gap-8 flex">
         <div className="self-stretch pb-16 flex-col justify-start items-center gap-10 flex">
           <div className=" flex-col justify-start items-center gap-4 flex">
             <div className="self-stretch text-center text-slate-100 lg:text-3xl font-extrabold lg:leading-[38px] text-2xl font-['Sen'] leading-loose">

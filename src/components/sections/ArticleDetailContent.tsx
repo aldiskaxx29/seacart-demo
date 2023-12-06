@@ -65,7 +65,7 @@ export default function ArticleDetailContent() {
   }
 
   return (
-    <main className={`flex min-h-screen flex-col items-center pt-[64px]`}>
+    <main className={`flex min-h-screen flex-col items-center`}>
       <Head>
         <title>{article.title} - Seacart</title>
         <meta name={article.title} content={article.short_description} />
@@ -76,8 +76,8 @@ export default function ArticleDetailContent() {
         />
       </Head>
 
-      <div className="flex w-full lg:relative items-center justify-center pt-[100px]">
-        <div className=" flex px-4 lg:w-[1200px] absolute w-full items-center">
+      <div className="flex w-full lg:relative items-center justify-center pt-[132px]">
+        <div className=" flex px-20 absolute w-full items-center">
           <button
             className=" text-gray-400 text-sm font-normal font-['Sen'] leading-tight hover:bg-gray-100 rounded-md p-2 flex item center justify-center"
             onClick={() => {
@@ -121,18 +121,25 @@ export default function ArticleDetailContent() {
 
       {/* Article */}
 
-      <div className="grid pt-[64px] items-center justify-center gap-5 lg:w-3/5 md:w-4/5 ">
-        <div className=" text-center text-teal-400 text-base font-extrabold font-['Sen'] leading-normal">
-          {article.category}
-        </div>
+      <div className="grid pt-[64px] items-center justify-center gap-16 lg:w-3/5 md:w-4/5 ">
+        <div className="grid gap-10">
+        <div className="grid gap-6">
+        <div className="grid gap-3">
+          <div className=" text-center text-teal-400 text-base font-extrabold font-['Sen'] leading-normal">
+            {article.category}
+          </div>
 
-        <div className=" text-center text-indigo-900  text-4xl lg:text-5xl font-extrabold font-['Sen'] leading-[60px]">
-          {article.title}
+          <div className=" text-center text-indigo-900  text-4xl lg:text-5xl font-extrabold font-['Sen'] leading-[60px]">
+            {article.title}
+          </div>
         </div>
 
         <div className=" text-center text-[#212121] text-xl font-normal font-['Sen'] leading-[30px]">
           {article.short_description}
         </div>
+          </div> 
+
+
 
         <div className="flex gap-2 items-center w-full justify-center">
           <Image
@@ -143,14 +150,17 @@ export default function ArticleDetailContent() {
             className="w-10 h-10"
           />
           <div className="grid">
-            <span className="text-sm font-extrabold font-['Sen'] leading-tight">
-              Admin
+            <span className="text-indigo-900 lg:text-lg font-extrabold font-['Sen'] leading-7 text-sm">
+              Seacart Admin
             </span>
-            <span className="text-sm font-normal font-['Sen'] leading-tight mt-2">
+            <span className="text-sm font-normal font-['Sen'] leading-tight">
               {formatDate(article.updated_at)}
             </span>
           </div>
+        </div>          
         </div>
+
+
 
         <Image
           src={`${article.image_url}`}
