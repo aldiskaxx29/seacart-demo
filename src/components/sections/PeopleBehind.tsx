@@ -56,17 +56,13 @@ export default function PeopleBehind() {
               height={500}
               alt={item.name}
               className="w-[768px] object-cover rounded-md"
-            />        
-            <FadeIn>
+            />       
             <div className="text-center text-indigo-900 text-3xl font-bold font-['Sen'] leading-[38px]">
               {item.name}
-            </div>              
-            </FadeIn>
-            <FadeIn>
+            </div>      
             <div className="text-center text-[#212121] text-lg font-normal font-['Sen'] leading-7">
               {item.position}
             </div>
-            </FadeIn>
             </div>
 
 
