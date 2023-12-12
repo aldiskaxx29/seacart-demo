@@ -40,14 +40,16 @@ export default function ShowCaseProduct() {
   return (
     <MotionDiv>
       <div className="bg-[#2F306A] lg:flex h-[100vh] lg:h-[100vh] pt-[72px] overflow-hidden">
-        <div className="flex-1 lg:w-2/5 overflow-hidden ">
+        <div className="flex-1 lg:w-2/5 overflow-hidden z-10">
           {Array.isArray(data) && data.length > 0 && (
             <Slider
               ref={sliderRef}
               {...settings}
               afterChange={handleSlideChange}>
               {data.map((item, index) => (
-                <div key={index} className="w-full flex items-center justify-center">
+                <div
+                  key={index}
+                  className="w-full flex items-center justify-center">
                   <FadeInRight>
                     <Image
                       src={`${item?.featured_image}`}
@@ -65,11 +67,11 @@ export default function ShowCaseProduct() {
 
         {/* Component Content */}
         {Array.isArray(data) && data.length > 0 && (
-          <div className="grid gap-2 lg:order-first lg:w-3/5 lg:pt-[72px] pt-6">
+          <div className="grid gap-2 lg:order-first lg:w-3/5 lg:pt-[72px] pt-6 pb-5">
             <div className="lg:flex-1 px-4 lg:px-[100px] flex flex-col lg:justify-between h-full">
               <div className="flex flex-col gap-6 justify-start  items-start lg:h-full h-[320px]">
-                  <div className=" h-fit">
-                <FadeInUp>
+                <div className=" h-fit">
+                  <FadeInUp>
                     <div className="grid lg:gap-4  h-fit">
                       <div className="lg:grid lg:gap-6 gap-4 flex items-start h-fit">
                         <Image
@@ -79,6 +81,7 @@ export default function ShowCaseProduct() {
                           height={24}
                           className="lg:w-12 lg:h-12 w-8 h-8"
                         />
+
                         <h3 className="text-slate-100 text-2xl lg:text-3xl font-extrabold lg:leading-[38px] h-fit">
                           {data[currentSlide]?.name}
                         </h3>
@@ -103,8 +106,8 @@ export default function ShowCaseProduct() {
                         />
                       </button>
                     </div>
-                </FadeInUp>
-                  </div>
+                  </FadeInUp>
+                </div>
 
                 <div className="flex items-center justify-start gap-5 lg:px-4 h-fit">
                   <div className="flex gap-4 lg:gap-5 items-start h-fit">
@@ -166,6 +169,17 @@ export default function ShowCaseProduct() {
                   </button>
                 </div>
               </FadeIn>
+              <div className="relative">
+                <Image
+                  src={`/assets/general/GraphicProduct${
+                    currentSlide % 2 === 0 ? "1" : "2"
+                  }.svg`}
+                  alt={""}
+                  height={500}
+                  width={500}
+                  className="object-cover absolute lg:bottom-10 bottom-[-20px] lg:right-[-200px] right-[-10px] z-0 lg:w-[450px] w-[300px]"
+                />
+              </div>
             </div>
           </div>
         )}

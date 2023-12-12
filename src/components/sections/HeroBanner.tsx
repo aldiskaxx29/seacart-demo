@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../atomic/Button";
 import Image from "next/image";
-import Router from "next/router";
 import { FadeIn, FadeInUp } from "../animations/AnimationTemplate";
 import { MotionDiv } from "../animations/MotionDiv";
 
@@ -13,7 +12,8 @@ export default function HeroBanner() {
   return (
     <MotionDiv>
       <div
-        className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4 relative pt-[100px]`}>
+        className={`bg-gray-100 flex min-h-screen flex-col items-center  justify-center gap-10 px-4 relative pt-[100px]`}
+        style={{ backgroundImage: "url('assets/general/SuperGraphic.svg')", backgroundSize:"cover" }}>
         <div className="text-center mb-10 space-y-4 lg:w-[694px] w-full">
           <FadeInUp>
             <span className="text-indigo-900 text-lg font-normal font-['Sen'] leading-7">

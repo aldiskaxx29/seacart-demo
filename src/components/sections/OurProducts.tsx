@@ -109,7 +109,7 @@ useEffect(() => {
                   key={item.id} // Pastikan setiap slide memiliki key yang unik
                   className="  hover:shadow-lg duration-500 overflow-visible"
                   onClick={() => {
-                    window.location.href = `/article/detail-article/${item.id}`;
+                    window.location.href = `/product/detail-product/${item.id}`;
                   }}>
                   <div className="lg:me-8 me-4 bg-white cursor-pointer rounded-md hover:bg-slate-200  p-0 ms-0">
                     <FadeIn>
@@ -138,7 +138,7 @@ useEffect(() => {
                           <button
                             className="text-[#2F306A] text-sm font-normal  leading-tight flex gap-2 items-center hover:bg-teal-400/10 rounded-lg w-fit "
                             onClick={() => {
-                              window.location.href = `/article/product-article/${item.id}`;
+                              window.location.href = `/product/detail-product/${item.id}`;
                             }}>
                             See Detail
                             <Image
@@ -161,7 +161,6 @@ useEffect(() => {
           </Slider>
         </div>
 
-        <FadeIn>
           <div className="flex gap-8 lg:justify-start  justify-between   lg:px-0 px-20 h-fit mt-12 lg:ms-32  lg:w-full w-[100vw] ">
             <button
               className=""
@@ -188,7 +187,6 @@ useEffect(() => {
               />
             </button>
           </div>
-        </FadeIn>
       </div>
     </MotionDiv>
   );

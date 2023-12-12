@@ -8,8 +8,15 @@ export default function ProductHero() {
   
   return (
     <MotionDiv>
-      <div>
-        <div className="flex h-[500px] lg:min-h-screen bg-gray-50">
+      <div className="">
+        <div
+          className="flex h-[500px] lg:h-[100vh] bg-gray-50 "
+          style={{
+            backgroundImage: "url('assets/general/SuperGraphicProduct.svg')",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat:"no-repeat"
+          }}>
           <div className="flex-1 relative flex items-center justify-center lg:ps-32 ">
             <div className="z-2 absolute ">
               <MoveRotate>
@@ -29,7 +36,7 @@ export default function ProductHero() {
           <div className="flex-1 items-center justify-center relative flex">
             {" "}
             <div className="text-indigo-900 lg:text-7xl    absolute lg:w-[420px]    lg:leading-[90px] w-[145px] text-2xl font-bold font-['Sen'] leading-[40px] h-fit">
-              <FadeInRight>FRESH FROM THE OCEAN TO YOUR PLATE</FadeInRight>
+              <FadeInRight>Fresh From The Ocean To Your Plate</FadeInRight>
             </div>
           </div>
         </div>

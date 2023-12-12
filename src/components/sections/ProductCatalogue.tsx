@@ -32,10 +32,10 @@ export default function ProductCatalogue() {
         <div key={index} className="">
           <MotionDiv>
             <div
-              className={`flex w-full lg:relative items-center justify-center min-h-screen ${
+              className={`flex w-full lg:relative items-center justify-center  min-h-screen ${
                 index % 2 === 0 ? `bg-white` : `bg-gray-100`
               }`}>
-              <div className="lg:absolute lg:w-[1200px] lg:flex w-full grid gap-8 px-4 py-8">
+              <div className="lg:absolute lg:w-[1200px] lg:flex w-full grid gap-4 px-4 py-8">
                 <div className="lg:w-2/5">
                   <div className="relative overflow-hidden  w-full">
                     <FadeIn>
@@ -50,17 +50,32 @@ export default function ProductCatalogue() {
                   </div>
                 </div>
                 <div
-                  className={`lg:w-3/5  flex-col justify-start items-start gap-3 lg:gap-8 inline-flex ${
-                    index % 2 === 0 ? `` : `lg:order-first  lg:pr-20`
+                  className={`lg:w-3/5  flex-col justify-center items-start gap-3 lg:gap-8 inline-flex ${
+                    index % 2 === 0 ? `` : `lg:order-first  lg:pr-10`
                   } `}>
                   <FadeIn>
-                    <Image
-                      src={"/assets/product-page/Ornament.svg"}
-                      width={100}
-                      height={100}
-                      alt={""}
-                      className="w-20"
-                    />
+                    <div className="flex justify-between">
+                      <div className="">
+                        <Image
+                          src={`/assets/general/GraphicProductCatalogue${
+                            index % 2 === 0 ? "2" : "1"
+                          }.svg`}
+                          alt={""}
+                          height={150}
+                          width={150}
+                          className={`object-cover absolute   z-0 lg:w-[150px] w-[100px] ${
+                            index % 2 === 0 ? "right-0" : "right-[550px]"
+                          }`}
+                        />
+                      </div>
+                      <Image
+                        src={"/assets/product-page/Ornament.svg"}
+                        width={100}
+                        height={100}
+                        alt={""}
+                        className="w-20"
+                      />
+                    </div>
                   </FadeIn>
                   <FadeIn>
                     <h2 className="text-[#2F306A] lg:text-5xl font-bold font-['Sen'] lg:leading-[60px] text-3xl  leading-[38px] m-0 p-0">
@@ -87,6 +102,17 @@ export default function ProductCatalogue() {
                         color="#2F306A"
                       />
                     </button>
+                    <div className="">
+                      <Image
+                        src={`/assets/general/GraphicProductCatalogue3.svg`}
+                        alt={""}
+                        height={150}
+                        width={150}
+                        className={`object-cover   pt-2 z-0 lg:w-[200px] w-[100px] ${
+                          index % 2 === 0 ? "hidden" : ""
+                        }`}
+                      />
+                    </div>
                   </FadeIn>
                 </div>
               </div>

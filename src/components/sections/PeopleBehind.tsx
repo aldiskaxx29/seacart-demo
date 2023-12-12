@@ -19,7 +19,7 @@ export default function PeopleBehind() {
   }, []);
   return (
     <main
-        className={`grid lg:px-20 mt-6 lg:mt-[164px] gap-10 items-center justify-center bg-slate-100 rounded-lg py-6`}>
+        className={`grid lg:px-20 mt-6 lg:mt-[164px] gap-10 items-center justify-center bg-slate-100 rounded-lg py-[120px]`}>
     <MotionDiv>
         <FadeInUp>
       <div className="w-full h-full grid items-center justify-center gap-3  lg:gap-5 lg:ps-10 text-center p-4">
@@ -51,18 +51,20 @@ export default function PeopleBehind() {
             <FadeIn>
             <div className="gap-3 grid items-end justify-end">
             <Image
-              src={`/assets/about/${item.url}`}
+              src={`/assets/general/${item.url}`}
               width={500}
               height={500}
               alt={item.name}
               className="w-[768px] object-cover rounded-md"
-            />       
+                />
+                <div className="flex flex-col gap-1">
             <div className="text-center text-indigo-900 text-3xl font-bold font-['Sen'] leading-[38px]">
               {item.name}
             </div>      
             <div className="text-center text-[#212121] text-lg font-normal font-['Sen'] leading-7">
               {item.position}
             </div>
+                </div>    
             </div>
 
 

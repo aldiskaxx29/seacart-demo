@@ -8,6 +8,13 @@ export default function Footers() {
       <div className="px-4 lg:px-8 flex-col justify-start items-start gap-8 flex">
         <div className="self-stretch pb-16 flex-col justify-start items-center gap-10 flex">
           <div className=" flex-col justify-start items-center gap-4 flex">
+            <Image
+              src={`/assets/general/FooterGraphic.svg`}
+              alt={""}
+              height={500}
+              width={500}
+              className="object-cover lg:w-[180px] w-[100px]"
+            />
             <div className="self-stretch text-center text-slate-100 lg:text-3xl font-extrabold lg:leading-[38px] text-2xl font-['Sen'] leading-loose">
               Explore Our Fresh Catch of the Day!
             </div>
