@@ -1,11 +1,32 @@
 import Image from "next/image";
-import React from "react";
 import { FadeInRight, MoveRotate } from "../animations/AnimationTemplate";
 import { MotionDiv } from "../animations/MotionDiv";
+import React, { useEffect, useState } from "react";
+
 
 export default function ProductHero() {
 
   
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    // Initial check on mount
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <MotionDiv>
       <div className="">
@@ -13,7 +34,7 @@ export default function ProductHero() {
           className="flex h-[500px] lg:h-[100vh] bg-gray-50 "
           style={{
             backgroundImage: "url('assets/general/SuperGraphicProduct.svg')",
-            backgroundSize: "contain",
+            backgroundSize: isMobile ? "cover" : "contain",
             backgroundPosition: "center",
             backgroundRepeat:"no-repeat"
           }}>
@@ -30,7 +51,7 @@ export default function ProductHero() {
                 />
               </MoveRotate>
             </div>
-            <div className="bg-primary w-[150px] lg:w-[400px] h-full  "></div>
+            <div className="bg-primary w-[100px] lg:w-[400px] h-full  "></div>
           </div>
 
           <div className="flex-1 items-center justify-center relative flex">

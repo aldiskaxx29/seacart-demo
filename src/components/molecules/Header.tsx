@@ -4,10 +4,36 @@ import DropMenu from "./DropMenuHeader";
 import { FadeIn } from "../animations/AnimationTemplate";
 import { useRouter } from "next/router";
 import { MotionDiv } from "../animations/MotionDiv";
+import React, { useEffect, useState } from "react";
+
 
 const Header = () => {
   
   const router = useRouter();
+
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    // Initial check on mount
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const logoSrc = isMobile
+    ? "/assets/general/Logo Article.svg"
+    : "/assets/general/Logo Header.svg";
 
     const isActiveLink = (path:String) => {
       return router.pathname === path ? "active-link" : "";
@@ -19,9 +45,9 @@ const Header = () => {
           <div className="flex gap-6 items-center lg:border-b w-full h-[72px] border-primary">
             <FadeIn>
               <Image
-                src="/assets/general/Logo Header.svg"
+                src={logoSrc}
                 alt="Logo"
-                className="w-full lg:h-12 mr-4   h-full"
+                className="w-full lg:h-10 mr-4   h-10"
                 width={100}
                 height={100}
               />

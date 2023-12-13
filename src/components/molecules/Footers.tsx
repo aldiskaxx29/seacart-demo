@@ -59,7 +59,7 @@ export default function Footers() {
             <div className=" flex-col justify-start items-start gap-8 flex">
               <div className=" h-10 justify-center items-center inline-flex">
                 <Image
-                  className="w-[150px] h-full object-cover"
+                  className="w-[150px] object-cover"
                   src="/assets/general/Logo Footer.svg"
                   alt={""}
                   width={150}
