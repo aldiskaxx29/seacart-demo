@@ -3,19 +3,16 @@ import Header from "@/components/molecules/Header";
 import ProductDetailContent from "@/components/sections/ProductDetailContent";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import {  ProductSlider } from "../../../../service/DummyData";
+import { ProductSlider } from "../../../../service/DummyData";
 import Head from "next/head";
 import { ProductProps } from "../../../../service/type";
 import { getProductDetail } from "../../../../service/API";
 import OurProducts from "@/components/sections/OurProducts";
 
-
-
 export default function ProductDetail() {
   const router = useRouter();
   const id: string | undefined = router.query?.id as string | undefined;
   const [product, setProduct] = useState<ProductProps | null>(null);
-
 
   useEffect(() => {
     const fetchData = async (id: any) => {
@@ -31,7 +28,7 @@ export default function ProductDetail() {
     };
 
     fetchData(id);
-  }, [id]); 
+  }, [id]);
 
   if (!product) {
     return <p>Loading Your Data ... </p>;
@@ -48,7 +45,7 @@ export default function ProductDetail() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
-          href="/assets/general/Seacart__Logo Normal Color.png"
+          href="/assets/general/Seacart_Logo Normal Circular.svg"
         />
       </Head>
       <main className={``}>

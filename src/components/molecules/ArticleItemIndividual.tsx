@@ -47,7 +47,7 @@ const ArticleItemIndiVidual: React.FC<ArticlePropsOne> = ({
             </div>
             <div className="flex gap-2 items-center mt-6">
               <Image
-                src={`/assets/article-list/Main Logo White.png`}
+                src={`/assets/general/Logo Article.svg`}
                 alt={""}
                 width={100}
                 height={100}

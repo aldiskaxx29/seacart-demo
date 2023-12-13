@@ -19,14 +19,20 @@ export default function product() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
-          href="/assets/general/Seacart__Logo Normal Color.png"
+          href="/assets/general/Seacart_Logo Normal Circular.svg"
         />
       </Head>
       <Header />
       <ProductHero />
 
       <ProductList />
-      <Image src={'/assets/general/image 53.png'} width={1500} height={1500} className="w-full px-1" alt="Food"/>
+      <Image
+        src={"/assets/general/image 53.png"}
+        width={1500}
+        height={1500}
+        className="w-full px-1"
+        alt="Food"
+      />
       <ProductCatalogue />
 
       <Footers />

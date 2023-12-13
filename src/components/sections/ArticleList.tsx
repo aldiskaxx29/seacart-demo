@@ -126,7 +126,7 @@ export default function ArticleList() {
 
                   <div className="flex gap-2 items-center mt-6">
                     <Image
-                      src={`/assets/article-list/Main Logo White.png`}
+                      src={`/assets/general/Logo Article.svg`}
                       alt={""}
                       width={100}
                       height={100}
@@ -142,17 +142,17 @@ export default function ArticleList() {
                     </div>
                   </div>
                 </FadeIn>
-
               </div>
             )
-          )}                <div className="w-full lg:hidden block mt-12">
-                  <Button
-                    link={"/article"}
-                    text={"View All Post"}
-                    variant={"Primary"}
-                    classNames="rounded-lg"
-                  />
-                </div>
+          )}{" "}
+          <div className="w-full lg:hidden block mt-12">
+            <Button
+              link={"/article"}
+              text={"View All Post"}
+              variant={"Primary"}
+              classNames="rounded-lg"
+            />
+          </div>
         </div>
       </div>
     </MotionDiv>

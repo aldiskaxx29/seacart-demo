@@ -19,7 +19,7 @@ const Header = () => {
           <div className="flex gap-6 items-center lg:border-b w-full h-[72px] border-primary">
             <FadeIn>
               <Image
-                src="/assets/general/Seacart__Logo Long_Color.png"
+                src="/assets/general/Logo Header.svg"
                 alt="Logo"
                 className="w-full lg:h-12 mr-4   h-full"
                 width={100}

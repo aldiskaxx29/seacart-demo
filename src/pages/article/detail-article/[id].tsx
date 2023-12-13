@@ -11,16 +11,28 @@ import ArticleList from "@/components/sections/ArticleList";
 export default function Article() {
 
   return (
-    <main className={``}>
+    <>
+      <Head>
+        <title>Seacart by Solutee</title>
+        <meta
+          name="Seafood Supplier"
+          content="Downstreaming Commodity Through Technology"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="icon"
+          href="/assets/general/Seacart_Logo Normal Circular.svg"
+        />
+      </Head>
+      <main className={``}>
+        <Header />
 
+        <ArticleDetailContent />
 
-      <Header />
+        <ArticleList />
 
-      <ArticleDetailContent />
-
-      <ArticleList />
-
-      <Footers />
-    </main>
+        <Footers />
+      </main>
+    </>
   );
 }

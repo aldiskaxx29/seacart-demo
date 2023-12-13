@@ -70,10 +70,7 @@ export default function ArticleDetailContent() {
         <title>{article.title} - Seacart</title>
         <meta name={article.title} content={article.short_description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="icon"
-          href="/assets/general/Seacart__Logo Normal Color.png"
-        />
+        <link rel="icon" href="/assets/general/Logo Article.svg" />
       </Head>
 
       <div className="flex w-full lg:relative items-center justify-center pt-[132px]">
@@ -123,44 +120,40 @@ export default function ArticleDetailContent() {
 
       <div className="grid pt-[64px] items-center justify-center gap-16 lg:w-3/5 md:w-4/5 ">
         <div className="grid gap-10">
-        <div className="grid gap-6">
-        <div className="grid gap-3">
-          <div className=" text-center text-teal-400 text-base font-extrabold font-['Sen'] leading-normal">
-            {article.category}
+          <div className="grid gap-6">
+            <div className="grid gap-3">
+              <div className=" text-center text-teal-400 text-base font-extrabold font-['Sen'] leading-normal">
+                {article.category}
+              </div>
+
+              <div className=" text-center text-indigo-900  text-4xl lg:text-5xl font-extrabold font-['Sen'] leading-[60px]">
+                {article.title}
+              </div>
+            </div>
+
+            <div className=" text-center text-[#212121] text-xl font-normal font-['Sen'] leading-[30px]">
+              {article.short_description}
+            </div>
           </div>
 
-          <div className=" text-center text-indigo-900  text-4xl lg:text-5xl font-extrabold font-['Sen'] leading-[60px]">
-            {article.title}
+          <div className="flex gap-2 items-center w-full justify-center">
+            <Image
+              src={`/assets/general/Logo Article.svg`}
+              alt={""}
+              width={100}
+              height={100}
+              className="w-10 h-10"
+            />
+            <div className="grid">
+              <span className="text-indigo-900 lg:text-lg font-extrabold font-['Sen'] leading-7 text-sm">
+                Seacart Admin
+              </span>
+              <span className="text-sm font-normal font-['Sen'] leading-tight">
+                {formatDate(article.updated_at)}
+              </span>
+            </div>
           </div>
         </div>
-
-        <div className=" text-center text-[#212121] text-xl font-normal font-['Sen'] leading-[30px]">
-          {article.short_description}
-        </div>
-          </div> 
-
-
-
-        <div className="flex gap-2 items-center w-full justify-center">
-          <Image
-            src={`/assets/article-list/Main Logo White.png`}
-            alt={""}
-            width={100}
-            height={100}
-            className="w-10 h-10"
-          />
-          <div className="grid">
-            <span className="text-indigo-900 lg:text-lg font-extrabold font-['Sen'] leading-7 text-sm">
-              Seacart Admin
-            </span>
-            <span className="text-sm font-normal font-['Sen'] leading-tight">
-              {formatDate(article.updated_at)}
-            </span>
-          </div>
-        </div>          
-        </div>
-
-
 
         <Image
           src={`${article.image_url}`}
