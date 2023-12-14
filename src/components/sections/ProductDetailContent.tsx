@@ -192,7 +192,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                         <div className="lg:w-1/3  w-1/3  grid gap-0 text-sm text-indigo-900 font-normal font-['Sen'] leading-[30px] items-center justify-start lg:px-4 px-2  bg-gray-100 lg:text-lg   lg:leading-7">
                           <div className="text-start grid justify-start items-start w-full  text-xs font-normal font-['Sen'] leading-[18px] ms-1 text-indigo-900 lg:text-lg lg:leading-7">
                             <div className="flex items-start justify-start">
-                              <li className="me-[-8px]"></li>
+                              <li className="me-[-4px]"></li>
                               {item.weight}
                             </div>
 
@@ -200,7 +200,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                               <div className="grid items-start justify-start">
                                 {item.type.split("$$").map((group, index) => (
                                   <div key={index} className="flex">
-                                    <li className="me-[-8px]"></li>
+                                    <li className="me-[-4px]"></li>
                                     <div className="grid">
                                       {group
                                         .split("%%")
@@ -222,7 +222,7 @@ const ProductDetailContent: React.FC<ProductDetailContentProps> = ({
                               <div
                                 key={index}
                                 className="flex items-start justify-start lg:px-4 px-2">
-                                <li className="me-[-8px]"></li>
+                                <li className="me-[-4px]"></li>
                                 {wrapItem.trim()}{" "}
                                 {index < item.wrap.split(", ").length - 3 &&
                                   ", "}
