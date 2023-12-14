@@ -44,6 +44,11 @@ const Header = () => {
         <header className="header-comp lg:px-20 px-4 py-4 flex items-center justify-between w-full fixed top-0 gap-10 h-[72px] z-50 border-b lg:border-b-0 lg:border-primary shadow-sm lg:rounded-none rounded-md">
           <div className="flex gap-6 items-center lg:border-b w-full h-[72px] border-primary">
             <FadeIn>
+              <Link
+                href="/"
+                className=" cursor-pointer"
+              >
+                
               <Image
                 src={logoSrc}
                 alt="Logo"
@@ -51,6 +56,7 @@ const Header = () => {
                 width={100}
                 height={100}
               />
+                  </Link>
             </FadeIn>
 
             <nav className="hidden lg:flex gap-4 text-gray-800">

@@ -39,7 +39,7 @@ export default function ShowCaseProduct() {
 
   return (
     <MotionDiv>
-      <div className="bg-[#2F306A] lg:flex h-[100vh] lg:h-[100vh] lg:mt-0 mt-20 lg:pt-[72px] overflow-hidden">
+      <div className="bg-[#2F306A] lg:flex h-fit lg:h-[100vh] lg:mt-0 mt-20 lg:pt-[72px] overflow-hidden">
         <div className="flex-1 lg:w-2/5 overflow-hidden z-10">
           {Array.isArray(data) && data.length > 0 && (
             <Slider
@@ -67,7 +67,7 @@ export default function ShowCaseProduct() {
 
         {/* Component Content */}
         {Array.isArray(data) && data.length > 0 && (
-          <div className="grid gap-2 lg:order-first lg:w-3/5 lg:pt-[72px] pt-6 pb-5">
+          <div className="grid gap-2 lg:order-first lg:w-3/5 lg:pt-[72px] pt-6 pb-10">
             <div className="lg:flex-1 px-4 lg:px-[100px] flex flex-col lg:justify-between h-full">
               <div className="flex flex-col gap-6 justify-start  items-start lg:h-full h-[320px]">
                 <div className=" h-fit">
@@ -144,7 +144,7 @@ export default function ShowCaseProduct() {
               <div className="z-20">
                 
               <FadeIn>
-                <div className="flex gap-8 lg:w-fit justify-between lg:mb-16 z-20  lg:px-0 px-20 h-fit">
+                <div className="flex gap-8 lg:w-fit justify-between lg:mb-16 lg:px-0 px-20 h-fit">
                   <button
                     className=""
                     onClick={() => sliderRef?.current?.slickPrev()}>

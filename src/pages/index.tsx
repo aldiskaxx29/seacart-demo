@@ -8,6 +8,7 @@ import PartnerList from "@/components/sections/PartnerList";
 import ShowCaseProduct from "@/components/sections/ShowCaseProduct";
 import VideoPlaceholder from "@/components/sections/VideoPlaceholder";
 import WhatWeServe from "@/components/sections/WhatWeServe";
+import WhatWeServeFix from "@/components/sections/WhatWeServeFix";
 import Head from "next/head";
 
 export default function Home() {
@@ -25,13 +26,16 @@ export default function Home() {
           href="/assets/general/Seacart_Logo Normal Circular.svg"
         />
       </Head>
-      <main className="lg:snap-containers w-screen overflow-hidden">
+      <main className="snap-containers w-screen overflow-hidden">
         <Header />
         <div className="snap-childs">
           <HeroBanner />
         </div>
         <div className=" snap-childs">
           <HomeVideo />
+        </div>
+        <div className=" snap-childs">
+          <WhatWeServeFix />
         </div>
         <div className=" snap-childs">
           <ShowCaseProduct />
@@ -42,11 +46,11 @@ export default function Home() {
         <div className="snap-childs">
           <DocumentasiKegiatan />
         </div>
-        <div className="lg:snap-childs">
+        <div className="snap-childs">
           <ArticleList />
         </div>
 
-        <div className="lg:snap-childs">
+        <div className="snap-childs">
           <Footers />
         </div>
       </main>

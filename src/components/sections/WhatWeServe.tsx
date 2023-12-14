@@ -19,7 +19,7 @@ export default function WhatWeServe() {
               </span>
             </FadeIn>
             <FadeIn>
-              <span className="relative lg:text-4xl  lg:leading-[44px]  text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px] ">
+              <span className="relative lg:text-4xl  lg:leading-[44px]  text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[30px] ">
                 Introducing to Seacart
               </span>
             </FadeIn>
