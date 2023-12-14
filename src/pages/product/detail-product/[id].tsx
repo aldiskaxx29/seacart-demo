@@ -8,6 +8,7 @@ import Head from "next/head";
 import { ProductProps } from "../../../../service/type";
 import { getProductDetail } from "../../../../service/API";
 import OurProducts from "@/components/sections/OurProducts";
+import Image from "next/image";
 
 export default function ProductDetail() {
   const router = useRouter();
@@ -31,7 +32,24 @@ export default function ProductDetail() {
   }, [id]);
 
   if (!product) {
-    return <p>Loading Your Data ... </p>;
+    return (
+      <div className="w-[100vw] h-[100vh]  items-center justify-center grid animate-pulse">
+        <div className="grid gap-10">
+          <div className="">
+            <Image
+          src={`/assets/general/GraphicProductCatalogue2.svg`}
+          alt={""}
+          height={100}
+          width={100}
+          className={` animate-spin `}
+        />
+          </div>
+        
+        <p>Loading...</p>
+
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -54,7 +72,10 @@ export default function ProductDetail() {
         {product ? (
           <ProductDetailContent product={product} />
         ) : (
+            <div className="w-[100vw] h-[100vh] bg-black">
+              
           <p>Loading...</p>
+            </div>
         )}
         <OurProducts />
         <Footers />
