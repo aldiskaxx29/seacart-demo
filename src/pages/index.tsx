@@ -8,7 +8,6 @@ import PartnerList from "@/components/sections/PartnerList";
 import ShowCaseProduct from "@/components/sections/ShowCaseProduct";
 import VideoPlaceholder from "@/components/sections/VideoPlaceholder";
 import WhatWeServe from "@/components/sections/WhatWeServe";
-import WhatWeServeFix from "@/components/sections/WhatWeServeFix";
 import Head from "next/head";
 
 export default function Home() {
@@ -33,9 +32,6 @@ export default function Home() {
         </div>
         <div className=" snap-childs">
           <HomeVideo />
-        </div>
-        <div className=" snap-childs">
-          <WhatWeServeFix />
         </div>
         <div className=" snap-childs">
           <ShowCaseProduct />
