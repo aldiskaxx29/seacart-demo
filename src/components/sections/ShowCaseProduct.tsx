@@ -39,7 +39,7 @@ export default function ShowCaseProduct() {
 
   return (
     <MotionDiv>
-      <div className="bg-[#2F306A] lg:flex h-[100vh] lg:h-[100vh] pt-[72px] overflow-hidden">
+      <div className="bg-[#2F306A] lg:flex h-[100vh] lg:h-[100vh] lg:mt-0 mt-20 lg:pt-[72px] overflow-hidden">
         <div className="flex-1 lg:w-2/5 overflow-hidden z-10">
           {Array.isArray(data) && data.length > 0 && (
             <Slider

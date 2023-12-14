@@ -86,18 +86,18 @@ export default function ImagePopUp({
                     {images.map((item, index) => (
                       <div
                         key={index}
-                        className="lg:w-[900px] w-[500px] max-h-[900px] items-center justify-center object-center relative rounded-2xl overflow-hidden">
+                        className="lg:w-[900px] w-[500px] max-h-[900px] items-center justify-center object-center relative  overflow-hidden px-4">
                         <Image
                           src={`${item.filename}`}
                           alt={"icon"}
                           height={800}
                           width={800}
-                          className="object-cover shadow-xl w-full h-full"
+                          className="object-cover shadow-xl w-full h-full lg:rounded-2xl rounded-lg"
                         />
                       </div>
                     ))}
                   </Slider>
-                  <div className="flex gap-8 lg:w-fit justify-between lg:mb-16   lg:px-0 px-20 h-fit lg:hidden block">
+                  <div className="flex gap-8 lg:w-fit justify-between lg:mb-16   lg:px-0 px-20 h-fit lg:hidden mt-6">
                     <button
                       className=""
                       onClick={() => sliderRef?.current?.slickPrev()}>

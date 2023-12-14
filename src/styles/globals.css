@@ -83,21 +83,27 @@ blockquote {
   backdrop-filter: blur(8px);
 }
 
-.snap-container {
+.snap-containers {
   scroll-snap-type: both mandatory;
   overflow-y: scroll;
   height: 100vh; /* Sesuaikan dengan tinggi viewport yang diinginkan */
 }
 
-.snap-child {
+.snap-childs {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
 
-@media screen and (min-width: 768px) {
-  .snap-container {
-    scroll-snap-type: both mandatory;
+@media screen and (min-width: 700px) {
+  .snap-containers {
+    scroll-snap-type: none mandatory;
   }
+
+  
+.snap-childs {
+  scroll-snap-align: none;
+  scroll-snap-stop: none;
+}
 }
 
 .slick-track{

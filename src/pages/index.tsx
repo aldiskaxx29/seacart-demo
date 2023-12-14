@@ -25,28 +25,28 @@ export default function Home() {
           href="/assets/general/Seacart_Logo Normal Circular.svg"
         />
       </Head>
-      <main className="snap-container w-screen overflow-hidden">
+      <main className="lg:snap-containers w-screen overflow-hidden">
         <Header />
-        <div className="snap-child">
+        <div className="snap-childs">
           <HeroBanner />
         </div>
-        <div className=" snap-child">
+        <div className=" snap-childs">
           <HomeVideo />
         </div>
-        <div className=" snap-child">
+        <div className=" snap-childs">
           <ShowCaseProduct />
         </div>
-        <div className=" snap-child">
+        <div className=" snap-childs">
           <PartnerList />
         </div>
-        <div className="snap-child">
+        <div className="snap-childs">
           <DocumentasiKegiatan />
         </div>
-        <div className="snap-child">
+        <div className="lg:snap-childs">
           <ArticleList />
         </div>
 
-        <div className="snap-child">
+        <div className="lg:snap-childs">
           <Footers />
         </div>
       </main>

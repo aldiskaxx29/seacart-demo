@@ -73,8 +73,8 @@ export default function ArticleDetailContent() {
         <link rel="icon" href="/assets/general/Logo Article.svg" />
       </Head>
 
-      <div className="flex w-full lg:relative items-center justify-center pt-[132px]">
-        <div className=" flex px-20 absolute w-full items-center">
+      <div className="flex w-full lg:relative items-center justify-center lg:pt-[132px] pt-[100px]">
+        <div className=" flex lg:px-20 absolute w-full items-center">
           <button
             className=" text-gray-400 text-sm font-normal font-['Sen'] leading-tight hover:bg-gray-100 rounded-md p-2 flex item center justify-center"
             onClick={() => {
@@ -126,12 +126,12 @@ export default function ArticleDetailContent() {
                 {article.category}
               </div>
 
-              <div className=" text-center text-indigo-900  text-4xl lg:text-5xl font-extrabold font-['Sen'] leading-[60px]">
+              <div className=" text-center text-indigo-900  lg:text-5xl font-extrabold font-['Sen'] lg:leading-[60px]  text-4xl leading-[44px]">
                 {article.title}
               </div>
             </div>
 
-            <div className=" text-center text-[#212121] text-xl font-normal font-['Sen'] leading-[30px]">
+            <div className=" text-center text-[#212121] lg:text-xl font-normal font-['Sen'] lg:leading-[30px]  text-lgleading-7">
               {article.short_description}
             </div>
           </div>

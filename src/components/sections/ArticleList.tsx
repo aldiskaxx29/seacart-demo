@@ -78,12 +78,12 @@ export default function ArticleList() {
         </FadeInUp>
 
         {/* Article */}
-        <div className="justify-start items-start gap-6 lg:inline-flex px-2">
+        <div className="justify-start items-start gap-6 lg:inline-flex ">
           {/* article Item */}
           {renderedData.map((item, index) =>
             id && item.id.toString() === id.toString() ? null : (
               <div
-                className="lg:p-2 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid  hover:shadow-lg duration-500 lg:mb-0 mb-12"
+                className="lg:p-2 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid  hover:shadow-lg duration-500 lg:mb-0 mb-12 p-2"
                 key={index}
                 onClick={() => {
                   window.location.href = `/article/detail-article/${item.id}`;
