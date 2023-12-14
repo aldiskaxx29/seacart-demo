@@ -141,8 +141,10 @@ export default function ShowCaseProduct() {
                 </div>
               </div>
 
+              <div className="z-20">
+                
               <FadeIn>
-                <div className="flex gap-8 lg:w-fit justify-between lg:mb-16   lg:px-0 px-20 h-fit">
+                <div className="flex gap-8 lg:w-fit justify-between lg:mb-16 z-20  lg:px-0 px-20 h-fit">
                   <button
                     className=""
                     onClick={() => sliderRef?.current?.slickPrev()}>
@@ -169,7 +171,8 @@ export default function ShowCaseProduct() {
                   </button>
                 </div>
               </FadeIn>
-              <div className="relative">
+              </div>
+              <div className="relative z-0">
                 <Image
                   src={`/assets/general/GraphicProduct${
                     currentSlide % 2 === 0 ? "1" : "2"
