@@ -12,17 +12,13 @@ export default function WhatWeServe() {
       <MotionDiv>
         {/* First Column */}
         <div className="flex-col flex gap-5 position relative">
-          <div className="grid gap-3 h-full items-center justify-star relative">
-            <FadeIn>
-              <span className="relative text-center text-teal-400 lg:text-base font-extrabold lg:leading-normal  text-sm font-['Sen'] leading-tight">
-                What We Serve
-              </span>
-            </FadeIn>
-            <FadeIn>
-              <span className="relative lg:text-4xl  lg:leading-[44px]  text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[30px] ">
-                Introducing to Seacart
-              </span>
-            </FadeIn>
+          <div className="grid gap-3">
+            <div className=" lg:text-base lg:leading-normal text-teal-400 text-sm font-extrabold font-['Sen'] leading-tight">
+              What We Serve
+            </div>
+            <div className="text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px]  lg:text-4xllg:leading-[44px]">
+              Introducing to Seacart
+            </div>
           </div>
 
           <FadeIn>
