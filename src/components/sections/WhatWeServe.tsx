@@ -11,15 +11,15 @@ export default function WhatWeServe() {
     <div className="lg:flex bg-gray-100 lg:px-20 lg:gap-24 gap:12 px-4 space-y-12 lg:space-y-0 lg:h-[500px] items-start justify-center pt-[112px]">
       <MotionDiv>
         {/* First Column */}
-        <div className="flex-col flex gap-5">
-          <div className="grid gap-3 h-full items-center justify-start">
+        <div className="flex-col flex gap-5 position static">
+          <div className="grid gap-3 h-full items-center justify-star static">
             <FadeIn>
-              <span className="text-center text-teal-400 lg:text-base font-extrabold lg:leading-normal  text-sm font-['Sen'] leading-tight">
+              <span className="static text-center text-teal-400 lg:text-base font-extrabold lg:leading-normal  text-sm font-['Sen'] leading-tight">
                 What We Serve
               </span>
             </FadeIn>
             <FadeIn>
-              <span className=" lg:text-4xl  lg:leading-[44px]  text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px] ">
+              <span className="static lg:text-4xl  lg:leading-[44px]  text-indigo-900 text-3xl font-extrabold font-['Sen'] leading-[38px] ">
                 Introducing to Seacart
               </span>
             </FadeIn>
