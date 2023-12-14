@@ -18,7 +18,7 @@ const ArticleItemIndiVidual: React.FC<ArticlePropsOne> = ({
     <div>
       <FadeIn>
         <div
-          className="lg:px-4 lg:py-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-8 lg:flex hover:shadow-lg duration-500 justify-center items-center w-full"
+          className="lg:px-4 lg:py-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-8 lg:flex lg:hover:shadow-lg duration-500 justify-center items-center w-full"
           onClick={() => {
             window.location.href = `/article/detail-article/${id}`;
           }}>

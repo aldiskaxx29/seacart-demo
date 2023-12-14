@@ -117,7 +117,7 @@ const Header = () => {
           <FadeIn>
             <div className="hidden lg:flex w-[300px] items-center justify-center lg:border-b h-[72px] border-primary">
               <button
-                className="bg-primary text-white hover:bg-gray-700 py-2 px-8 font-regular rounded flex items-center justify-center gap-2 "
+                className="bg-primary text-white hover:bg-navy-700 py-2 px-8 font-regular rounded flex items-center justify-center gap-2 "
                 onClick={() => {
                   window.open("https://wa.me/+6282280002797", "_blank");
                 }}>

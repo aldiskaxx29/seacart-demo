@@ -18,7 +18,7 @@ const ArticleItem: React.FC<ArticlePropsMaps> = ({
   return (
     <div>
       <div
-        className="lg:p-4 cursor-pointer rounded-md hover:bg-slate-200 flex-1 gap-4 grid mt-12 hover:shadow-lg duration-500"
+        className="lg:p-4 cursor-pointer rounded-md lg:hover:bg-slate-200 flex-1 gap-4 grid mt-12 lg:hover:shadow-lg duration-500"
         key={key}
         onClick={() => {
           window.location.href = `/article/detail-article/${id}`;

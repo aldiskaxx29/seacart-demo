@@ -7,7 +7,7 @@ import { FadeIn } from "../animations/AnimationTemplate";
 
 export default function  DropMenu() {
   return (
-    <div >
+    <div>
       <Menu as="div" className=" inline-block text-left">
         <div>
           <Menu.Button className="inline-flex  justify-center rounded-md  text-sm font-medium text-primary  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 px-0 w-10 h-10 p-2">
@@ -27,8 +27,8 @@ export default function  DropMenu() {
           leave="transition ease-in duration-75"
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95">
-          <Menu.Items className="fixed left-0 w-screen  divide-gray-100 rounded-lg bg-primary shadow-lg ring-1 ring-black/5 focus:outline-none ">
-            <div className="lg:hidden   bg-white h-full rounded shadow-lg w-full grid gap-5 ">
+          <Menu.Items className="fixed left-0 w-screen    divide-gray-100 rounded-lg  shadow-lg ring-1 ring-black/5 focus:outline-none ">
+            <div className="lg:hidden  h-full rounded shadow-lg w-full grid gap-5 bg-white">
               <FadeIn>
                 <Link
                   href="/"
