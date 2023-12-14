@@ -44,7 +44,7 @@ export default function ProductCatalogue() {
                         alt={item.name}
                         width={700}
                         height={700}
-                        className="lg:w-[388px] h-[580px] rounded-lg object-cover"
+                        className="lg:w-[388px] lg:h-[580px] h-[450px] rounded-lg object-cover"
                       />
                     </FadeIn>
                   </div>
@@ -64,7 +64,7 @@ export default function ProductCatalogue() {
                           height={150}
                           width={150}
                           className={`object-cover absolute   z-0 lg:w-[150px] w-[100px] ${
-                            index % 2 === 0 ? "right-0" : "right-[550px]"
+                            index % 2 === 0 ? "right-4" : "lg:right-[550px] right-4"
                           }`}
                         />
                       </div>
