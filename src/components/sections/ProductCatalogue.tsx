@@ -50,9 +50,10 @@ export default function ProductCatalogue() {
                   </div>
                 </div>
                 <div
-                  className={`lg:w-3/5  flex-col justify-center items-start gap-3 lg:gap-8 inline-flex ${
+                  className={`lg:w-3/5  flex-col justify-center items-start gap-3 lg:gap-8 inline-flex lg:mt-0 mt-6 ${
                     index % 2 === 0 ? `` : `lg:order-first  lg:pr-10`
-                  } `}>
+                    } `}>
+                  
                   <FadeIn>
                     <div className="flex justify-between">
                       <div className="">
