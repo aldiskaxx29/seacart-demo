@@ -56,7 +56,7 @@ export default function VisiMisi() {
                     alt="Food"
                     className="w-[768px] object-cover rounded-md lg:me-[-100px] mt-4 lg:shadow-lg lg:h-full h-[400px] mb-[-100px] object-left-top lg:mb-0"
                   />
-                <div className="absolute  lg:bottom-[-800px] lg:right-[300px] right-[120px] bottom-[-980px] ">
+                <div className="absolute  lg:bottom-[-800px] lg:right-[300px] right-[120px] bottom-[-780px] lg:block hidden">
                   <Image
                     src={`/assets/general/GraphicVision.svg`}
                     alt={""}

@@ -57,7 +57,7 @@ export default function ProductHero() {
 
           <div className="flex-1 items-center justify-center relative flex">
             {" "}
-            <div className="text-indigo-900 lg:text-7xl    absolute lg:w-[420px]    lg:leading-[90px] w-[145px] text-2xl font-bold font-['Sen'] leading-[40px] h-fit ">
+            <div className="text-indigo-900 lg:text-7xl    absolute lg:w-[420px]    lg:leading-[90px] w-[145px] text-2xl font-bold font-['Sen'] leading-[32px] h-fit ">
               <FadeInRight>Fresh From The Ocean To Your Plate</FadeInRight>
             </div>
           </div>

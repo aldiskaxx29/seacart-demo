@@ -15,7 +15,7 @@ export default function Footers() {
               width={500}
               className="object-cover lg:w-[180px] w-[100px]"
             />
-            <div className="self-stretch text-center text-slate-100 lg:text-3xl font-extrabold lg:leading-[38px] text-2xl font-['Sen'] leading-loose">
+            <div className="self-stretch text-center text-slate-100 lg:text-3xl font-extrabold lg:leading-[38px] text-2xl font-['Sen']">
               Explore Our Fresh Catch of the Day!
             </div>
             <div className="self-stretch text-center text-slate-300 lg:text-xl font-normal lg:leading-[30px] text-base  font-['Sen'] leading-normal">
@@ -57,10 +57,10 @@ export default function Footers() {
         <div className="w-full pt-8 border-slate-400 border-t  flex-col justify-start items-start gap-12 flex">
           <div className="w-full  flex-col justify-start items-start gap-8 flex">
             <div className=" flex-col justify-start items-start gap-8 flex">
-              <div className=" h-10 justify-center items-center inline-flex">
+              <div className=" justify-center items-center inline-flex">
                 <Image
-                  className="w-[150px] object-cover"
-                  src="/assets/general/Logo Footer.svg"
+                  className=" object-cover"
+                  src="/assets/general/Seacart_Logo Landscape White.svg"
                   alt={""}
                   width={150}
                   height={150}

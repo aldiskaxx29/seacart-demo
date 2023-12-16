@@ -95,7 +95,7 @@ export default function ArticleListFull() {
 
   return (
     <MotionDiv>
-      <div className="grid gap-10 lg:px-20 lg:pt-[112px] p-4">
+      <div className="grid gap-10 lg:px-20 lg:pt-[112px] pt-[100px] p-4">
         <FadeInUp>
           <div className="grid gap-5">
             <div className="grid gap-3">
