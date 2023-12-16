@@ -119,7 +119,7 @@ export default function ArticleDetailContent() {
       {/* Article */}
 
       <div className="grid pt-[64px] items-center justify-center gap-16 lg:w-3/5 md:w-4/5 ">
-        <div className="grid gap-10">
+        <div className="grid gap-10 px-4">
           <div className="grid gap-6">
             <div className="grid gap-3">
               <div className=" text-center text-teal-400 text-base font-extrabold font-['Sen'] leading-normal">
