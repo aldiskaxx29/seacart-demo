@@ -48,7 +48,7 @@ export default function ProductHero() {
                   alt={"product"}
                   width={600}
                   height={600}
-                  className="lg:w-full w-[200px] object-cover"
+                  className="lg:w-[600px] w-[200px] object-cover"
                 />
               </MoveRotate>
             </div>
