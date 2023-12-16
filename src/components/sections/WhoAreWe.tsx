@@ -7,7 +7,7 @@ export default function WhoAreWe() {
   return (
     <MotionDiv>
       <main
-        className={`lg:flex lg:px-20 mt-[112px] lg:mt-[164px] lg:gap-5 gap-5 items-center justify-center`}>
+        className={`lg:flex lg:px-20 mt-[112px] lg:mt-[164px] lg:gap-5 gap-5 items-center justify-center w-[100vw] overflow-hidden`}>
         <div className="lg:w-2/5 h-full grid items-center justify-center gap-4 lg:gap-8 p-4 lg:px-10">
           <div className="flex flex-col gap-3">
             <FadeIn>
